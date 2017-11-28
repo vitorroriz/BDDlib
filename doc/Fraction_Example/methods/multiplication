@@ -1,0 +1,19 @@
+// Note: implementation of the multiplication (one operand), paste this in the Fraction.cpp file (replace old implementation)
+Fraction& Fraction::operator *=(const Fraction& rhs) {
+	int new_n = n * rhs.n / gcd(n * rhs.n, d * rhs.d);
+	d = d * rhs.d / gcd(n * rhs.n, d * rhs.d);
+	n = new_n;
+	return *this;
+}
+
+// Note: implementation of the multiplication (two operands), paste this in the Fraction.cpp file (replace old implementation)
+Fraction operator *(const Fraction& lhs, const Fraction& rhs) {
+	Fraction frc(lhs.num(), lhs.den());
+	return frc *= rhs;
+}
+
+// Note: code to print out fractions using the << operator, paste this in the Fraction.cpp file (replace old implementation)
+ostream& operator <<(ostream& out, const Fraction& rhs) {
+	return out << rhs.num() << "/" << rhs.den();
+}
+

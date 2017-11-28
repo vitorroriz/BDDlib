@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vitorroriz/vdsproject/src/Manager.cpp
+Manager.h
+/home/vitorroriz/vdsproject/src/Manager.h
+
+/home/vitorroriz/vdsproject/src/Manager.h
+ManagerInterface.h
+/home/vitorroriz/vdsproject/src/ManagerInterface.h
+iostream
+-
+map
+-
+vector
+-
+functional
+-
+
+/home/vitorroriz/vdsproject/src/ManagerInterface.h
+string
+-
+set
+-
+

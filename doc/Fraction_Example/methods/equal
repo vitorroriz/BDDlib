@@ -1,0 +1,4 @@
+// Note: implementation of the equality comparison, paste this in the Fraction.cpp file (replace old implementation)
+bool Fraction::operator ==(const Fraction& rhs) const {
+	return this->num() == rhs.num() && this->den() == rhs.den();
+}
