@@ -61,6 +61,11 @@ BDD_ID  Manager::topVar(const BDD_ID f)
     return getBDDNode(f)->top_var;
 }
 
+BDD_ID Manager::coFactorFalse(const BDD_ID f)
+{
+    return getBDDNode(f)->low;
+}
+
 BDD_Node* Manager::getBDDNode(BDD_ID id)
 {
     return pointers[id];
