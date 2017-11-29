@@ -80,5 +80,13 @@ TEST (coFactorFalsef, Variable) {
 
 //TODO TEST (coFactorFalsef, Operation)
 
+TEST (coFactorTruef, Variable) {
+    Manager *manager = new Manager();
+    BDD_ID id = manager->createVar("a");
+    ASSERT_EQ (manager->True(), manager->coFactorTrue(id));
+}
+
+//TODO TEST (coFactorTruef, Operation)
+
 
 #endif 
