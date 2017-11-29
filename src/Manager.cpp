@@ -56,6 +56,11 @@ bool Manager::isVariable(const BDD_ID x)
     return false;
 }
 
+BDD_ID  Manager::topVar(const BDD_ID f)
+{
+    return getBDDNode(f)->top_var;
+}
+
 BDD_Node* Manager::getBDDNode(BDD_ID id)
 {
     return pointers[id];
