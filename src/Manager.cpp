@@ -4,26 +4,14 @@ using namespace ClassProject;
 
 Manager::Manager()
 {
-	/*Creating terminal vars */
-//	ID_Nodes.push_back(&(*(ID_Table.insert(BDD_Nodes(ID_Nodes.size(), 0, 0, "0")).first)));
-//	ID_Nodes.push_back(&(*(ID_Table.insert(BDD_Nodes(ID_Nodes.size(), 1, 1, "1")).first)));
+        /*Creating terminal vars */
+
+        BDD_Node* falseNode = new BDD_Node("FALSE", BDD_ID_FALSE, BDD_ID_FALSE, BDD_ID_FALSE, BDD_ID_FALSE);
+        unique_table.insert(falseNode);
+        pointers.push_back(falseNode);
+        BDD_Node* trueNode = new BDD_Node("TRUE", BDD_ID_TRUE, BDD_ID_TRUE, BDD_ID_TRUE, BDD_ID_TRUE);
+        unique_table.insert(trueNode);
+        pointers.push_back(trueNode);
+
         std::cout << "Manager obj created" << std::endl;
 }
-/*
-const &BDD_ID Manager::True()
-{
-	return BDD_ID_HIGH;
-}
-
-const &BDD_ID Manager::False()
-{
-	return BDD_ID_LOW;
-}
-
-BDD_ID Manager::createVar(const std::string &label)
-{
-
-	BDD_Node node = BDD_Node(ID_Nodes.size(), True(), False(), label);
-	ID_Nodes.push_back(&(*(ID_Table.insert(node).first)));
-}    
-*/

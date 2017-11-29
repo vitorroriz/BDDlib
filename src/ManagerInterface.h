@@ -14,13 +14,15 @@ namespace ClassProject {
 
     class ManagerInterface {
     public:
-        virtual BDD_ID createVar(const std::string &label) = 0;
+
+        /*
+	virtual BDD_ID createVar(const std::string &label) = 0;
 
         virtual   const BDD_ID &True() = 0;
 
         virtual   const BDD_ID &False() = 0;
 
-        virtual   bool isConstant(const BDD_ID f) = 0;
+        /*virtual   bool isConstant(const BDD_ID f) = 0;
 
         virtual   bool isVariable(const BDD_ID x) = 0;
 
@@ -54,7 +56,8 @@ namespace ClassProject {
 
         virtual   void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root) =0 ;
 
-		virtual   size_t uniqueTableSize() = 0;
+        virtual   size_t uniqueTableSize() = 0;
+*/
     };
 }
 
