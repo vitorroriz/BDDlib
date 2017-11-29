@@ -8,9 +8,14 @@
 using namespace ClassProject;
 //DEFINE YOUR TESTS HERE
 
-TEST (False, FalseNode) {
+TEST (FalseTest, FalseID) {
     Manager *manager = new Manager();
     ASSERT_EQ (manager->False(), BDD_ID(0));
+}
+
+TEST (TrueTest, TrueID) {
+    Manager *manager = new Manager();
+    ASSERT_EQ (manager->True(), BDD_ID(1));
 }
 
 #endif 
