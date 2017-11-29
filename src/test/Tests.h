@@ -64,4 +64,12 @@ TEST (isVariableTest, LeafNode) {
     ASSERT_EQ (false, manager->isVariable(manager->False()));
 }
 
+TEST (topVarTest, Variable) {
+    Manager *manager = new Manager();
+    BDD_ID id = manager->createVar("a");
+    ASSERT_EQ (id, manager->topVar(id));
+}
+
+//TODO TEST (topVarTest, NonVariable)
+
 #endif 
