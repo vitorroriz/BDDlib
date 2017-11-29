@@ -10,12 +10,12 @@ using namespace ClassProject;
 
 TEST (FalseTest, FalseID) {
     Manager *manager = new Manager();
-    ASSERT_EQ (BDD_ID(0), manager->False());
+    ASSERT_EQ (0, manager->False());
 }
 
 TEST (TrueTest, TrueID) {
     Manager *manager = new Manager();
-    ASSERT_EQ (BDD_ID(1), manager->True());
+    ASSERT_EQ (1, manager->True());
 }
 
 TEST (uniqueTableSizeTest, uniqueTableSize) {
@@ -25,14 +25,19 @@ TEST (uniqueTableSizeTest, uniqueTableSize) {
 
 TEST (createVarTest, uniqueTableSize) {
     Manager *manager = new Manager();
-    //manager->createVar("a");
+    manager->createVar("a");
     ASSERT_EQ (3, manager->uniqueTableSize());
 }
 
 TEST (createVarTest, varAttributes) {
     Manager *manager = new Manager();
-   // manager->createVar("a");
-    ASSERT_EQ (new BDD_Node("a", 2, manager->True(), manager->False(), 2), manager->getBDDNode(2));
+    BDD_ID id = manager->createVar("a");
+    BDD_Node* var = manager->getBDDNode(id);
+    ASSERT_EQ ("a", var->label);
+    ASSERT_EQ (id, var->top_var);
+    ASSERT_EQ (manager->True(), var->high);
+    ASSERT_EQ (manager->False(), var->low);
+    ASSERT_EQ (id, var->id);
 }
 
 #endif 

@@ -31,4 +31,21 @@ size_t Manager::uniqueTableSize()
     return unique_table.size();
 }
 
+BDD_ID Manager::createVar(const std::string &label)
+{
+    BDD_ID id = unique_table.size();
+    BDD_Node* node = new BDD_Node(label, id, True(), False(), id);
+    unique_table.insert(node);
+    pointers.push_back(node);
+    cout << id << endl;
+    return id;
+}
+
+BDD_Node* Manager::getBDDNode(BDD_ID id)
+{
+    BDD_Node* node = pointers[id];
+    std::cout << node->top_var << node->high << node->low << endl;
+    return node;
+}
+
 

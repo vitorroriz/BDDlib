@@ -41,8 +41,7 @@ namespace ClassProject {
        public:
             Manager();
 
-
-            //BDD_ID createVar(const std::string &label);
+            BDD_ID createVar(const std::string &label);
 
             const BDD_ID &True() override;
 
@@ -83,6 +82,8 @@ namespace ClassProject {
             virtual   void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root) =0 ;
 */
             size_t uniqueTableSize() override;
+
+            BDD_Node* getBDDNode(BDD_ID id);
 
 
     };
