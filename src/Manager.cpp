@@ -47,6 +47,15 @@ bool Manager::isConstant(const BDD_ID f)
     return false;
 }
 
+
+bool Manager::isVariable(const BDD_ID x)
+{
+    BDD_Node* node = getBDDNode(x);
+    if(!isConstant(x) && (node->top_var == node->id))
+        return true;
+    return false;
+}
+
 BDD_Node* Manager::getBDDNode(BDD_ID id)
 {
     return pointers[id];
