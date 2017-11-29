@@ -21,4 +21,9 @@ const BDD_ID& Manager::False()
     return  pointers[BDD_ID_FALSE]->id;
 }
 
+const BDD_ID& Manager::True()
+{
+    return pointers[BDD_ID_TRUE]->id;
+}
+
 
