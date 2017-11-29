@@ -44,9 +44,9 @@ namespace ClassProject {
 
             //BDD_ID createVar(const std::string &label);
 
-            const BDD_ID &True();
+            const BDD_ID &True() override;
 
-            const BDD_ID &False();
+            const BDD_ID &False() override;
 
             /*virtual   bool isConstant(const BDD_ID f) = 0;
 
@@ -81,9 +81,9 @@ namespace ClassProject {
             virtual   void findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root) = 0;
 
             virtual   void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root) =0 ;
+*/
+            size_t uniqueTableSize() override;
 
-            virtual   size_t uniqueTableSize() = 0;
-    		*/
 
     };
 

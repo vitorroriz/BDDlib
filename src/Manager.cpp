@@ -26,4 +26,9 @@ const BDD_ID& Manager::True()
     return pointers[BDD_ID_TRUE]->id;
 }
 
+size_t Manager::uniqueTableSize()
+{
+    return unique_table.size();
+}
+
 
