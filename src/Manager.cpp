@@ -15,3 +15,10 @@ Manager::Manager()
 
         std::cout << "Manager obj created" << std::endl;
 }
+
+const BDD_ID& Manager::False()
+{
+    return  pointers[BDD_ID_FALSE]->id;
+}
+
+

@@ -15,13 +15,13 @@ namespace ClassProject {
     public:
 
 
-        /*virtual BDD_ID createVar(const std::string &label) = 0;
+        //virtual BDD_ID createVar(const std::string &label) = 0;
 
-        virtual   const BDD_ID &True() = 0;
+        //virtual   const BDD_ID &True() = 0;
 
         virtual   const BDD_ID &False() = 0;
 
-        virtual   bool isConstant(const BDD_ID f) = 0;
+        /*virtual   bool isConstant(const BDD_ID f) = 0;
 
         virtual   bool isVariable(const BDD_ID x) = 0;
 

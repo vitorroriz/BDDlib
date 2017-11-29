@@ -42,13 +42,13 @@ namespace ClassProject {
             Manager();
 
 
-            /*BDD_ID createVar(const std::string &label);
+            //BDD_ID createVar(const std::string &label);
 
-            const BDD_ID &True();
+            //const BDD_ID &True();
 
             const BDD_ID &False();
 
-            virtual   bool isConstant(const BDD_ID f) = 0;
+            /*virtual   bool isConstant(const BDD_ID f) = 0;
 
             virtual   bool isVariable(const BDD_ID x) = 0;
 
