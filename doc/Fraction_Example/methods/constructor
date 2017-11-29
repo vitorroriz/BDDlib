@@ -1,0 +1,35 @@
+// Note: private data members, paste this in the Fraction.hpp file
+// numerator and denominator
+int n, d;
+
+// greatest common divisor
+int gcd(int a, int b);
+
+// Note: implementation of the constructor, paste this in the Fraction.cpp file (replace old implementation)
+Fraction::Fraction(int n, int d) throw (DivisionByZeroException) :
+		n(n / gcd(n, d)), d(d / gcd(n, d)) {
+	if (d == 0)
+		throw DivisionByZeroException();
+}
+
+// Note: definition of private method greatest common divisor, paste this in the Fraction.hpp file
+int gcd(int a, int b);
+
+// Note: greatest common divisor, paste this in the Fraction.cpp file
+/**
+ * Computes the greatest common divisor.
+ * This method is used to reduce the fractions.
+ */
+int Fraction::gcd(int a, int b) {
+	return b == 0 ? a : gcd(b, a % b);
+}
+
+// Note: return numerator value, paste this in the Fraction.cpp file (replace old implementation)
+int Fraction::num() const {
+	return n;
+}
+
+// Note: return denominator value, paste this in the Fraction.cpp file (replace old implementation)
+int Fraction::den() const {
+	return d;
+}

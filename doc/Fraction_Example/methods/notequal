@@ -1,0 +1,4 @@
+// Note: implementation of the inequality comparison, paste this in the Fraction.cpp file (replace old implementation)
+bool Fraction::operator !=(const Fraction& rhs) const {
+	return !(*this == rhs);
+}
