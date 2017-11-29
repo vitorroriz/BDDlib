@@ -18,4 +18,9 @@ TEST (TrueTest, TrueID) {
     ASSERT_EQ (manager->True(), BDD_ID(1));
 }
 
+TEST (uniqueTableSizeTest, uniqueTableSize) {
+    Manager *manager = new Manager();
+    ASSERT_EQ (manager->uniqueTableSize(), 2);
+}
+
 #endif 
