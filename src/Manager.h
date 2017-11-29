@@ -47,9 +47,9 @@ namespace ClassProject {
 
             const BDD_ID &False() override;
 
-            /*virtual   bool isConstant(const BDD_ID f) = 0;
+            bool isConstant(const BDD_ID f) override;
 
-            virtual   bool isVariable(const BDD_ID x) = 0;
+            /*virtual   bool isVariable(const BDD_ID x) = 0;
 
             virtual   BDD_ID topVar(const BDD_ID f) = 0;
 
