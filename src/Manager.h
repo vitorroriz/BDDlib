@@ -59,7 +59,7 @@ namespace ClassProject {
 
             //virtual BDD_ID coFactorFalse(const BDD_ID f, BDD_ID x) = 0;
 
-            //virtual   BDD_ID coFactorTrue(const BDD_ID f) = 0;
+            BDD_ID coFactorTrue(const BDD_ID f) override;
 
             BDD_ID coFactorFalse(const BDD_ID f) override;
 
