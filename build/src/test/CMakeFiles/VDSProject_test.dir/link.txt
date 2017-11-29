@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11     CMakeFiles/VDSProject_test.dir/main_test.cpp.o  -o ../../VDSProject_test  -L/home/vitorroriz/vdsproject/src  -L/home/vitorroriz/vdsproject/src/test -rdynamic ../libManager.a -lgtest -lgtest_main -lpthread -Wl,-rpath,/home/vitorroriz/vdsproject/src:/home/vitorroriz/vdsproject/src/test 

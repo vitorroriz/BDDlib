@@ -1,9 +1,0 @@
-/home/vitorroriz/vdsproject/build/CMakeFiles/edit_cache.dir
-/home/vitorroriz/vdsproject/build/CMakeFiles/rebuild_cache.dir
-/home/vitorroriz/vdsproject/build/CMakeFiles/VDSProject.dir
-/home/vitorroriz/vdsproject/build/src/CMakeFiles/edit_cache.dir
-/home/vitorroriz/vdsproject/build/src/CMakeFiles/rebuild_cache.dir
-/home/vitorroriz/vdsproject/build/src/CMakeFiles/Manager.dir
-/home/vitorroriz/vdsproject/build/src/test/CMakeFiles/edit_cache.dir
-/home/vitorroriz/vdsproject/build/src/test/CMakeFiles/rebuild_cache.dir
-/home/vitorroriz/vdsproject/build/src/test/CMakeFiles/VDSProject_test.dir

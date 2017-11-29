@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11     CMakeFiles/VDSProject.dir/src/main.cpp.o  -o VDSProject  -L/home/vitorroriz/vdsproject/src  -L/home/vitorroriz/vdsproject/src/test -rdynamic src/libManager.a -Wl,-rpath,/home/vitorroriz/vdsproject/src:/home/vitorroriz/vdsproject/src/test 
