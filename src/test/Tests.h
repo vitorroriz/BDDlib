@@ -52,4 +52,16 @@ TEST (isConstantTest, NonLeafNode) {
     ASSERT_EQ (false, manager->isConstant(id));
 }
 
+TEST (isVariableTest, Variable) {
+    Manager *manager = new Manager();
+    BDD_ID id = manager->createVar("a");
+    ASSERT_EQ (true, manager->isVariable(id));
+}
+
+TEST (isVariableTest, LeafNode) {
+    Manager *manager = new Manager();
+    ASSERT_EQ (false, manager->isVariable(manager->True()));
+    ASSERT_EQ (false, manager->isVariable(manager->False()));
+}
+
 #endif 
