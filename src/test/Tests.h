@@ -255,4 +255,19 @@ TEST(or2Test, Function)
 
 }
 
+TEST(and2Test, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID trueId = manager->True();
+    BDD_ID falseId = manager->False();
+    BDD_ID a = manager->createVar("a");
+
+    ASSERT_EQ (falseId,manager->and2(falseId,falseId));
+    ASSERT_EQ (falseId,manager->and2(falseId,trueId));
+    ASSERT_EQ (falseId,manager->and2(trueId,falseId));
+    ASSERT_EQ (trueId,manager->and2(trueId,trueId));
+    ASSERT_EQ (a,manager->and2(a,trueId));
+    ASSERT_EQ (falseId,manager->and2(a,falseId));
+}
+
 #endif
