@@ -85,7 +85,7 @@ BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e)
     if(high == low)
         return high;
 
-    BDD_Node* node = new BDD_Node("f" + to_string(uniqueTableSize()),top_var,high,low,uniqueTableSize());
+    BDD_Node* node = new BDD_Node("f" + to_string(uniqueTableSize()-2),top_var,high,low,uniqueTableSize());
     auto it = unique_table.insert(node);
 
     if(it.second)

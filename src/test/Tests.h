@@ -330,6 +330,51 @@ TEST(getTopVarNameTest, Function)
     BDD_Node* nodeNegA = manager->getBDDNode(manager->neg(nodeA->id));
 
     ASSERT_EQ ("a",nodeA->label);
-    ASSERT_EQ ("f3",nodeNegA->label);
+    ASSERT_EQ ("f1",nodeNegA->label);
+}
+
+TEST(findNodesTest, LeafNode)
+{
+    Manager *manager = new Manager();
+    BDD_ID trueId = manager->True();
+    BDD_ID falseId = manager->False();
+    std::set<BDD_ID> nodesFound;
+    manager->findNodes(trueId,nodesFound);
+    manager->findNodes(falseId,nodesFound);
+    std::set<BDD_ID> nodes = {trueId,falseId};
+
+    ASSERT_EQ (nodes,nodesFound);
+}
+
+
+TEST(findNodesTest, Variable)
+{
+    Manager *manager = new Manager();
+    BDD_ID trueId = manager->True();
+    BDD_ID falseId = manager->False();
+    BDD_ID a = manager->createVar("a");
+    std::set<BDD_ID> nodesFound;
+    manager->findNodes(a,nodesFound);
+    std::set<BDD_ID> nodes = {a};
+
+    ASSERT_EQ (nodes,nodesFound);
+}
+
+TEST(findNodesTest, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID trueId = manager->True();
+    BDD_ID falseId = manager->False();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID c = manager->createVar("c");
+    BDD_ID d = manager->createVar("d");
+    BDD_ID f = manager->and2(manager->or2(a,b),
+                      manager->and2(c,d));
+    std::set<BDD_ID> nodesFound;
+    manager->findNodes(f,nodesFound);
+    std::set<BDD_ID> nodes = {f,manager->ite(b,manager->ite(c,d,falseId),falseId),manager->ite(c,d,falseId),d,trueId,falseId};
+
+    ASSERT_EQ (nodes,nodesFound);
 }
 #endif
