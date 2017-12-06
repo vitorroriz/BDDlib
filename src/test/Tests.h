@@ -322,4 +322,14 @@ TEST(nand2Test, Function)
     ASSERT_EQ (manager->neg(manager->and2(a,b)),manager->nand2(a,b));
 
 }
+
+TEST(getTopVarNameTest, Function)
+{
+    Manager *manager = new Manager();
+    BDD_Node* nodeA = manager->getBDDNode(manager->createVar("a"));
+    BDD_Node* nodeNegA = manager->getBDDNode(manager->neg(nodeA->id));
+
+    ASSERT_EQ ("a",nodeA->label);
+    ASSERT_EQ ("f3",nodeNegA->label);
+}
 #endif
