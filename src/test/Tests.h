@@ -92,6 +92,17 @@ TEST (coFactorFalsef, Variable) {
     ASSERT_EQ (manager->False(), manager->coFactorFalse(id));
 }
 
+TEST (topVarTest, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID c = manager->createVar("c");
+    BDD_ID f = manager->ite(a,b,c);
+
+    ASSERT_EQ (a, manager->getBDDNode(f)->top_var);
+}
+
 TEST (coFactorFalsefx, TerminalCase) {
     Manager *manager = new Manager();
     BDD_ID falseId = manager->False();
