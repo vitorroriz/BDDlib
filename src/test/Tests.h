@@ -225,4 +225,13 @@ TEST (coFactorTruefx, Function)
     ASSERT_EQ (f, manager->coFactorTrue(f,d));
 }
 
+TEST(negTest, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID trueId = manager->True();
+    BDD_ID falseId = manager->False();
+
+    ASSERT_EQ (falseId,manager->neg(trueId));
+    ASSERT_EQ (trueId,manager->neg(falseId));
+}
 #endif
