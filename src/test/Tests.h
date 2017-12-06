@@ -18,12 +18,12 @@ TEST (TrueTest, TrueID) {
     ASSERT_EQ (1, manager->True());
 }
 
-TEST (uniqueTableSizeTest, uniqueTableSize) {
+TEST (uniqueTableSizeTest, LeafNodes) {
     Manager *manager = new Manager();
     ASSERT_EQ (2, manager->uniqueTableSize());
 }
 
-TEST (createVarTest, uniqueTableSize) {
+TEST (uniqueTableSizeTest, Variable) {
     Manager *manager = new Manager();
     manager->createVar("a");
     ASSERT_EQ (3, manager->uniqueTableSize());
@@ -70,7 +70,6 @@ TEST (topVarTest, Variable) {
     ASSERT_EQ (id, manager->topVar(id));
 }
 
-//TODO TEST (topVarTest, NonVariable)
 
 TEST (coFactorFalsef, Variable) {
     Manager *manager = new Manager();
@@ -142,8 +141,6 @@ TEST(iteTest, Function) {
     ASSERT_EQ (f,manager->ite(a,f,f));
 }
 
-//TODO TEST (coFactorFalsef, Function)
-
 TEST (coFactorFalsef, Function)
 {
     Manager *manager = new Manager();
@@ -202,4 +199,4 @@ TEST (coFactorTruefx, Function)
     ASSERT_EQ (f, manager->coFactorTrue(f,d));
 }
 
-#endif 
+#endif
