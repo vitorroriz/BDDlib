@@ -76,7 +76,7 @@ namespace ClassProject {
 
             BDD_ID nor2(const BDD_ID a, const BDD_ID b) override;
 
-            //std::string getTopVarName(const BDD_ID &root) override;
+            std::string getTopVarName(const BDD_ID &root) override;
 
             //void findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root) override;
 

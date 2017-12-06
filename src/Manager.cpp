@@ -164,6 +164,11 @@ BDD_ID Manager::nand2(const BDD_ID a, const BDD_ID b)
     ite(a,neg(b),BDD_ID_TRUE);
 }
 
+std::string Manager::getTopVarName(const BDD_ID &root)
+{
+    return getBDDNode(root)->label;
+}
+
 BDD_Node* Manager::getBDDNode(BDD_ID id)
 {
     return pointers[id];
