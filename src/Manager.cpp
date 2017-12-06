@@ -61,9 +61,58 @@ BDD_ID  Manager::topVar(const BDD_ID f)
     return getBDDNode(f)->top_var;
 }
 
+BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e)
+{
+    BDD_ID top_var = topVar(i);
+
+    if(isConstant(i))
+    {
+        if(i == BDD_ID_FALSE)
+            return e;
+        return t;
+    }
+
+    if(isVariable(i) && t == BDD_ID_TRUE && t == BDD_ID_FALSE)
+        return i;
+
+    if(t == e)
+        return t;
+
+    BDD_ID high = ite(coFactorTrue(i), coFactorTrue(t,top_var), coFactorTrue(e,top_var));
+
+    BDD_ID low = ite(coFactorFalse(i), coFactorFalse(t,top_var), coFactorFalse(e,top_var));
+
+    if(high == low)
+        return high;
+
+    BDD_Node* node = new BDD_Node("f" + to_string(uniqueTableSize()),top_var,high,low,uniqueTableSize());
+    auto it = unique_table.insert(node);
+
+    if(it.second)
+    {
+        pointers.push_back(*(it.first));
+    }
+
+    return (*(it.first))->id;
+}
+
 BDD_ID Manager::coFactorFalse(const BDD_ID f)
 {
     return getBDDNode(f)->low;
+}
+
+BDD_ID Manager::coFactorFalse(const BDD_ID f, BDD_ID x)
+{
+    bool isTheSameVar = topVar(f) == x;
+    if(isConstant(f) || isConstant(x) || !isVariable(x) || (!isTheSameVar && isVariable(f)))
+        return f;
+    if(isTheSameVar)
+        return getBDDNode(f)->low;
+
+    BDD_ID high = coFactorFalse(getBDDNode(f)->high,x);
+    BDD_ID low = coFactorFalse(getBDDNode(f)->low,x);
+
+    return ite(topVar(f),high,low);
 }
 
 BDD_ID Manager::coFactorTrue(const BDD_ID f)
@@ -71,9 +120,21 @@ BDD_ID Manager::coFactorTrue(const BDD_ID f)
     return getBDDNode(f)->high;
 }
 
+BDD_ID Manager::coFactorTrue(const BDD_ID f, BDD_ID x)
+{
+    bool isTheSameVar = topVar(f) == x;
+    if(isConstant(f) || isConstant(x) || !isVariable(x) || (!isTheSameVar && isVariable(f)))
+        return f;
+    if(isTheSameVar)
+        return getBDDNode(f)->high;
+
+    BDD_ID high = coFactorTrue(getBDDNode(f)->high,x);
+    BDD_ID low = coFactorTrue(getBDDNode(f)->low,x);
+
+    return ite(topVar(f),high,low);
+}
+
 BDD_Node* Manager::getBDDNode(BDD_ID id)
 {
     return pointers[id];
 }
-
-

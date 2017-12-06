@@ -28,8 +28,9 @@ namespace ClassProject {
 
     typedef struct BDDComparer {
         bool operator ()(const BDD_Node* node, const BDD_Node* anotherNode) const {
-            return (node->top_var != anotherNode->top_var || node->high != anotherNode->high || node->low != anotherNode->low);
+            return (node->top_var < anotherNode->top_var || node->high < anotherNode->high || node->low < anotherNode->low);
         }
+
     } BDDComparer;
 
     class Manager : ManagerInterface
@@ -41,7 +42,7 @@ namespace ClassProject {
        public:
             Manager();
 
-            BDD_ID createVar(const std::string &label);
+            BDD_ID createVar(const std::string &label) override;
 
             const BDD_ID &True() override;
 
@@ -53,43 +54,43 @@ namespace ClassProject {
 
             BDD_ID topVar(const BDD_ID f) override;
 
-            //virtual   BDD_ID ite(const BDD_ID i, const BDD_ID t, const BDD_ID e) = 0;
+            BDD_ID ite(const BDD_ID i, const BDD_ID t, const BDD_ID e) override;
 
-            //virtual   BDD_ID coFactorTrue(const BDD_ID f, BDD_ID x) = 0;
+            BDD_ID coFactorTrue(const BDD_ID f, BDD_ID x) override;
 
-            //virtual BDD_ID coFactorFalse(const BDD_ID f, BDD_ID x) = 0;
+            BDD_ID coFactorFalse(const BDD_ID f, BDD_ID x) override;
 
             BDD_ID coFactorTrue(const BDD_ID f) override;
 
             BDD_ID coFactorFalse(const BDD_ID f) override;
 
-             /*virtual   BDD_ID and2(const BDD_ID a, const BDD_ID b) = 0;
+            //BDD_ID and2(const BDD_ID a, const BDD_ID b) override;
 
-            virtual   BDD_ID or2(const BDD_ID a, const BDD_ID b) = 0;
+            //BDD_ID or2(const BDD_ID a, const BDD_ID b) override;
 
-            virtual   BDD_ID xor2(const BDD_ID a, const BDD_ID b) = 0;
+            //BDD_ID xor2(const BDD_ID a, const BDD_ID b) override;
 
-            virtual   BDD_ID neg(const BDD_ID a) = 0;
+            //BDD_ID neg(const BDD_ID a) override;
 
-            virtual   BDD_ID nand2(const BDD_ID a, const BDD_ID b) = 0;
+            //BDD_ID nand2(const BDD_ID a, const BDD_ID b) override;
 
-            virtual   BDD_ID nor2(const BDD_ID a, const BDD_ID b) = 0;
+            //BDD_ID nor2(const BDD_ID a, const BDD_ID b) override;
 
-            virtual   std::string getTopVarName(const BDD_ID &root) = 0;
+            //std::string getTopVarName(const BDD_ID &root) override;
 
-            virtual   void findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root) = 0;
+            //void findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root) override;
 
-            virtual   void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root) =0 ;
-*/
+            //void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root) override;
+
             size_t uniqueTableSize() override;
 
             BDD_Node* getBDDNode(BDD_ID id);
 
+            //void printUniqueTable();
 
+            //bool evaluateBDD(BDD_ID id, std::vector<bool>);
     };
 
 }
 
 #endif
-
-
