@@ -45,7 +45,7 @@ namespace ClassProject {
 
         virtual   BDD_ID neg(const BDD_ID a) = 0;
 
-        //virtual   BDD_ID nand2(const BDD_ID a, const BDD_ID b) = 0;
+        virtual   BDD_ID nand2(const BDD_ID a, const BDD_ID b) = 0;
 
         virtual   BDD_ID nor2(const BDD_ID a, const BDD_ID b) = 0;
         /*
