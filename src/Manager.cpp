@@ -134,6 +134,11 @@ BDD_ID Manager::coFactorTrue(const BDD_ID f, BDD_ID x)
     return ite(topVar(f),high,low);
 }
 
+BDD_ID Manager::neg(const BDD_ID a)
+{
+    ite(a,BDD_ID_FALSE,BDD_ID_TRUE);
+}
+
 BDD_Node* Manager::getBDDNode(BDD_ID id)
 {
     return pointers[id];
