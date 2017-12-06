@@ -231,11 +231,11 @@ TEST(negTest, Function)
     BDD_ID trueId = manager->True();
     BDD_ID falseId = manager->False();
     BDD_ID a = manager->createVar("a");
-    BDD_ID a_neg = manager->neg(a);
+    BDD_ID nega = manager->neg(a);
 
     ASSERT_EQ (falseId,manager->neg(trueId));
     ASSERT_EQ (trueId,manager->neg(falseId));
-    ASSERT_EQ (a, manager->neg(a_neg));
+    ASSERT_EQ (a, manager->neg(nega));
 
 }
 
@@ -270,4 +270,19 @@ TEST(and2Test, Function)
     ASSERT_EQ (falseId,manager->and2(a,falseId));
 }
 
+TEST(xor2Test, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID trueId = manager->True();
+    BDD_ID falseId = manager->False();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID nega = manager->neg(a);
+
+    ASSERT_EQ (falseId,manager->xor2(falseId,falseId));
+    ASSERT_EQ (trueId,manager->xor2(falseId,trueId));
+    ASSERT_EQ (trueId,manager->xor2(trueId,falseId));
+    ASSERT_EQ (falseId,manager->xor2(trueId,trueId));
+    ASSERT_EQ (nega,manager->xor2(a,trueId));
+    ASSERT_EQ (a,manager->xor2(a,falseId));
+}
 #endif
