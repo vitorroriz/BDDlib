@@ -37,10 +37,10 @@ namespace ClassProject {
 
         virtual   BDD_ID coFactorFalse(const BDD_ID f) = 0;
 
-        /*virtual   BDD_ID and2(const BDD_ID a, const BDD_ID b) = 0;
+        //virtual   BDD_ID and2(const BDD_ID a, const BDD_ID b) = 0;
 
         virtual   BDD_ID or2(const BDD_ID a, const BDD_ID b) = 0;
-
+        /*
         virtual   BDD_ID xor2(const BDD_ID a, const BDD_ID b) = 0;
         */
         virtual   BDD_ID neg(const BDD_ID a) = 0;

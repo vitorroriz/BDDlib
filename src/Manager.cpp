@@ -139,6 +139,11 @@ BDD_ID Manager::neg(const BDD_ID a)
     ite(a,BDD_ID_FALSE,BDD_ID_TRUE);
 }
 
+BDD_ID Manager::or2(const BDD_ID a, const BDD_ID b)
+{
+    return ite(a,BDD_ID_TRUE,b);
+}
+
 BDD_Node* Manager::getBDDNode(BDD_ID id)
 {
     return pointers[id];
