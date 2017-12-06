@@ -29,6 +29,21 @@ TEST (uniqueTableSizeTest, Variable) {
     ASSERT_EQ (3, manager->uniqueTableSize());
 }
 
+TEST (uniqueTableSizeTest, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID c = manager->createVar("c");
+    BDD_ID f = manager->ite(a,b,c);
+    size_t size1 = manager->uniqueTableSize();
+    manager->ite(a,b,c);
+    size_t size2 = manager->uniqueTableSize();
+
+    ASSERT_EQ (6, size1);
+    ASSERT_EQ (size1,size2);
+}
+
 TEST (createVarTest, varAttributes) {
     Manager *manager = new Manager();
     BDD_ID id = manager->createVar("a");
