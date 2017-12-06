@@ -6,6 +6,7 @@
 #define PROJECT_MANAGERINTERFACE_H
 
 #include <string>
+#include <set>
 
 namespace ClassProject {
 

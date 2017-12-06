@@ -355,7 +355,7 @@ TEST(findNodesTest, Variable)
     BDD_ID a = manager->createVar("a");
     std::set<BDD_ID> nodesFound;
     manager->findNodes(a,nodesFound);
-    std::set<BDD_ID> nodes = {a};
+    std::set<BDD_ID> nodes = {a, trueId, falseId};
 
     ASSERT_EQ (nodes,nodesFound);
 }
