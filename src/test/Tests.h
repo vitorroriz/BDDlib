@@ -285,4 +285,22 @@ TEST(xor2Test, Function)
     ASSERT_EQ (nega,manager->xor2(a,trueId));
     ASSERT_EQ (a,manager->xor2(a,falseId));
 }
+
+TEST(nor2Test, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID trueId = manager->True();
+    BDD_ID falseId = manager->False();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID nega = manager->neg(a);
+
+    ASSERT_EQ (trueId,manager->nor2(falseId,falseId));
+    ASSERT_EQ (falseId,manager->nor2(falseId,trueId));
+    ASSERT_EQ (falseId,manager->nor2(trueId,falseId));
+    ASSERT_EQ (falseId,manager->nor2(trueId,trueId));
+    ASSERT_EQ (falseId,manager->nor2(a,trueId));
+    ASSERT_EQ (nega,manager->nor2(a,falseId));
+    ASSERT_EQ (manager->neg(manager->or2(a,b)),manager->nor2(a,b));
+}
 #endif
