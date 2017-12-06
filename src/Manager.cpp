@@ -169,6 +169,16 @@ std::string Manager::getTopVarName(const BDD_ID &root)
     return getBDDNode(root)->label;
 }
 
+void Manager::findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root)
+{
+    if(!isConstant(root))
+    {
+        findNodes(coFactorFalse(root), nodes_of_root);
+        findNodes(coFactorTrue(root), nodes_of_root);
+    }
+    nodes_of_root.insert(root);
+}
+
 BDD_Node* Manager::getBDDNode(BDD_ID id)
 {
     return pointers[id];
