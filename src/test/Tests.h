@@ -303,4 +303,23 @@ TEST(nor2Test, Function)
     ASSERT_EQ (nega,manager->nor2(a,falseId));
     ASSERT_EQ (manager->neg(manager->or2(a,b)),manager->nor2(a,b));
 }
+
+TEST(nand2Test, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID trueId = manager->True();
+    BDD_ID falseId = manager->False();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID nega = manager->neg(a);
+
+    ASSERT_EQ (trueId,manager->nand2(falseId,falseId));
+    ASSERT_EQ (trueId,manager->nand2(falseId,trueId));
+    ASSERT_EQ (trueId,manager->nand2(trueId,falseId));
+    ASSERT_EQ (falseId,manager->nand2(trueId,trueId));
+    ASSERT_EQ (nega,manager->nand2(a,trueId));
+    ASSERT_EQ (trueId,manager->nand2(a,falseId));
+    ASSERT_EQ (manager->neg(manager->and2(a,b)),manager->nand2(a,b));
+
+}
 #endif
