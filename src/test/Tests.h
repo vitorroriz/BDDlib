@@ -78,7 +78,19 @@ TEST (coFactorFalsef, Variable) {
     ASSERT_EQ (manager->False(), manager->coFactorFalse(id));
 }
 
-//TODO TEST (coFactorFalsef, Function)
+TEST (coFactorFalsefx, TerminalCase) {
+    Manager *manager = new Manager();
+    BDD_ID falseId = manager->False();
+    BDD_ID trueId = manager->True();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    ASSERT_EQ (falseId, manager->coFactorFalse(falseId,a));
+    ASSERT_EQ (a, manager->coFactorFalse(a,falseId));
+    ASSERT_EQ (trueId, manager->coFactorFalse(trueId,a));
+    ASSERT_EQ (a, manager->coFactorFalse(a,trueId));
+    ASSERT_EQ (falseId, manager->coFactorFalse(a,a));
+    ASSERT_EQ (a, manager->coFactorFalse(a,b));
+}
 
 TEST (coFactorTruef, Variable) {
     Manager *manager = new Manager();
@@ -86,29 +98,108 @@ TEST (coFactorTruef, Variable) {
     ASSERT_EQ (manager->True(), manager->coFactorTrue(id));
 }
 
-//TODO TEST (coFactorTruef, Function)
-
-TEST (iteTest, LeafNode) {
+TEST (coFactorTruefx, TerminalCase) {
     Manager *manager = new Manager();
     BDD_ID falseId = manager->False();
     BDD_ID trueId = manager->True();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    ASSERT_EQ (falseId, manager->coFactorTrue(falseId,a));
+    ASSERT_EQ (a, manager->coFactorTrue(a,falseId));
+    ASSERT_EQ (trueId, manager->coFactorTrue(trueId,a));
+    ASSERT_EQ (a, manager->coFactorTrue(a,trueId));
+    ASSERT_EQ (trueId, manager->coFactorTrue(a,a));
+    ASSERT_EQ (a, manager->coFactorTrue(a,b));
+}
+
+TEST (iteTest, TerminalCase) {
+    Manager *manager = new Manager();
+    BDD_ID falseId = manager->False();
+    BDD_ID trueId = manager->True();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+
     ASSERT_EQ (falseId, manager->ite(falseId,falseId,falseId));
     ASSERT_EQ (trueId, manager->ite(falseId,falseId,trueId));
     ASSERT_EQ (falseId, manager->ite(trueId,falseId,falseId));
     ASSERT_EQ (trueId, manager->ite(trueId,trueId,trueId));
-}
-
-TEST (iteTest, VarNode) {
-    Manager *manager = new Manager();
-    BDD_ID a = manager->createVar("a");
-    BDD_ID falseId = manager->False();
-    BDD_ID trueId = manager->True();
     ASSERT_EQ (a, manager->ite(a,trueId,falseId));
     ASSERT_EQ (a, manager->ite(falseId,trueId,a));
     ASSERT_EQ (a, manager->ite(trueId,a,falseId));
+    ASSERT_EQ (a,manager->ite(b,a,a));
+    ASSERT_EQ (falseId,manager->ite(b,falseId,falseId));
+    ASSERT_EQ (trueId,manager->ite(b,trueId,trueId));
 }
 
-//TODO TEST (iteTest, FunctionNode)
+TEST(iteTest, Function) {
+    Manager *manager = new Manager();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID c = manager->createVar("c");
+    BDD_ID f = manager->ite(a,b,c);
 
+    ASSERT_EQ (f,manager->ite(a,b,c));
+    ASSERT_EQ (f,manager->ite(a,f,f));
+}
+
+//TODO TEST (coFactorFalsef, Function)
+
+TEST (coFactorFalsef, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID c = manager->createVar("c");
+    BDD_ID f = manager->ite(a,b,c);
+
+    ASSERT_EQ (c, manager->coFactorFalse(f));
+}
+
+//TODO TEST (coFactorTruef, Function)
+
+TEST (coFactorTruef, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID c = manager->createVar("c");
+    BDD_ID f = manager->ite(a,b,c);
+
+    ASSERT_EQ (b, manager->coFactorTrue(f));
+}
+
+//TODO TEST (coFactorFalsefx, Function)
+
+TEST (coFactorFalsefx, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID c = manager->createVar("c");
+    BDD_ID d = manager->createVar("d");
+    BDD_ID f = manager->ite(a,b,c);
+
+    ASSERT_EQ (c,manager->coFactorFalse(f,a));
+    ASSERT_EQ (manager->ite(a,0,c),manager->coFactorFalse(f,b));
+    ASSERT_EQ (manager->ite(a,b,0),manager->coFactorFalse(f,c));
+    ASSERT_EQ (f, manager->coFactorFalse(f,d));
+}
+
+//TODO TEST (coFactorTruefx, Function)
+
+TEST (coFactorTruefx, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID c = manager->createVar("c");
+    BDD_ID d = manager->createVar("d");
+    BDD_ID f = manager->ite(a,b,c);
+
+    ASSERT_EQ (b,manager->coFactorTrue(f,a));
+    ASSERT_EQ (manager->ite(a,1,c),manager->coFactorTrue(f,b));
+    ASSERT_EQ (manager->ite(a,b,1),manager->coFactorTrue(f,c));
+    ASSERT_EQ (f, manager->coFactorTrue(f,d));
+}
 
 #endif 
