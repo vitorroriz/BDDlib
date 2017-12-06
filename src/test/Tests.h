@@ -238,4 +238,21 @@ TEST(negTest, Function)
     ASSERT_EQ (a, manager->neg(a_neg));
 
 }
+
+TEST(or2Test, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID trueId = manager->True();
+    BDD_ID falseId = manager->False();
+    BDD_ID a = manager->createVar("a");
+
+    ASSERT_EQ (falseId,manager->or2(falseId,falseId));
+    ASSERT_EQ (trueId,manager->or2(falseId,trueId));
+    ASSERT_EQ (trueId,manager->or2(trueId,falseId));
+    ASSERT_EQ (trueId,manager->or2(trueId,trueId));
+    ASSERT_EQ (trueId,manager->or2(a,trueId));
+    ASSERT_EQ (a,manager->or2(a,falseId));
+
+}
+
 #endif
