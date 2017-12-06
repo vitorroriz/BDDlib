@@ -149,6 +149,11 @@ BDD_ID Manager::and2(const BDD_ID a, const BDD_ID b)
     return ite(a,b,BDD_ID_FALSE);
 }
 
+BDD_ID Manager::xor2(const BDD_ID a, const BDD_ID b)
+{
+    return ite(a,neg(b),b);
+}
+
 BDD_Node* Manager::getBDDNode(BDD_ID id)
 {
     return pointers[id];
