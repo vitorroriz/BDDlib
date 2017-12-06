@@ -64,7 +64,7 @@ namespace ClassProject {
 
             BDD_ID coFactorFalse(const BDD_ID f) override;
 
-            //BDD_ID and2(const BDD_ID a, const BDD_ID b) override;
+            BDD_ID and2(const BDD_ID a, const BDD_ID b) override;
 
             BDD_ID or2(const BDD_ID a, const BDD_ID b) override;
 
