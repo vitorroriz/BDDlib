@@ -377,4 +377,48 @@ TEST(findNodesTest, Function)
 
     ASSERT_EQ (nodes,nodesFound);
 }
+
+TEST(findVarsTest, LeafNode)
+{
+    Manager *manager = new Manager();
+    BDD_ID trueId = manager->True();
+    BDD_ID falseId = manager->False();
+    std::set<BDD_ID> varsFound;
+    manager->findVars(trueId,varsFound);
+    manager->findVars(falseId,varsFound);
+    std::set<BDD_ID> vars = {};
+
+    ASSERT_EQ (vars,varsFound);
+}
+
+TEST(findVarsTest, Variable)
+{
+    Manager *manager = new Manager();
+    BDD_ID trueId = manager->True();
+    BDD_ID falseId = manager->False();
+    BDD_ID a = manager->createVar("a");
+    std::set<BDD_ID> varsFound;
+    manager->findVars(a,varsFound);
+    std::set<BDD_ID> vars = {a};
+
+    ASSERT_EQ (vars,varsFound);
+}
+
+TEST(findVarsTest, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID trueId = manager->True();
+    BDD_ID falseId = manager->False();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID c = manager->createVar("c");
+    BDD_ID d = manager->createVar("d");
+    BDD_ID f = manager->or2(manager->and2(a,b),
+                      manager->and2(c,d));
+    std::set<BDD_ID> varsFound;
+    manager->findVars(f,varsFound);
+    std::set<BDD_ID> vars = {a,b,c,d};
+
+    ASSERT_EQ (vars,varsFound);
+}
 #endif
