@@ -51,7 +51,7 @@
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classClassProject_1_1Manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ClassProject::Manager Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">ClassProject::Manager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -66,82 +66,85 @@ Inheritance diagram for ClassProject::Manager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a97ae19f8f11f5ed7ebe6caaa826f7e46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97ae19f8f11f5ed7ebe6caaa826f7e46"></a>
-virtual BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>createVar</b> (const std::string &amp;label)</td></tr>
-<tr class="separator:a97ae19f8f11f5ed7ebe6caaa826f7e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3eac0b08002740ba226316c95dbff7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3eac0b08002740ba226316c95dbff7e"></a>
-virtual const BDD_ID &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>True</b> ()=0</td></tr>
-<tr class="separator:ab3eac0b08002740ba226316c95dbff7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92a90137d54f6d96bb04087710929238"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92a90137d54f6d96bb04087710929238"></a>
-virtual const BDD_ID &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>False</b> ()=0</td></tr>
-<tr class="separator:a92a90137d54f6d96bb04087710929238"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add7cfa29b1325c264dc7c1be2ce8979f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add7cfa29b1325c264dc7c1be2ce8979f"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isConstant</b> (const BDD_ID f)=0</td></tr>
-<tr class="separator:add7cfa29b1325c264dc7c1be2ce8979f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f857f43e7d21d539428d46a83b768b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f857f43e7d21d539428d46a83b768b9"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isVariable</b> (const BDD_ID x)=0</td></tr>
-<tr class="separator:a5f857f43e7d21d539428d46a83b768b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a068688caab54859eab346ba70fc1651b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a068688caab54859eab346ba70fc1651b"></a>
-virtual BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>topVar</b> (const BDD_ID f)=0</td></tr>
-<tr class="separator:a068688caab54859eab346ba70fc1651b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4694c8bc70fac1501005bfd767206246"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4694c8bc70fac1501005bfd767206246"></a>
-virtual BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>ite</b> (const BDD_ID i, const BDD_ID t, const BDD_ID e)=0</td></tr>
-<tr class="separator:a4694c8bc70fac1501005bfd767206246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0abf6b5a273bf49b2f7fb1c371a62b91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0abf6b5a273bf49b2f7fb1c371a62b91"></a>
-virtual BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>coFactorTrue</b> (const BDD_ID f, BDD_ID x)=0</td></tr>
-<tr class="separator:a0abf6b5a273bf49b2f7fb1c371a62b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49aa66978b764a8929c48d29d0aa7d6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49aa66978b764a8929c48d29d0aa7d6f"></a>
-virtual BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>coFactorFalse</b> (const BDD_ID f, BDD_ID x)=0</td></tr>
-<tr class="separator:a49aa66978b764a8929c48d29d0aa7d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae515a5798d7211188a2529ee7c74e88f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae515a5798d7211188a2529ee7c74e88f"></a>
-virtual BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>coFactorTrue</b> (const BDD_ID f)=0</td></tr>
-<tr class="separator:ae515a5798d7211188a2529ee7c74e88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a248a5a627f59a767184538ea76564cd0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a248a5a627f59a767184538ea76564cd0"></a>
-virtual BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>coFactorFalse</b> (const BDD_ID f)=0</td></tr>
-<tr class="separator:a248a5a627f59a767184538ea76564cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79cdf4a48c2eb03af29af3f9c29e77d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79cdf4a48c2eb03af29af3f9c29e77d4"></a>
-virtual BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>and2</b> (const BDD_ID a, const BDD_ID b)=0</td></tr>
-<tr class="separator:a79cdf4a48c2eb03af29af3f9c29e77d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab450ea2f3fbf870d349e77ac7ca25583"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab450ea2f3fbf870d349e77ac7ca25583"></a>
-virtual BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>or2</b> (const BDD_ID a, const BDD_ID b)=0</td></tr>
-<tr class="separator:ab450ea2f3fbf870d349e77ac7ca25583"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c28cecaf946c8f9a5c31c9229af5c5b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c28cecaf946c8f9a5c31c9229af5c5b"></a>
-virtual BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>xor2</b> (const BDD_ID a, const BDD_ID b)=0</td></tr>
-<tr class="separator:a5c28cecaf946c8f9a5c31c9229af5c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff5c65b5132c6232dd46b444beda843b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff5c65b5132c6232dd46b444beda843b"></a>
-virtual BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>neg</b> (const BDD_ID a)=0</td></tr>
-<tr class="separator:aff5c65b5132c6232dd46b444beda843b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32fb05421aee2ac2c363ade2c4ee96b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32fb05421aee2ac2c363ade2c4ee96b2"></a>
-virtual BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>nand2</b> (const BDD_ID a, const BDD_ID b)=0</td></tr>
-<tr class="separator:a32fb05421aee2ac2c363ade2c4ee96b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a692ea10092ffab1681a0dacdeecae7db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a692ea10092ffab1681a0dacdeecae7db"></a>
-virtual BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>nor2</b> (const BDD_ID a, const BDD_ID b)=0</td></tr>
-<tr class="separator:a692ea10092ffab1681a0dacdeecae7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae27ed8a7834023b7f7f5bb89418bb854"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae27ed8a7834023b7f7f5bb89418bb854"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getTopVarName</b> (const BDD_ID &amp;root)=0</td></tr>
-<tr class="separator:ae27ed8a7834023b7f7f5bb89418bb854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5197bad6c3e175f3dd37d9f27c8c3012"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5197bad6c3e175f3dd37d9f27c8c3012"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>findNodes</b> (const BDD_ID &amp;root, std::set&lt; BDD_ID &gt; &amp;nodes_of_root)=0</td></tr>
-<tr class="separator:a5197bad6c3e175f3dd37d9f27c8c3012"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a336766e1d335bf4d52fe36c64ac8d953"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a336766e1d335bf4d52fe36c64ac8d953"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>findVars</b> (const BDD_ID &amp;root, std::set&lt; BDD_ID &gt; &amp;vars_of_root)=0</td></tr>
-<tr class="separator:a336766e1d335bf4d52fe36c64ac8d953"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31bcf025c3f0be7410b4d537fcc58aa4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31bcf025c3f0be7410b4d537fcc58aa4"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>uniqueTableSize</b> ()=0</td></tr>
-<tr class="separator:a31bcf025c3f0be7410b4d537fcc58aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3fe08b0b002032a13a5ff9d05f39cfd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3fe08b0b002032a13a5ff9d05f39cfd"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>createVar</b> (const std::string &amp;label) override</td></tr>
+<tr class="separator:aa3fe08b0b002032a13a5ff9d05f39cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7229b49af4aebfd32af558a18e17e243"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7229b49af4aebfd32af558a18e17e243"></a>
+const BDD_ID &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>True</b> () override</td></tr>
+<tr class="separator:a7229b49af4aebfd32af558a18e17e243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a699638a290747c865312b4c130260a06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a699638a290747c865312b4c130260a06"></a>
+const BDD_ID &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>False</b> () override</td></tr>
+<tr class="separator:a699638a290747c865312b4c130260a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13edef310f5e0ea718619151a7be451a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13edef310f5e0ea718619151a7be451a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isConstant</b> (const BDD_ID f) override</td></tr>
+<tr class="separator:a13edef310f5e0ea718619151a7be451a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c7144dc3c74e39dfb50a053da626a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84c7144dc3c74e39dfb50a053da626a0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isVariable</b> (const BDD_ID x) override</td></tr>
+<tr class="separator:a84c7144dc3c74e39dfb50a053da626a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07c655db284e0f8c169563adbed8801b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07c655db284e0f8c169563adbed8801b"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>topVar</b> (const BDD_ID f) override</td></tr>
+<tr class="separator:a07c655db284e0f8c169563adbed8801b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a615943b56ed99f812d4117ebb5bbc455"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a615943b56ed99f812d4117ebb5bbc455"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>ite</b> (const BDD_ID i, const BDD_ID t, const BDD_ID e) override</td></tr>
+<tr class="separator:a615943b56ed99f812d4117ebb5bbc455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae58b05ca4ddd764390db56a1e22e7b07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae58b05ca4ddd764390db56a1e22e7b07"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>coFactorTrue</b> (const BDD_ID f, BDD_ID x) override</td></tr>
+<tr class="separator:ae58b05ca4ddd764390db56a1e22e7b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91b0f680c53a9813e11f590f99c21264"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91b0f680c53a9813e11f590f99c21264"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>coFactorFalse</b> (const BDD_ID f, BDD_ID x) override</td></tr>
+<tr class="separator:a91b0f680c53a9813e11f590f99c21264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc6417257171d6032a7dee6ea2ecd8d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc6417257171d6032a7dee6ea2ecd8d3"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>coFactorTrue</b> (const BDD_ID f) override</td></tr>
+<tr class="separator:abc6417257171d6032a7dee6ea2ecd8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9621e396f35aebfefa623a5c67e32a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9621e396f35aebfefa623a5c67e32a1"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>coFactorFalse</b> (const BDD_ID f) override</td></tr>
+<tr class="separator:ac9621e396f35aebfefa623a5c67e32a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75bd703f518ab88006bb2b493569ba08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75bd703f518ab88006bb2b493569ba08"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>and2</b> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="separator:a75bd703f518ab88006bb2b493569ba08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b0f8f45f547343dd165357900f155d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b0f8f45f547343dd165357900f155d0"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>or2</b> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="separator:a0b0f8f45f547343dd165357900f155d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a210d71defa6813536c7c4e4007bdd67e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a210d71defa6813536c7c4e4007bdd67e"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>xor2</b> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="separator:a210d71defa6813536c7c4e4007bdd67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c83a83001023096dd68183f40ee80b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c83a83001023096dd68183f40ee80b3"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>neg</b> (const BDD_ID a) override</td></tr>
+<tr class="separator:a6c83a83001023096dd68183f40ee80b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94abdd8d633d6e52a052838305f97f36"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94abdd8d633d6e52a052838305f97f36"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>nand2</b> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="separator:a94abdd8d633d6e52a052838305f97f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3271fba879ca737e9566c079629841c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3271fba879ca737e9566c079629841c5"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>nor2</b> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="separator:a3271fba879ca737e9566c079629841c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7238da7832b931611dbfd273800360e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7238da7832b931611dbfd273800360e2"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getTopVarName</b> (const BDD_ID &amp;root) override</td></tr>
+<tr class="separator:a7238da7832b931611dbfd273800360e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d465fdff670b0bd9ef4a35ab9611f25"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d465fdff670b0bd9ef4a35ab9611f25"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>findNodes</b> (const BDD_ID &amp;root, std::set&lt; BDD_ID &gt; &amp;nodes_of_root) override</td></tr>
+<tr class="separator:a9d465fdff670b0bd9ef4a35ab9611f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a759513c0bb7447bfb05a82a818ab22eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a759513c0bb7447bfb05a82a818ab22eb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>findVars</b> (const BDD_ID &amp;root, std::set&lt; BDD_ID &gt; &amp;vars_of_root) override</td></tr>
+<tr class="separator:a759513c0bb7447bfb05a82a818ab22eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b54ce30834a6044fc9eb8e85550c5a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b54ce30834a6044fc9eb8e85550c5a8"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>uniqueTableSize</b> () override</td></tr>
+<tr class="separator:a0b54ce30834a6044fc9eb8e85550c5a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4669617591b7c3d9e36620a547e282"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f4669617591b7c3d9e36620a547e282"></a>
+<a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getBDDNode</b> (BDD_ID id)</td></tr>
+<tr class="separator:a1f4669617591b7c3d9e36620a547e282"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a19a5b01b92811f6e218265a223ae4168"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19a5b01b92811f6e218265a223ae4168"></a>
-std::map&lt; std::size_t, <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ID_Table</b></td></tr>
-<tr class="separator:a19a5b01b92811f6e218265a223ae4168"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af32bdc663dfcb5d1b434dd0d7f990161"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af32bdc663dfcb5d1b434dd0d7f990161"></a>
-std::vector&lt; const <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ID_Nodes</b></td></tr>
-<tr class="separator:af32bdc663dfcb5d1b434dd0d7f990161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74c6fce8db0937f9ddbc0cedd99e5daf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74c6fce8db0937f9ddbc0cedd99e5daf"></a>
+std::set&lt; <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> *, <a class="el" href="structClassProject_1_1BDDComparer.html">BDDComparer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>unique_table</b></td></tr>
+<tr class="separator:a74c6fce8db0937f9ddbc0cedd99e5daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a829538aaa985c76de340d8f31bbbab80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a829538aaa985c76de340d8f31bbbab80"></a>
+std::vector&lt; <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pointers</b></td></tr>
+<tr class="separator:a829538aaa985c76de340d8f31bbbab80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/vitorroriz/vdsproject/src/<a class="el" href="Manager_8h_source.html">Manager.h</a></li>
-<li>/home/vitorroriz/vdsproject/src/Manager.cpp</li>
+<li>/home/vitorroriz/vds-final/vdsproject/src/<a class="el" href="Manager_8h_source.html">Manager.h</a></li>
+<li>/home/vitorroriz/vds-final/vdsproject/src/Manager.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
