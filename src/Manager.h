@@ -80,15 +80,13 @@ namespace ClassProject {
 
             void findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root) override;
 
-            //void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root) override;
+            void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root) override;
 
             size_t uniqueTableSize() override;
 
             BDD_Node* getBDDNode(BDD_ID id);
 
             //void printUniqueTable();
-
-            //bool evaluateBDD(BDD_ID id, std::vector<bool>);
     };
 
 }
