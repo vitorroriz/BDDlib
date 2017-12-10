@@ -12,8 +12,6 @@ Manager::Manager()
         BDD_Node* trueNode = new BDD_Node("TRUE", BDD_ID_TRUE, BDD_ID_TRUE, BDD_ID_TRUE, BDD_ID_TRUE);
         unique_table.insert(trueNode);
         pointers.push_back(trueNode);
-
-        std::cout << "Manager obj created" << std::endl;
 }
 
 const BDD_ID& Manager::False()
