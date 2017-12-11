@@ -26,8 +26,6 @@ Manager::Manager(){
         /*Insert the new node into the uniqueTable*/
 	unique_table.insert(trueNode);
         pointers.push_back(trueNode);
-
-        std::cout << "Manager obj created" << std::endl;
 }
 
 //! Function to return the id of the FALSE leaf node in the Binary Tree.
