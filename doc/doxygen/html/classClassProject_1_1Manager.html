@@ -38,6 +38,7 @@
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 <div id="nav-path" class="navpath">
@@ -48,12 +49,16 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classClassProject_1_1Manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ClassProject::Manager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classClassProject_1_1Manager.html" title="Manager Class. ">Manager</a> Class.  
+ <a href="classClassProject_1_1Manager.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Manager_8h_source.html">Manager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ClassProject::Manager:</div>
 <div class="dyncontent">
@@ -66,85 +71,1029 @@ Inheritance diagram for ClassProject::Manager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa3fe08b0b002032a13a5ff9d05f39cfd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3fe08b0b002032a13a5ff9d05f39cfd"></a>
-BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>createVar</b> (const std::string &amp;label) override</td></tr>
+<tr class="memitem:a1658ff9f18e38ccd9cb8b0b371b9c20b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a1658ff9f18e38ccd9cb8b0b371b9c20b">Manager</a> ()</td></tr>
+<tr class="memdesc:a1658ff9f18e38ccd9cb8b0b371b9c20b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classClassProject_1_1Manager.html" title="Manager Class. ">Manager</a> Class.  <a href="#a1658ff9f18e38ccd9cb8b0b371b9c20b">More...</a><br /></td></tr>
+<tr class="separator:a1658ff9f18e38ccd9cb8b0b371b9c20b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3fe08b0b002032a13a5ff9d05f39cfd"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#aa3fe08b0b002032a13a5ff9d05f39cfd">createVar</a> (const std::string &amp;label) override</td></tr>
+<tr class="memdesc:aa3fe08b0b002032a13a5ff9d05f39cfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to create a new Variable.  <a href="#aa3fe08b0b002032a13a5ff9d05f39cfd">More...</a><br /></td></tr>
 <tr class="separator:aa3fe08b0b002032a13a5ff9d05f39cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7229b49af4aebfd32af558a18e17e243"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7229b49af4aebfd32af558a18e17e243"></a>
-const BDD_ID &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>True</b> () override</td></tr>
+<tr class="memitem:a7229b49af4aebfd32af558a18e17e243"><td class="memItemLeft" align="right" valign="top">const BDD_ID &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a7229b49af4aebfd32af558a18e17e243">True</a> () override</td></tr>
+<tr class="memdesc:a7229b49af4aebfd32af558a18e17e243"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return the id of the TRUE leaf node in the Binary Tree.  <a href="#a7229b49af4aebfd32af558a18e17e243">More...</a><br /></td></tr>
 <tr class="separator:a7229b49af4aebfd32af558a18e17e243"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a699638a290747c865312b4c130260a06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a699638a290747c865312b4c130260a06"></a>
-const BDD_ID &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>False</b> () override</td></tr>
+<tr class="memitem:a699638a290747c865312b4c130260a06"><td class="memItemLeft" align="right" valign="top">const BDD_ID &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a699638a290747c865312b4c130260a06">False</a> () override</td></tr>
+<tr class="memdesc:a699638a290747c865312b4c130260a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return the id of the FALSE leaf node in the Binary Tree.  <a href="#a699638a290747c865312b4c130260a06">More...</a><br /></td></tr>
 <tr class="separator:a699638a290747c865312b4c130260a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13edef310f5e0ea718619151a7be451a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13edef310f5e0ea718619151a7be451a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isConstant</b> (const BDD_ID f) override</td></tr>
+<tr class="memitem:a13edef310f5e0ea718619151a7be451a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant</a> (const BDD_ID f) override</td></tr>
+<tr class="memdesc:a13edef310f5e0ea718619151a7be451a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to test if a given BDD_ID is a Constant.  <a href="#a13edef310f5e0ea718619151a7be451a">More...</a><br /></td></tr>
 <tr class="separator:a13edef310f5e0ea718619151a7be451a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84c7144dc3c74e39dfb50a053da626a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84c7144dc3c74e39dfb50a053da626a0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isVariable</b> (const BDD_ID x) override</td></tr>
+<tr class="memitem:a84c7144dc3c74e39dfb50a053da626a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a84c7144dc3c74e39dfb50a053da626a0">isVariable</a> (const BDD_ID x) override</td></tr>
+<tr class="memdesc:a84c7144dc3c74e39dfb50a053da626a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to test if a given BDD_ID is a Variable.  <a href="#a84c7144dc3c74e39dfb50a053da626a0">More...</a><br /></td></tr>
 <tr class="separator:a84c7144dc3c74e39dfb50a053da626a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07c655db284e0f8c169563adbed8801b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07c655db284e0f8c169563adbed8801b"></a>
-BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>topVar</b> (const BDD_ID f) override</td></tr>
+<tr class="memitem:a07c655db284e0f8c169563adbed8801b"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar</a> (const BDD_ID f) override</td></tr>
+<tr class="memdesc:a07c655db284e0f8c169563adbed8801b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return the top variable of a given BDD_ID.  <a href="#a07c655db284e0f8c169563adbed8801b">More...</a><br /></td></tr>
 <tr class="separator:a07c655db284e0f8c169563adbed8801b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a615943b56ed99f812d4117ebb5bbc455"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a615943b56ed99f812d4117ebb5bbc455"></a>
-BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>ite</b> (const BDD_ID i, const BDD_ID t, const BDD_ID e) override</td></tr>
+<tr class="memitem:a615943b56ed99f812d4117ebb5bbc455"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite</a> (const BDD_ID i, const BDD_ID t, const BDD_ID e) override</td></tr>
+<tr class="memdesc:a615943b56ed99f812d4117ebb5bbc455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute the IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator of a given BDD_ID with respect to its top variable.  <a href="#a615943b56ed99f812d4117ebb5bbc455">More...</a><br /></td></tr>
 <tr class="separator:a615943b56ed99f812d4117ebb5bbc455"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae58b05ca4ddd764390db56a1e22e7b07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae58b05ca4ddd764390db56a1e22e7b07"></a>
-BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>coFactorTrue</b> (const BDD_ID f, BDD_ID x) override</td></tr>
+<tr class="memitem:ae58b05ca4ddd764390db56a1e22e7b07"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue</a> (const BDD_ID f, BDD_ID x) override</td></tr>
+<tr class="memdesc:ae58b05ca4ddd764390db56a1e22e7b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute the TRUE coFactor of a given BDD_ID f with respect to the BDD_ID x.  <a href="#ae58b05ca4ddd764390db56a1e22e7b07">More...</a><br /></td></tr>
 <tr class="separator:ae58b05ca4ddd764390db56a1e22e7b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91b0f680c53a9813e11f590f99c21264"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91b0f680c53a9813e11f590f99c21264"></a>
-BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>coFactorFalse</b> (const BDD_ID f, BDD_ID x) override</td></tr>
+<tr class="memitem:a91b0f680c53a9813e11f590f99c21264"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse</a> (const BDD_ID f, BDD_ID x) override</td></tr>
+<tr class="memdesc:a91b0f680c53a9813e11f590f99c21264"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute the FALSE coFactor of a given BDD_ID f with respect to the BDD_ID x.  <a href="#a91b0f680c53a9813e11f590f99c21264">More...</a><br /></td></tr>
 <tr class="separator:a91b0f680c53a9813e11f590f99c21264"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc6417257171d6032a7dee6ea2ecd8d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc6417257171d6032a7dee6ea2ecd8d3"></a>
-BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>coFactorTrue</b> (const BDD_ID f) override</td></tr>
+<tr class="memitem:abc6417257171d6032a7dee6ea2ecd8d3"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#abc6417257171d6032a7dee6ea2ecd8d3">coFactorTrue</a> (const BDD_ID f) override</td></tr>
+<tr class="memdesc:abc6417257171d6032a7dee6ea2ecd8d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute the TRUE coFactor of a given BDD_ID f.  <a href="#abc6417257171d6032a7dee6ea2ecd8d3">More...</a><br /></td></tr>
 <tr class="separator:abc6417257171d6032a7dee6ea2ecd8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9621e396f35aebfefa623a5c67e32a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9621e396f35aebfefa623a5c67e32a1"></a>
-BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>coFactorFalse</b> (const BDD_ID f) override</td></tr>
+<tr class="memitem:ac9621e396f35aebfefa623a5c67e32a1"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#ac9621e396f35aebfefa623a5c67e32a1">coFactorFalse</a> (const BDD_ID f) override</td></tr>
+<tr class="memdesc:ac9621e396f35aebfefa623a5c67e32a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute the FALSE coFactor of a given BDD_ID f.  <a href="#ac9621e396f35aebfefa623a5c67e32a1">More...</a><br /></td></tr>
 <tr class="separator:ac9621e396f35aebfefa623a5c67e32a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75bd703f518ab88006bb2b493569ba08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75bd703f518ab88006bb2b493569ba08"></a>
-BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>and2</b> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="memitem:a75bd703f518ab88006bb2b493569ba08"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a75bd703f518ab88006bb2b493569ba08">and2</a> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="memdesc:a75bd703f518ab88006bb2b493569ba08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute an AND Boolean Login Function of two given BDD_IDs a and b.  <a href="#a75bd703f518ab88006bb2b493569ba08">More...</a><br /></td></tr>
 <tr class="separator:a75bd703f518ab88006bb2b493569ba08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b0f8f45f547343dd165357900f155d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b0f8f45f547343dd165357900f155d0"></a>
-BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>or2</b> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="memitem:a0b0f8f45f547343dd165357900f155d0"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a0b0f8f45f547343dd165357900f155d0">or2</a> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="memdesc:a0b0f8f45f547343dd165357900f155d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute an OR Boolean Login Function of two given BDD_IDs a and b.  <a href="#a0b0f8f45f547343dd165357900f155d0">More...</a><br /></td></tr>
 <tr class="separator:a0b0f8f45f547343dd165357900f155d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a210d71defa6813536c7c4e4007bdd67e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a210d71defa6813536c7c4e4007bdd67e"></a>
-BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>xor2</b> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="memitem:a210d71defa6813536c7c4e4007bdd67e"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a210d71defa6813536c7c4e4007bdd67e">xor2</a> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="memdesc:a210d71defa6813536c7c4e4007bdd67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute a XOR Boolean Login Function of two given BDD_IDs a and b.  <a href="#a210d71defa6813536c7c4e4007bdd67e">More...</a><br /></td></tr>
 <tr class="separator:a210d71defa6813536c7c4e4007bdd67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c83a83001023096dd68183f40ee80b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c83a83001023096dd68183f40ee80b3"></a>
-BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>neg</b> (const BDD_ID a) override</td></tr>
+<tr class="memitem:a6c83a83001023096dd68183f40ee80b3"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a6c83a83001023096dd68183f40ee80b3">neg</a> (const BDD_ID a) override</td></tr>
+<tr class="memdesc:a6c83a83001023096dd68183f40ee80b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute the Negation of a give BDD_ID.  <a href="#a6c83a83001023096dd68183f40ee80b3">More...</a><br /></td></tr>
 <tr class="separator:a6c83a83001023096dd68183f40ee80b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94abdd8d633d6e52a052838305f97f36"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94abdd8d633d6e52a052838305f97f36"></a>
-BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>nand2</b> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="memitem:a94abdd8d633d6e52a052838305f97f36"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a94abdd8d633d6e52a052838305f97f36">nand2</a> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="memdesc:a94abdd8d633d6e52a052838305f97f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute a NAND Boolean Login Function of two given BDD_IDs a and b.  <a href="#a94abdd8d633d6e52a052838305f97f36">More...</a><br /></td></tr>
 <tr class="separator:a94abdd8d633d6e52a052838305f97f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3271fba879ca737e9566c079629841c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3271fba879ca737e9566c079629841c5"></a>
-BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>nor2</b> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="memitem:a3271fba879ca737e9566c079629841c5"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a3271fba879ca737e9566c079629841c5">nor2</a> (const BDD_ID a, const BDD_ID b) override</td></tr>
+<tr class="memdesc:a3271fba879ca737e9566c079629841c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute a NOR Boolean Login Function of two given BDD_IDs a and b.  <a href="#a3271fba879ca737e9566c079629841c5">More...</a><br /></td></tr>
 <tr class="separator:a3271fba879ca737e9566c079629841c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7238da7832b931611dbfd273800360e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7238da7832b931611dbfd273800360e2"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getTopVarName</b> (const BDD_ID &amp;root) override</td></tr>
+<tr class="memitem:a7238da7832b931611dbfd273800360e2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a7238da7832b931611dbfd273800360e2">getTopVarName</a> (const BDD_ID &amp;root) override</td></tr>
+<tr class="memdesc:a7238da7832b931611dbfd273800360e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get the name of the Top Variable of a given BDD_ID.  <a href="#a7238da7832b931611dbfd273800360e2">More...</a><br /></td></tr>
 <tr class="separator:a7238da7832b931611dbfd273800360e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d465fdff670b0bd9ef4a35ab9611f25"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d465fdff670b0bd9ef4a35ab9611f25"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>findNodes</b> (const BDD_ID &amp;root, std::set&lt; BDD_ID &gt; &amp;nodes_of_root) override</td></tr>
+<tr class="memitem:a9d465fdff670b0bd9ef4a35ab9611f25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a9d465fdff670b0bd9ef4a35ab9611f25">findNodes</a> (const BDD_ID &amp;root, std::set&lt; BDD_ID &gt; &amp;nodes_of_root) override</td></tr>
+<tr class="memdesc:a9d465fdff670b0bd9ef4a35ab9611f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to find out all the reachable nodes in the Binary Tree starting from a given BDD_ID.  <a href="#a9d465fdff670b0bd9ef4a35ab9611f25">More...</a><br /></td></tr>
 <tr class="separator:a9d465fdff670b0bd9ef4a35ab9611f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a759513c0bb7447bfb05a82a818ab22eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a759513c0bb7447bfb05a82a818ab22eb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>findVars</b> (const BDD_ID &amp;root, std::set&lt; BDD_ID &gt; &amp;vars_of_root) override</td></tr>
+<tr class="memitem:a759513c0bb7447bfb05a82a818ab22eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a759513c0bb7447bfb05a82a818ab22eb">findVars</a> (const BDD_ID &amp;root, std::set&lt; BDD_ID &gt; &amp;vars_of_root) override</td></tr>
+<tr class="memdesc:a759513c0bb7447bfb05a82a818ab22eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to find out all the reachable Variables in the Binary Tree starting from a given BDD_ID.  <a href="#a759513c0bb7447bfb05a82a818ab22eb">More...</a><br /></td></tr>
 <tr class="separator:a759513c0bb7447bfb05a82a818ab22eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b54ce30834a6044fc9eb8e85550c5a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b54ce30834a6044fc9eb8e85550c5a8"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>uniqueTableSize</b> () override</td></tr>
+<tr class="memitem:a0b54ce30834a6044fc9eb8e85550c5a8"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a0b54ce30834a6044fc9eb8e85550c5a8">uniqueTableSize</a> () override</td></tr>
+<tr class="memdesc:a0b54ce30834a6044fc9eb8e85550c5a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return the size of the uniqueTable.  <a href="#a0b54ce30834a6044fc9eb8e85550c5a8">More...</a><br /></td></tr>
 <tr class="separator:a0b54ce30834a6044fc9eb8e85550c5a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f4669617591b7c3d9e36620a547e282"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f4669617591b7c3d9e36620a547e282"></a>
-<a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getBDDNode</b> (BDD_ID id)</td></tr>
+<tr class="memitem:a1f4669617591b7c3d9e36620a547e282"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode</a> (BDD_ID id)</td></tr>
+<tr class="memdesc:a1f4669617591b7c3d9e36620a547e282"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return a Node from the uniqueTable according to its BDD_ID.  <a href="#a1f4669617591b7c3d9e36620a547e282">More...</a><br /></td></tr>
 <tr class="separator:a1f4669617591b7c3d9e36620a547e282"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a74c6fce8db0937f9ddbc0cedd99e5daf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74c6fce8db0937f9ddbc0cedd99e5daf"></a>
-std::set&lt; <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> *, <a class="el" href="structClassProject_1_1BDDComparer.html">BDDComparer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>unique_table</b></td></tr>
-<tr class="separator:a74c6fce8db0937f9ddbc0cedd99e5daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a829538aaa985c76de340d8f31bbbab80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a829538aaa985c76de340d8f31bbbab80"></a>
-std::vector&lt; <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pointers</b></td></tr>
-<tr class="separator:a829538aaa985c76de340d8f31bbbab80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe9e70c59d3ee82369a9176fa53b20a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe9e70c59d3ee82369a9176fa53b20a6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#afe9e70c59d3ee82369a9176fa53b20a6">printUniqueTable</a> ()</td></tr>
+<tr class="memdesc:afe9e70c59d3ee82369a9176fa53b20a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to print all the BDD_Nodes present in the uniqueTable. <br /></td></tr>
+<tr class="separator:afe9e70c59d3ee82369a9176fa53b20a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classClassProject_1_1Manager.html" title="Manager Class. ">Manager</a> Class. </p>
+<p>Declaration of the functions from the <a class="el" href="classClassProject_1_1ManagerInterface.html">ManagerInterface</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a1658ff9f18e38ccd9cb8b0b371b9c20b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Manager::Manager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classClassProject_1_1Manager.html" title="Manager Class. ">Manager</a> Class. </p>
+<p>Vector containing pointers to the BDD_Nodes in the uniqueTable.</p>
+<p>Implements the virtual functions from the ManagerInterface.Manager Constructor. </p>
+<p><a class="el" href="structClassProject_1_1BDD__Node.html" title="typedef struct BDD_Node ">BDD_Node</a> falseNode.</p>
+<p>Initiates the FALSE leaf node of the Binary Tree.</p>
+<p><a class="el" href="structClassProject_1_1BDD__Node.html" title="typedef struct BDD_Node ">BDD_Node</a> trueNode.</p>
+<p>Initiates the TRUE leaf of node the Binary Tree. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a75bd703f518ab88006bb2b493569ba08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::and2 </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to compute an AND Boolean Login Function of two given BDD_IDs a and b. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">b</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the computed ITE operator of BDD_IDs a and b according the AND Boolean Logic. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91b0f680c53a9813e11f590f99c21264"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::coFactorFalse </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BDD_ID&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to compute the FALSE coFactor of a given BDD_ID f with respect to the BDD_ID x. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">x</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the computed ITE operator of the TRUE, and FALSE branches of BDD_ID f with respect to BDD_ID x. </dd></dl>
+<p>bool value isTheSameVar. </p>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode()</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, <a class="el" href="classClassProject_1_1Manager.html#a84c7144dc3c74e39dfb50a053da626a0">isVariable()</a>, <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, <a class="el" href="structClassProject_1_1BDD__Node.html#a263243c7dc98c163f1b6f076cc948a2c">ClassProject::BDD_Node::low</a>, and <a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar()</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a9d465fdff670b0bd9ef4a35ab9611f25">findNodes()</a>, <a class="el" href="classClassProject_1_1Manager.html#a759513c0bb7447bfb05a82a818ab22eb">findVars()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9621e396f35aebfefa623a5c67e32a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::coFactorFalse </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to compute the FALSE coFactor of a given BDD_ID f. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the FALSE coFactor of the given BDD_ID f. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode()</a>, and <a class="el" href="structClassProject_1_1BDD__Node.html#a263243c7dc98c163f1b6f076cc948a2c">ClassProject::BDD_Node::low</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae58b05ca4ddd764390db56a1e22e7b07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::coFactorTrue </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BDD_ID&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to compute the TRUE coFactor of a given BDD_ID f with respect to the BDD_ID x. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">x</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the computed ITE operator of the TRUE, and FALSE branches of BDD_ID f with respect to BDD_ID x. </dd></dl>
+<p>bool value isTheSameVar. </p>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode()</a>, <a class="el" href="structClassProject_1_1BDD__Node.html#a1b094c78ca5aabfbf8b2ca3908ebc0d8">ClassProject::BDD_Node::high</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, <a class="el" href="classClassProject_1_1Manager.html#a84c7144dc3c74e39dfb50a053da626a0">isVariable()</a>, <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar()</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a9d465fdff670b0bd9ef4a35ab9611f25">findNodes()</a>, <a class="el" href="classClassProject_1_1Manager.html#a759513c0bb7447bfb05a82a818ab22eb">findVars()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc6417257171d6032a7dee6ea2ecd8d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::coFactorTrue </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to compute the TRUE coFactor of a given BDD_ID f. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the TRUE coFactor of the given BDD_ID f. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode()</a>, and <a class="el" href="structClassProject_1_1BDD__Node.html#a1b094c78ca5aabfbf8b2ca3908ebc0d8">ClassProject::BDD_Node::high</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa3fe08b0b002032a13a5ff9d05f39cfd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::createVar </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to create a new Variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>a string argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The id of the new variable which correspond to the size of the uniqueTable. </dd></dl>
+<p>BDD_ID value id.</p>
+<p><a class="el" href="structClassProject_1_1BDD__Node.html" title="typedef struct BDD_Node ">BDD_Node</a> value node. </p>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a699638a290747c865312b4c130260a06">False()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a7229b49af4aebfd32af558a18e17e243">True()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a699638a290747c865312b4c130260a06"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const BDD_ID &amp; Manager::False </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to return the id of the FALSE leaf node in the Binary Tree. </p>
+<dl class="section return"><dt>Returns</dt><dd>The id of the False leaf node in the Binary Tree. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#aa3fe08b0b002032a13a5ff9d05f39cfd">createVar()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d465fdff670b0bd9ef4a35ab9611f25"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Manager::findNodes </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID &amp;&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::set&lt; BDD_ID &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nodes_of_root</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to find out all the reachable nodes in the Binary Tree starting from a given BDD_ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return set containing all the reachable Nodes from a given Node. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a759513c0bb7447bfb05a82a818ab22eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Manager::findVars </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID &amp;&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::set&lt; BDD_ID &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vars_of_root</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to find out all the reachable Variables in the Binary Tree starting from a given BDD_ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return set containing all the reachable Variables from a given Node. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1f4669617591b7c3d9e36620a547e282"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> * Manager::getBDDNode </td>
+          <td>(</td>
+          <td class="paramtype">BDD_ID&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to return a Node from the uniqueTable according to its BDD_ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return a <a class="el" href="structClassProject_1_1BDD__Node.html" title="typedef struct BDD_Node ">BDD_Node</a> from the uniqueTable that has the corresponding BDD_ID. </dd></dl>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#ac9621e396f35aebfefa623a5c67e32a1">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#abc6417257171d6032a7dee6ea2ecd8d3">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a7238da7832b931611dbfd273800360e2">getTopVarName()</a>, <a class="el" href="classClassProject_1_1Manager.html#a84c7144dc3c74e39dfb50a053da626a0">isVariable()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7238da7832b931611dbfd273800360e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Manager::getTopVarName </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID &amp;&#160;</td>
+          <td class="paramname"><em>root</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to get the name of the Top Variable of a given BDD_ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the label(Top Varaible Name) of the given BDD_ID root. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a13edef310f5e0ea718619151a7be451a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Manager::isConstant </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to test if a given BDD_ID is a Constant. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TRUE in case that the given BDD_ID f is a Constant, otherwise return FALSE. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a699638a290747c865312b4c130260a06">False()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a7229b49af4aebfd32af558a18e17e243">True()</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a9d465fdff670b0bd9ef4a35ab9611f25">findNodes()</a>, <a class="el" href="classClassProject_1_1Manager.html#a759513c0bb7447bfb05a82a818ab22eb">findVars()</a>, <a class="el" href="classClassProject_1_1Manager.html#a84c7144dc3c74e39dfb50a053da626a0">isVariable()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a84c7144dc3c74e39dfb50a053da626a0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Manager::isVariable </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to test if a given BDD_ID is a Variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TRUE in case that the given BDD_ID x is a Variable, otherwise return FALSE. </dd></dl>
+<p>&lt; <a class="el" href="structClassProject_1_1BDD__Node.html" title="typedef struct BDD_Node ">BDD_Node</a> pointer value node. </p>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode()</a>, <a class="el" href="structClassProject_1_1BDD__Node.html#a3b0b7736bfb22fd65bf790cb308450a5">ClassProject::BDD_Node::id</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, and <a class="el" href="structClassProject_1_1BDD__Node.html#a334b891f34eac8419a6402c6e7c730dd">ClassProject::BDD_Node::top_var</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a615943b56ed99f812d4117ebb5bbc455"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::ite </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to compute the IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator of a given BDD_ID with respect to its top variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">t</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">e</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the id of the computed IF then ELSE Operator. </dd></dl>
+<p>BDD_ID value top_var. </p>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, <a class="el" href="classClassProject_1_1Manager.html#a84c7144dc3c74e39dfb50a053da626a0">isVariable()</a>, <a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a0b54ce30834a6044fc9eb8e85550c5a8">uniqueTableSize()</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a75bd703f518ab88006bb2b493569ba08">and2()</a>, <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a94abdd8d633d6e52a052838305f97f36">nand2()</a>, <a class="el" href="classClassProject_1_1Manager.html#a6c83a83001023096dd68183f40ee80b3">neg()</a>, <a class="el" href="classClassProject_1_1Manager.html#a3271fba879ca737e9566c079629841c5">nor2()</a>, <a class="el" href="classClassProject_1_1Manager.html#a0b0f8f45f547343dd165357900f155d0">or2()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a210d71defa6813536c7c4e4007bdd67e">xor2()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94abdd8d633d6e52a052838305f97f36"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::nand2 </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to compute a NAND Boolean Login Function of two given BDD_IDs a and b. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">b</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the computed ITE operator of BDD_IDs a and b according the NAND Boolean Logic. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a6c83a83001023096dd68183f40ee80b3">neg()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6c83a83001023096dd68183f40ee80b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::neg </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to compute the Negation of a give BDD_ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the Negation of a given BDD_ID. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a94abdd8d633d6e52a052838305f97f36">nand2()</a>, <a class="el" href="classClassProject_1_1Manager.html#a3271fba879ca737e9566c079629841c5">nor2()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a210d71defa6813536c7c4e4007bdd67e">xor2()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3271fba879ca737e9566c079629841c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::nor2 </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to compute a NOR Boolean Login Function of two given BDD_IDs a and b. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">b</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the computed ITE operator of BDD_IDs a and b according the NOR Boolean Logic. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a6c83a83001023096dd68183f40ee80b3">neg()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b0f8f45f547343dd165357900f155d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::or2 </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to compute an OR Boolean Login Function of two given BDD_IDs a and b. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">b</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the computed ITE operator of BDD_IDs a and b according the OR Boolean Logic. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a07c655db284e0f8c169563adbed8801b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::topVar </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to return the top variable of a given BDD_ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the top variable of the given BDD_ID. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode()</a>, and <a class="el" href="structClassProject_1_1BDD__Node.html#a334b891f34eac8419a6402c6e7c730dd">ClassProject::BDD_Node::top_var</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a759513c0bb7447bfb05a82a818ab22eb">findVars()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7229b49af4aebfd32af558a18e17e243"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const BDD_ID &amp; Manager::True </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to return the id of the TRUE leaf node in the Binary Tree. </p>
+<dl class="section return"><dt>Returns</dt><dd>The id of the TRUE leaf node in the Binary Tree. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#aa3fe08b0b002032a13a5ff9d05f39cfd">createVar()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b54ce30834a6044fc9eb8e85550c5a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Manager::uniqueTableSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to return the size of the uniqueTable. </p>
+<dl class="section return"><dt>Returns</dt><dd>The size_t of the uniqueTable. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a210d71defa6813536c7c4e4007bdd67e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::xor2 </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to compute a XOR Boolean Login Function of two given BDD_IDs a and b. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">b</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the computed ITE operator of BDD_IDs a and b according the XOR Boolean Logic. </dd></dl>
+
+<p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a6c83a83001023096dd68183f40ee80b3">neg()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/vitorroriz/vds-final/vdsproject/src/<a class="el" href="Manager_8h_source.html">Manager.h</a></li>
-<li>/home/vitorroriz/vds-final/vdsproject/src/Manager.cpp</li>
+<li>/import/home/vdscp04/Commit/vdsproject/src/<a class="el" href="Manager_8h_source.html">Manager.h</a></li>
+<li>/import/home/vdscp04/Commit/vdsproject/src/Manager.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

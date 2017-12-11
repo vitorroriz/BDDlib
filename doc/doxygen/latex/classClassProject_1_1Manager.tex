@@ -1,5 +1,14 @@
 \section{Class\+Project\+:\+:Manager Class Reference}
 \label{classClassProject_1_1Manager}\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+
+
+\doxyref{Manager}{p.}{classClassProject_1_1Manager} Class.  
+
+
+
+
+{\ttfamily \#include $<$Manager.\+h$>$}
+
 Inheritance diagram for Class\+Project\+:\+:Manager\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,84 +18,722 @@ Inheritance diagram for Class\+Project\+:\+:Manager\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-B\+D\+D\+\_\+\+ID {\bfseries create\+Var} (const std\+::string \&label) override\label{classClassProject_1_1Manager_aa3fe08b0b002032a13a5ff9d05f39cfd}
+{\bf Manager} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Manager}{p.}{classClassProject_1_1Manager} Class. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf create\+Var} (const std\+::string \&label) override
+\begin{DoxyCompactList}\small\item\em Function to create a new Variable. \end{DoxyCompactList}\item 
+const B\+D\+D\+\_\+\+ID \& {\bf True} () override
+\begin{DoxyCompactList}\small\item\em Function to return the id of the T\+R\+UE leaf node in the Binary Tree. \end{DoxyCompactList}\item 
+const B\+D\+D\+\_\+\+ID \& {\bf False} () override
+\begin{DoxyCompactList}\small\item\em Function to return the id of the F\+A\+L\+SE leaf node in the Binary Tree. \end{DoxyCompactList}\item 
+bool {\bf is\+Constant} (const B\+D\+D\+\_\+\+ID f) override
+\begin{DoxyCompactList}\small\item\em Function to test if a given B\+D\+D\+\_\+\+ID is a Constant. \end{DoxyCompactList}\item 
+bool {\bf is\+Variable} (const B\+D\+D\+\_\+\+ID x) override
+\begin{DoxyCompactList}\small\item\em Function to test if a given B\+D\+D\+\_\+\+ID is a Variable. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf top\+Var} (const B\+D\+D\+\_\+\+ID f) override
+\begin{DoxyCompactList}\small\item\em Function to return the top variable of a given B\+D\+D\+\_\+\+ID. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf ite} (const B\+D\+D\+\_\+\+ID i, const B\+D\+D\+\_\+\+ID t, const B\+D\+D\+\_\+\+ID e) override
+\begin{DoxyCompactList}\small\item\em Function to compute the I\+F(\+B\+D\+D\+\_\+\+I\+D i) then(\+B\+D\+D\+\_\+\+I\+D t) E\+L\+S\+E(\+B\+D\+D\+\_\+\+I\+D e) Operator of a given B\+D\+D\+\_\+\+ID with respect to its top variable. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf co\+Factor\+True} (const B\+D\+D\+\_\+\+ID f, B\+D\+D\+\_\+\+ID x) override
+\begin{DoxyCompactList}\small\item\em Function to compute the T\+R\+UE co\+Factor of a given B\+D\+D\+\_\+\+ID f with respect to the B\+D\+D\+\_\+\+ID x. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf co\+Factor\+False} (const B\+D\+D\+\_\+\+ID f, B\+D\+D\+\_\+\+ID x) override
+\begin{DoxyCompactList}\small\item\em Function to compute the F\+A\+L\+SE co\+Factor of a given B\+D\+D\+\_\+\+ID f with respect to the B\+D\+D\+\_\+\+ID x. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf co\+Factor\+True} (const B\+D\+D\+\_\+\+ID f) override
+\begin{DoxyCompactList}\small\item\em Function to compute the T\+R\+UE co\+Factor of a given B\+D\+D\+\_\+\+ID f. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf co\+Factor\+False} (const B\+D\+D\+\_\+\+ID f) override
+\begin{DoxyCompactList}\small\item\em Function to compute the F\+A\+L\+SE co\+Factor of a given B\+D\+D\+\_\+\+ID f. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf and2} (const B\+D\+D\+\_\+\+ID a, const B\+D\+D\+\_\+\+ID b) override
+\begin{DoxyCompactList}\small\item\em Function to compute an A\+ND Boolean Login Function of two given B\+D\+D\+\_\+\+I\+Ds a and b. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf or2} (const B\+D\+D\+\_\+\+ID a, const B\+D\+D\+\_\+\+ID b) override
+\begin{DoxyCompactList}\small\item\em Function to compute an OR Boolean Login Function of two given B\+D\+D\+\_\+\+I\+Ds a and b. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf xor2} (const B\+D\+D\+\_\+\+ID a, const B\+D\+D\+\_\+\+ID b) override
+\begin{DoxyCompactList}\small\item\em Function to compute a X\+OR Boolean Login Function of two given B\+D\+D\+\_\+\+I\+Ds a and b. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf neg} (const B\+D\+D\+\_\+\+ID a) override
+\begin{DoxyCompactList}\small\item\em Function to compute the Negation of a give B\+D\+D\+\_\+\+ID. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf nand2} (const B\+D\+D\+\_\+\+ID a, const B\+D\+D\+\_\+\+ID b) override
+\begin{DoxyCompactList}\small\item\em Function to compute a N\+A\+ND Boolean Login Function of two given B\+D\+D\+\_\+\+I\+Ds a and b. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf nor2} (const B\+D\+D\+\_\+\+ID a, const B\+D\+D\+\_\+\+ID b) override
+\begin{DoxyCompactList}\small\item\em Function to compute a N\+OR Boolean Login Function of two given B\+D\+D\+\_\+\+I\+Ds a and b. \end{DoxyCompactList}\item 
+std\+::string {\bf get\+Top\+Var\+Name} (const B\+D\+D\+\_\+\+ID \&root) override
+\begin{DoxyCompactList}\small\item\em Function to get the name of the Top Variable of a given B\+D\+D\+\_\+\+ID. \end{DoxyCompactList}\item 
+void {\bf find\+Nodes} (const B\+D\+D\+\_\+\+ID \&root, std\+::set$<$ B\+D\+D\+\_\+\+ID $>$ \&nodes\+\_\+of\+\_\+root) override
+\begin{DoxyCompactList}\small\item\em Function to find out all the reachable nodes in the Binary Tree starting from a given B\+D\+D\+\_\+\+ID. \end{DoxyCompactList}\item 
+void {\bf find\+Vars} (const B\+D\+D\+\_\+\+ID \&root, std\+::set$<$ B\+D\+D\+\_\+\+ID $>$ \&vars\+\_\+of\+\_\+root) override
+\begin{DoxyCompactList}\small\item\em Function to find out all the reachable Variables in the Binary Tree starting from a given B\+D\+D\+\_\+\+ID. \end{DoxyCompactList}\item 
+size\+\_\+t {\bf unique\+Table\+Size} () override
+\begin{DoxyCompactList}\small\item\em Function to return the size of the unique\+Table. \end{DoxyCompactList}\item 
+{\bf B\+D\+D\+\_\+\+Node} $\ast$ {\bf get\+B\+D\+D\+Node} (B\+D\+D\+\_\+\+ID id)
+\begin{DoxyCompactList}\small\item\em Function to return a Node from the unique\+Table according to its B\+D\+D\+\_\+\+ID. \end{DoxyCompactList}\item 
+void {\bf print\+Unique\+Table} ()\label{classClassProject_1_1Manager_afe9e70c59d3ee82369a9176fa53b20a6}
 
-\item 
-const B\+D\+D\+\_\+\+ID \& {\bfseries True} () override\label{classClassProject_1_1Manager_a7229b49af4aebfd32af558a18e17e243}
+\begin{DoxyCompactList}\small\item\em Function to print all the B\+D\+D\+\_\+\+Nodes present in the unique\+Table. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-const B\+D\+D\+\_\+\+ID \& {\bfseries False} () override\label{classClassProject_1_1Manager_a699638a290747c865312b4c130260a06}
 
-\item 
-bool {\bfseries is\+Constant} (const B\+D\+D\+\_\+\+ID f) override\label{classClassProject_1_1Manager_a13edef310f5e0ea718619151a7be451a}
+\subsection{Detailed Description}
+\doxyref{Manager}{p.}{classClassProject_1_1Manager} Class. 
 
-\item 
-bool {\bfseries is\+Variable} (const B\+D\+D\+\_\+\+ID x) override\label{classClassProject_1_1Manager_a84c7144dc3c74e39dfb50a053da626a0}
+Declaration of the functions from the \doxyref{Manager\+Interface}{p.}{classClassProject_1_1ManagerInterface}. 
 
-\item 
-B\+D\+D\+\_\+\+ID {\bfseries top\+Var} (const B\+D\+D\+\_\+\+ID f) override\label{classClassProject_1_1Manager_a07c655db284e0f8c169563adbed8801b}
+\subsection{Constructor \& Destructor Documentation}
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!Manager@{Manager}}
+\index{Manager@{Manager}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{Manager()}]{\setlength{\rightskip}{0pt plus 5cm}Manager\+::\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classClassProject_1_1Manager_a1658ff9f18e38ccd9cb8b0b371b9c20b}
 
-\item 
-B\+D\+D\+\_\+\+ID {\bfseries ite} (const B\+D\+D\+\_\+\+ID i, const B\+D\+D\+\_\+\+ID t, const B\+D\+D\+\_\+\+ID e) override\label{classClassProject_1_1Manager_a615943b56ed99f812d4117ebb5bbc455}
 
-\item 
-B\+D\+D\+\_\+\+ID {\bfseries co\+Factor\+True} (const B\+D\+D\+\_\+\+ID f, B\+D\+D\+\_\+\+ID x) override\label{classClassProject_1_1Manager_ae58b05ca4ddd764390db56a1e22e7b07}
+\doxyref{Manager}{p.}{classClassProject_1_1Manager} Class. 
 
-\item 
-B\+D\+D\+\_\+\+ID {\bfseries co\+Factor\+False} (const B\+D\+D\+\_\+\+ID f, B\+D\+D\+\_\+\+ID x) override\label{classClassProject_1_1Manager_a91b0f680c53a9813e11f590f99c21264}
+Vector containing pointers to the B\+D\+D\+\_\+\+Nodes in the unique\+Table.
 
-\item 
-B\+D\+D\+\_\+\+ID {\bfseries co\+Factor\+True} (const B\+D\+D\+\_\+\+ID f) override\label{classClassProject_1_1Manager_abc6417257171d6032a7dee6ea2ecd8d3}
+Implements the virtual functions from the Manager\+Interface.\+Manager Constructor. \doxyref{B\+D\+D\+\_\+\+Node}{p.}{structClassProject_1_1BDD__Node} false\+Node.
 
-\item 
-B\+D\+D\+\_\+\+ID {\bfseries co\+Factor\+False} (const B\+D\+D\+\_\+\+ID f) override\label{classClassProject_1_1Manager_ac9621e396f35aebfefa623a5c67e32a1}
+Initiates the F\+A\+L\+SE leaf node of the Binary Tree.
 
-\item 
-B\+D\+D\+\_\+\+ID {\bfseries and2} (const B\+D\+D\+\_\+\+ID a, const B\+D\+D\+\_\+\+ID b) override\label{classClassProject_1_1Manager_a75bd703f518ab88006bb2b493569ba08}
+\doxyref{B\+D\+D\+\_\+\+Node}{p.}{structClassProject_1_1BDD__Node} true\+Node.
 
-\item 
-B\+D\+D\+\_\+\+ID {\bfseries or2} (const B\+D\+D\+\_\+\+ID a, const B\+D\+D\+\_\+\+ID b) override\label{classClassProject_1_1Manager_a0b0f8f45f547343dd165357900f155d0}
+Initiates the T\+R\+UE leaf of node the Binary Tree. 
 
-\item 
-B\+D\+D\+\_\+\+ID {\bfseries xor2} (const B\+D\+D\+\_\+\+ID a, const B\+D\+D\+\_\+\+ID b) override\label{classClassProject_1_1Manager_a210d71defa6813536c7c4e4007bdd67e}
+\subsection{Member Function Documentation}
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!and2@{and2}}
+\index{and2@{and2}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{and2(const B\+D\+D\+\_\+\+I\+D a, const B\+D\+D\+\_\+\+I\+D b) override}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::and2 (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{a, }
+\item[{const B\+D\+D\+\_\+\+ID}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a75bd703f518ab88006bb2b493569ba08}
 
-\item 
-B\+D\+D\+\_\+\+ID {\bfseries neg} (const B\+D\+D\+\_\+\+ID a) override\label{classClassProject_1_1Manager_a6c83a83001023096dd68183f40ee80b3}
 
-\item 
-B\+D\+D\+\_\+\+ID {\bfseries nand2} (const B\+D\+D\+\_\+\+ID a, const B\+D\+D\+\_\+\+ID b) override\label{classClassProject_1_1Manager_a94abdd8d633d6e52a052838305f97f36}
+Function to compute an A\+ND Boolean Login Function of two given B\+D\+D\+\_\+\+I\+Ds a and b. 
 
-\item 
-B\+D\+D\+\_\+\+ID {\bfseries nor2} (const B\+D\+D\+\_\+\+ID a, const B\+D\+D\+\_\+\+ID b) override\label{classClassProject_1_1Manager_a3271fba879ca737e9566c079629841c5}
 
-\item 
-std\+::string {\bfseries get\+Top\+Var\+Name} (const B\+D\+D\+\_\+\+ID \&root) override\label{classClassProject_1_1Manager_a7238da7832b931611dbfd273800360e2}
+\begin{DoxyParams}{Parameters}
+{\em a} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em b} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the computed I\+TE operator of B\+D\+D\+\_\+\+I\+Ds a and b according the A\+ND Boolean Logic. 
+\end{DoxyReturn}
 
-\item 
-void {\bfseries find\+Nodes} (const B\+D\+D\+\_\+\+ID \&root, std\+::set$<$ B\+D\+D\+\_\+\+ID $>$ \&nodes\+\_\+of\+\_\+root) override\label{classClassProject_1_1Manager_a9d465fdff670b0bd9ef4a35ab9611f25}
 
-\item 
-void {\bfseries find\+Vars} (const B\+D\+D\+\_\+\+ID \&root, std\+::set$<$ B\+D\+D\+\_\+\+ID $>$ \&vars\+\_\+of\+\_\+root) override\label{classClassProject_1_1Manager_a759513c0bb7447bfb05a82a818ab22eb}
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
 
-\item 
-size\+\_\+t {\bfseries unique\+Table\+Size} () override\label{classClassProject_1_1Manager_a0b54ce30834a6044fc9eb8e85550c5a8}
 
-\item 
-{\bf B\+D\+D\+\_\+\+Node} $\ast$ {\bfseries get\+B\+D\+D\+Node} (B\+D\+D\+\_\+\+ID id)\label{classClassProject_1_1Manager_a1f4669617591b7c3d9e36620a547e282}
 
-\end{DoxyCompactItemize}
-\subsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-std\+::set$<$ {\bf B\+D\+D\+\_\+\+Node} $\ast$, {\bf B\+D\+D\+Comparer} $>$ {\bfseries unique\+\_\+table}\label{classClassProject_1_1Manager_a74c6fce8db0937f9ddbc0cedd99e5daf}
+References ite().
 
-\item 
-std\+::vector$<$ {\bf B\+D\+D\+\_\+\+Node} $\ast$ $>$ {\bfseries pointers}\label{classClassProject_1_1Manager_a829538aaa985c76de340d8f31bbbab80}
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!co\+Factor\+False@{co\+Factor\+False}}
+\index{co\+Factor\+False@{co\+Factor\+False}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{co\+Factor\+False(const B\+D\+D\+\_\+\+I\+D f, B\+D\+D\+\_\+\+I\+D x) override}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::co\+Factor\+False (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{f, }
+\item[{B\+D\+D\+\_\+\+ID}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a91b0f680c53a9813e11f590f99c21264}
 
-\end{DoxyCompactItemize}
+
+Function to compute the F\+A\+L\+SE co\+Factor of a given B\+D\+D\+\_\+\+ID f with respect to the B\+D\+D\+\_\+\+ID x. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em x} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the computed I\+TE operator of the T\+R\+UE, and F\+A\+L\+SE branches of B\+D\+D\+\_\+\+ID f with respect to B\+D\+D\+\_\+\+ID x. 
+\end{DoxyReturn}
+bool value is\+The\+Same\+Var. 
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References get\+B\+D\+D\+Node(), is\+Constant(), is\+Variable(), ite(), Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::low, and top\+Var().
+
+
+
+Referenced by find\+Nodes(), find\+Vars(), and ite().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!co\+Factor\+False@{co\+Factor\+False}}
+\index{co\+Factor\+False@{co\+Factor\+False}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{co\+Factor\+False(const B\+D\+D\+\_\+\+I\+D f) override}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::co\+Factor\+False (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_ac9621e396f35aebfefa623a5c67e32a1}
+
+
+Function to compute the F\+A\+L\+SE co\+Factor of a given B\+D\+D\+\_\+\+ID f. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the F\+A\+L\+SE co\+Factor of the given B\+D\+D\+\_\+\+ID f. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References get\+B\+D\+D\+Node(), and Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::low.
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!co\+Factor\+True@{co\+Factor\+True}}
+\index{co\+Factor\+True@{co\+Factor\+True}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{co\+Factor\+True(const B\+D\+D\+\_\+\+I\+D f, B\+D\+D\+\_\+\+I\+D x) override}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::co\+Factor\+True (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{f, }
+\item[{B\+D\+D\+\_\+\+ID}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_ae58b05ca4ddd764390db56a1e22e7b07}
+
+
+Function to compute the T\+R\+UE co\+Factor of a given B\+D\+D\+\_\+\+ID f with respect to the B\+D\+D\+\_\+\+ID x. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em x} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the computed I\+TE operator of the T\+R\+UE, and F\+A\+L\+SE branches of B\+D\+D\+\_\+\+ID f with respect to B\+D\+D\+\_\+\+ID x. 
+\end{DoxyReturn}
+bool value is\+The\+Same\+Var. 
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References get\+B\+D\+D\+Node(), Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::high, is\+Constant(), is\+Variable(), ite(), and top\+Var().
+
+
+
+Referenced by find\+Nodes(), find\+Vars(), and ite().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!co\+Factor\+True@{co\+Factor\+True}}
+\index{co\+Factor\+True@{co\+Factor\+True}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{co\+Factor\+True(const B\+D\+D\+\_\+\+I\+D f) override}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::co\+Factor\+True (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_abc6417257171d6032a7dee6ea2ecd8d3}
+
+
+Function to compute the T\+R\+UE co\+Factor of a given B\+D\+D\+\_\+\+ID f. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the T\+R\+UE co\+Factor of the given B\+D\+D\+\_\+\+ID f. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References get\+B\+D\+D\+Node(), and Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::high.
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!create\+Var@{create\+Var}}
+\index{create\+Var@{create\+Var}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{create\+Var(const std\+::string \&label) override}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::create\+Var (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{label}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_aa3fe08b0b002032a13a5ff9d05f39cfd}
+
+
+Function to create a new Variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & a string argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The id of the new variable which correspond to the size of the unique\+Table. 
+\end{DoxyReturn}
+B\+D\+D\+\_\+\+ID value id.
+
+\doxyref{B\+D\+D\+\_\+\+Node}{p.}{structClassProject_1_1BDD__Node} value node. 
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References False(), and True().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!False@{False}}
+\index{False@{False}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{False() override}]{\setlength{\rightskip}{0pt plus 5cm}const B\+D\+D\+\_\+\+ID \& Manager\+::\+False (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a699638a290747c865312b4c130260a06}
+
+
+Function to return the id of the F\+A\+L\+SE leaf node in the Binary Tree. 
+
+\begin{DoxyReturn}{Returns}
+The id of the False leaf node in the Binary Tree. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+Referenced by create\+Var(), and is\+Constant().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!find\+Nodes@{find\+Nodes}}
+\index{find\+Nodes@{find\+Nodes}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{find\+Nodes(const B\+D\+D\+\_\+\+I\+D \&root, std\+::set$<$ B\+D\+D\+\_\+\+I\+D $>$ \&nodes\+\_\+of\+\_\+root) override}]{\setlength{\rightskip}{0pt plus 5cm}void Manager\+::find\+Nodes (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID \&}]{root, }
+\item[{std\+::set$<$ B\+D\+D\+\_\+\+ID $>$ \&}]{nodes\+\_\+of\+\_\+root}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a9d465fdff670b0bd9ef4a35ab9611f25}
+
+
+Function to find out all the reachable nodes in the Binary Tree starting from a given B\+D\+D\+\_\+\+ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return set containing all the reachable Nodes from a given Node. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References co\+Factor\+False(), co\+Factor\+True(), and is\+Constant().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!find\+Vars@{find\+Vars}}
+\index{find\+Vars@{find\+Vars}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{find\+Vars(const B\+D\+D\+\_\+\+I\+D \&root, std\+::set$<$ B\+D\+D\+\_\+\+I\+D $>$ \&vars\+\_\+of\+\_\+root) override}]{\setlength{\rightskip}{0pt plus 5cm}void Manager\+::find\+Vars (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID \&}]{root, }
+\item[{std\+::set$<$ B\+D\+D\+\_\+\+ID $>$ \&}]{vars\+\_\+of\+\_\+root}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a759513c0bb7447bfb05a82a818ab22eb}
+
+
+Function to find out all the reachable Variables in the Binary Tree starting from a given B\+D\+D\+\_\+\+ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return set containing all the reachable Variables from a given Node. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References co\+Factor\+False(), co\+Factor\+True(), is\+Constant(), and top\+Var().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!get\+B\+D\+D\+Node@{get\+B\+D\+D\+Node}}
+\index{get\+B\+D\+D\+Node@{get\+B\+D\+D\+Node}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{get\+B\+D\+D\+Node(\+B\+D\+D\+\_\+\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+D\+D\+\_\+\+Node} $\ast$ Manager\+::get\+B\+D\+D\+Node (
+\begin{DoxyParamCaption}
+\item[{B\+D\+D\+\_\+\+ID}]{id}
+\end{DoxyParamCaption}
+)}\label{classClassProject_1_1Manager_a1f4669617591b7c3d9e36620a547e282}
+
+
+Function to return a Node from the unique\+Table according to its B\+D\+D\+\_\+\+ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return a \doxyref{B\+D\+D\+\_\+\+Node}{p.}{structClassProject_1_1BDD__Node} from the unique\+Table that has the corresponding B\+D\+D\+\_\+\+ID. 
+\end{DoxyReturn}
+
+
+Referenced by co\+Factor\+False(), co\+Factor\+True(), get\+Top\+Var\+Name(), is\+Variable(), and top\+Var().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!get\+Top\+Var\+Name@{get\+Top\+Var\+Name}}
+\index{get\+Top\+Var\+Name@{get\+Top\+Var\+Name}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{get\+Top\+Var\+Name(const B\+D\+D\+\_\+\+I\+D \&root) override}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Manager\+::get\+Top\+Var\+Name (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID \&}]{root}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a7238da7832b931611dbfd273800360e2}
+
+
+Function to get the name of the Top Variable of a given B\+D\+D\+\_\+\+ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the label(\+Top Varaible Name) of the given B\+D\+D\+\_\+\+ID root. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References get\+B\+D\+D\+Node().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!is\+Constant@{is\+Constant}}
+\index{is\+Constant@{is\+Constant}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{is\+Constant(const B\+D\+D\+\_\+\+I\+D f) override}]{\setlength{\rightskip}{0pt plus 5cm}bool Manager\+::is\+Constant (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a13edef310f5e0ea718619151a7be451a}
+
+
+Function to test if a given B\+D\+D\+\_\+\+ID is a Constant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE in case that the given B\+D\+D\+\_\+\+ID f is a Constant, otherwise return F\+A\+L\+SE. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References False(), and True().
+
+
+
+Referenced by co\+Factor\+False(), co\+Factor\+True(), find\+Nodes(), find\+Vars(), is\+Variable(), and ite().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!is\+Variable@{is\+Variable}}
+\index{is\+Variable@{is\+Variable}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{is\+Variable(const B\+D\+D\+\_\+\+I\+D x) override}]{\setlength{\rightskip}{0pt plus 5cm}bool Manager\+::is\+Variable (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a84c7144dc3c74e39dfb50a053da626a0}
+
+
+Function to test if a given B\+D\+D\+\_\+\+ID is a Variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE in case that the given B\+D\+D\+\_\+\+ID x is a Variable, otherwise return F\+A\+L\+SE. 
+\end{DoxyReturn}
+$<$ \doxyref{B\+D\+D\+\_\+\+Node}{p.}{structClassProject_1_1BDD__Node} pointer value node. 
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References get\+B\+D\+D\+Node(), Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::id, is\+Constant(), and Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::top\+\_\+var.
+
+
+
+Referenced by co\+Factor\+False(), co\+Factor\+True(), and ite().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!ite@{ite}}
+\index{ite@{ite}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{ite(const B\+D\+D\+\_\+\+I\+D i, const B\+D\+D\+\_\+\+I\+D t, const B\+D\+D\+\_\+\+I\+D e) override}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::ite (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{i, }
+\item[{const B\+D\+D\+\_\+\+ID}]{t, }
+\item[{const B\+D\+D\+\_\+\+ID}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a615943b56ed99f812d4117ebb5bbc455}
+
+
+Function to compute the I\+F(\+B\+D\+D\+\_\+\+I\+D i) then(\+B\+D\+D\+\_\+\+I\+D t) E\+L\+S\+E(\+B\+D\+D\+\_\+\+I\+D e) Operator of a given B\+D\+D\+\_\+\+ID with respect to its top variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em t} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em e} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the id of the computed IF then E\+L\+SE Operator. 
+\end{DoxyReturn}
+B\+D\+D\+\_\+\+ID value top\+\_\+var. 
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References co\+Factor\+False(), co\+Factor\+True(), is\+Constant(), is\+Variable(), top\+Var(), and unique\+Table\+Size().
+
+
+
+Referenced by and2(), co\+Factor\+False(), co\+Factor\+True(), nand2(), neg(), nor2(), or2(), and xor2().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!nand2@{nand2}}
+\index{nand2@{nand2}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{nand2(const B\+D\+D\+\_\+\+I\+D a, const B\+D\+D\+\_\+\+I\+D b) override}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::nand2 (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{a, }
+\item[{const B\+D\+D\+\_\+\+ID}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a94abdd8d633d6e52a052838305f97f36}
+
+
+Function to compute a N\+A\+ND Boolean Login Function of two given B\+D\+D\+\_\+\+I\+Ds a and b. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em b} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the computed I\+TE operator of B\+D\+D\+\_\+\+I\+Ds a and b according the N\+A\+ND Boolean Logic. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References ite(), and neg().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!neg@{neg}}
+\index{neg@{neg}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{neg(const B\+D\+D\+\_\+\+I\+D a) override}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::neg (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a6c83a83001023096dd68183f40ee80b3}
+
+
+Function to compute the Negation of a give B\+D\+D\+\_\+\+ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the Negation of a given B\+D\+D\+\_\+\+ID. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References ite().
+
+
+
+Referenced by nand2(), nor2(), and xor2().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!nor2@{nor2}}
+\index{nor2@{nor2}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{nor2(const B\+D\+D\+\_\+\+I\+D a, const B\+D\+D\+\_\+\+I\+D b) override}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::nor2 (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{a, }
+\item[{const B\+D\+D\+\_\+\+ID}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a3271fba879ca737e9566c079629841c5}
+
+
+Function to compute a N\+OR Boolean Login Function of two given B\+D\+D\+\_\+\+I\+Ds a and b. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em b} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the computed I\+TE operator of B\+D\+D\+\_\+\+I\+Ds a and b according the N\+OR Boolean Logic. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References ite(), and neg().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!or2@{or2}}
+\index{or2@{or2}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{or2(const B\+D\+D\+\_\+\+I\+D a, const B\+D\+D\+\_\+\+I\+D b) override}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::or2 (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{a, }
+\item[{const B\+D\+D\+\_\+\+ID}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a0b0f8f45f547343dd165357900f155d0}
+
+
+Function to compute an OR Boolean Login Function of two given B\+D\+D\+\_\+\+I\+Ds a and b. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em b} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the computed I\+TE operator of B\+D\+D\+\_\+\+I\+Ds a and b according the OR Boolean Logic. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References ite().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!top\+Var@{top\+Var}}
+\index{top\+Var@{top\+Var}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{top\+Var(const B\+D\+D\+\_\+\+I\+D f) override}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::top\+Var (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a07c655db284e0f8c169563adbed8801b}
+
+
+Function to return the top variable of a given B\+D\+D\+\_\+\+ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the top variable of the given B\+D\+D\+\_\+\+ID. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References get\+B\+D\+D\+Node(), and Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::top\+\_\+var.
+
+
+
+Referenced by co\+Factor\+False(), co\+Factor\+True(), find\+Vars(), and ite().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!True@{True}}
+\index{True@{True}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{True() override}]{\setlength{\rightskip}{0pt plus 5cm}const B\+D\+D\+\_\+\+ID \& Manager\+::\+True (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a7229b49af4aebfd32af558a18e17e243}
+
+
+Function to return the id of the T\+R\+UE leaf node in the Binary Tree. 
+
+\begin{DoxyReturn}{Returns}
+The id of the T\+R\+UE leaf node in the Binary Tree. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+Referenced by create\+Var(), and is\+Constant().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!unique\+Table\+Size@{unique\+Table\+Size}}
+\index{unique\+Table\+Size@{unique\+Table\+Size}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{unique\+Table\+Size() override}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Manager\+::unique\+Table\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a0b54ce30834a6044fc9eb8e85550c5a8}
+
+
+Function to return the size of the unique\+Table. 
+
+\begin{DoxyReturn}{Returns}
+The size\+\_\+t of the unique\+Table. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+Referenced by ite().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!xor2@{xor2}}
+\index{xor2@{xor2}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{xor2(const B\+D\+D\+\_\+\+I\+D a, const B\+D\+D\+\_\+\+I\+D b) override}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::xor2 (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{a, }
+\item[{const B\+D\+D\+\_\+\+ID}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\label{classClassProject_1_1Manager_a210d71defa6813536c7c4e4007bdd67e}
+
+
+Function to compute a X\+OR Boolean Login Function of two given B\+D\+D\+\_\+\+I\+Ds a and b. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em b} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the computed I\+TE operator of B\+D\+D\+\_\+\+I\+Ds a and b according the X\+OR Boolean Logic. 
+\end{DoxyReturn}
+
+
+Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
+
+
+
+References ite(), and neg().
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/vitorroriz/vds-\/final/vdsproject/src/Manager.\+h\item 
-/home/vitorroriz/vds-\/final/vdsproject/src/Manager.\+cpp\end{DoxyCompactItemize}
+/import/home/vdscp04/\+Commit/vdsproject/src/Manager.\+h\item 
+/import/home/vdscp04/\+Commit/vdsproject/src/Manager.\+cpp\end{DoxyCompactItemize}
