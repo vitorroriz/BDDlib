@@ -129,7 +129,7 @@ BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e){
     if(high == low)
         return high;
 
-    BDD_Node* node = new BDD_Node("f" + to_string(uniqueTableSize()),top_var,high,low,uniqueTableSize());
+    BDD_Node* node = new BDD_Node("f" + to_string(uniqueTableSize()-2),top_var,high,low,uniqueTableSize());
     auto it = unique_table.insert(node);
 
     if(it.second)
@@ -274,12 +274,10 @@ std::string Manager::getTopVarName(const BDD_ID &root)
 void Manager::findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root){   
     if(!isConstant(root))
     {
-        if(!isConstant(coFactorFalse(root)))
             findNodes(coFactorFalse(root), nodes_of_root);
-        if(!isConstant(coFactorTrue(root)))
             findNodes(coFactorTrue(root), nodes_of_root);
-        nodes_of_root.insert(root);
     }
+        nodes_of_root.insert(root);
 }
 
 //! Function to find out all the reachable Variables in the Binary Tree starting from a given BDD_ID.
