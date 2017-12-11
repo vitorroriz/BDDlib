@@ -9,12 +9,12 @@ using namespace ClassProject;
 
 TEST (FalseTest, FalseID) {
     Manager *manager = new Manager();
-    ASSERT_EQ (0, manager->False());
+    ASSERT_EQ (BDD_ID_FALSE, manager->False());
 }
 
 TEST (TrueTest, TrueID) {
     Manager *manager = new Manager();
-    ASSERT_EQ (1, manager->True());
+    ASSERT_EQ (BDD_ID_TRUE, manager->True());
 }
 
 TEST (uniqueTableSizeTest, LeafNodes) {
