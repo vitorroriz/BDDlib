@@ -105,24 +105,31 @@ BDD_ID  Manager::topVar(const BDD_ID f){
         \return Return the id of the computed IF then ELSE Operator.
 */
 BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e){
-    BDD_ID top_var = topVar(i);/*!BDD_ID value top_var.*/
 
     if(isConstant(i))
     {
         if(i == BDD_ID_FALSE)
             return e;
         return t;
-    }
+    }    
 
-    if(isVariable(i) && t == BDD_ID_TRUE && t == BDD_ID_FALSE)
+    if(isVariable(i) && t == BDD_ID_TRUE && e == BDD_ID_FALSE)
         return i;
 
     if(t == e)
         return t;
 
-    BDD_ID high = ite(coFactorTrue(i), coFactorTrue(t,top_var), coFactorTrue(e,top_var));
+    BDD_ID top_var = topVar(i);
 
-    BDD_ID low = ite(coFactorFalse(i), coFactorFalse(t,top_var), coFactorFalse(e,top_var));
+    if(!isConstant(t) && topVar(t) < top_var)
+        top_var = topVar(t);
+
+    if(!isConstant(e) && topVar(e) < top_var)
+        top_var = topVar(e);
+
+    BDD_ID high = ite(coFactorTrue(i,top_var), coFactorTrue(t,top_var), coFactorTrue(e,top_var));
+
+    BDD_ID low = ite(coFactorFalse(i,top_var), coFactorFalse(t,top_var), coFactorFalse(e,top_var));
 
     if(high == low)
         return high;
@@ -155,7 +162,7 @@ BDD_ID Manager::coFactorFalse(const BDD_ID f){
 */
 BDD_ID Manager::coFactorFalse(const BDD_ID f, BDD_ID x){
     bool isTheSameVar = topVar(f) == x;/*! bool value isTheSameVar.*/
-    if(isConstant(f) || isConstant(x) || !isVariable(x) || (!isTheSameVar && isVariable(f)))
+    if(isConstant(f) || isConstant(x) || !isVariable(x) || (!isTheSameVar && isVariable(f)) || topVar(f) > x)
         return f;
     if(isTheSameVar)
         return getBDDNode(f)->low;
@@ -183,7 +190,7 @@ BDD_ID Manager::coFactorTrue(const BDD_ID f){
 */
 BDD_ID Manager::coFactorTrue(const BDD_ID f, BDD_ID x){    
     bool isTheSameVar = topVar(f) == x;/*! bool value isTheSameVar.*/
-    if(isConstant(f) || isConstant(x) || !isVariable(x) || (!isTheSameVar && isVariable(f)))
+    if(isConstant(f) || isConstant(x) || !isVariable(x) || (!isTheSameVar && isVariable(f)) || topVar(f) > x)
         return f;
     if(isTheSameVar)
         return getBDDNode(f)->high;
@@ -261,7 +268,7 @@ BDD_ID Manager::nor2(const BDD_ID a, const BDD_ID b){
 */
 std::string Manager::getTopVarName(const BDD_ID &root)
 {
-    return getBDDNode(root)->label;
+    return getBDDNode(getBDDNode(root)->top_var)->label;
 }
 
 //! Function to find out all the reachable nodes in the Binary Tree starting from a given BDD_ID.
