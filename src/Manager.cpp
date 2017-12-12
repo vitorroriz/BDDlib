@@ -147,7 +147,7 @@ BDD_ID Manager::coFactorFalse(const BDD_ID f){
     return getBDDNode(f)->low;
 }
 
-//! Function to compute the FALSE coFactor of a given BDD_ID f with respect to the BDD_ID x.
+//! Function to compute the FALSE coFactor of a given BDD_ID f with respect to BDD_ID x.
 /*!  
         \param f a BDD_ID argument.
 	\param x a BDD_ID argument.
@@ -175,7 +175,7 @@ BDD_ID Manager::coFactorTrue(const BDD_ID f){
     return getBDDNode(f)->high;
 }
 
-//! Function to compute the TRUE coFactor of a given BDD_ID f with respect to the BDD_ID x.
+//! Function to compute the TRUE coFactor of a given BDD_ID f with respect to BDD_ID x.
 /*!  
         \param f a BDD_ID argument.
         \param x a BDD_ID argument.
@@ -194,37 +194,37 @@ BDD_ID Manager::coFactorTrue(const BDD_ID f, BDD_ID x){
     return ite(topVar(f),high,low);
 }
 
-//! Function to compute an AND Boolean Login Function of two given BDD_IDs a and b.
+//! Function to compute an AND Boolean Function of two given BDD_IDs a and b.
 /*!  
         \param a a BDD_ID argument.
         \param b a BDD_ID argument.
-        \return Return the computed ITE operator of BDD_IDs a and b according the AND Boolean Logic.
+        \return Return the computed ITE operator of BDD_IDs a and b according to the AND Function.
 */
 BDD_ID Manager::and2(const BDD_ID a, const BDD_ID b){
     return ite(a,b,BDD_ID_FALSE);
 }
 
-//! Function to compute an OR Boolean Login Function of two given BDD_IDs a and b.
+//! Function to compute an OR Boolean Function of two given BDD_IDs a and b.
 /*!  
         \param a a BDD_ID argument.
         \param b a BDD_ID argument.
-        \return Return the computed ITE operator of BDD_IDs a and b according the OR Boolean Logic.
+        \return Return the computed ITE operator of BDD_IDs a and b according to the OR Function.
 */
 BDD_ID Manager::or2(const BDD_ID a, const BDD_ID b){
     return ite(a,BDD_ID_TRUE,b);
 }
 
-//! Function to compute a XOR Boolean Login Function of two given BDD_IDs a and b.
+//! Function to compute an XOR Boolean Function of two given BDD_IDs a and b.
 /*!  
         \param a a BDD_ID argument.
         \param b a BDD_ID argument.
-        \return Return the computed ITE operator of BDD_IDs a and b according the XOR Boolean Logic.
+        \return Return the computed ITE operator of BDD_IDs a and b according to the XOR Function.
 */
 BDD_ID Manager::xor2(const BDD_ID a, const BDD_ID b){
     return ite(a,neg(b),b);
 }
 
-//! Function to compute the Negation of a give BDD_ID.
+//! Function to compute the Negation of a given BDD_ID.
 /*!  
         \param a a BDD_ID argument.
         \return Return the Negation of a given BDD_ID.
@@ -233,21 +233,21 @@ BDD_ID Manager::neg(const BDD_ID a){
     ite(a,BDD_ID_FALSE,BDD_ID_TRUE);
 }
 
-//! Function to compute a NAND Boolean Login Function of two given BDD_IDs a and b.
+//! Function to compute a NAND Boolean Function of two given BDD_IDs a and b.
 /*!  
         \param a a BDD_ID argument.
         \param b a BDD_ID argument.
-        \return Return the computed ITE operator of BDD_IDs a and b according the NAND Boolean Logic.
+        \return Return the computed ITE operator of BDD_IDs a and b according to the NAND Function.
 */
 BDD_ID Manager::nand2(const BDD_ID a, const BDD_ID b){
     ite(a,neg(b),BDD_ID_TRUE);
 }
 
-//! Function to compute a NOR Boolean Login Function of two given BDD_IDs a and b.
+//! Function to compute a NOR Boolean Function of two given BDD_IDs a and b.
 /*!  
         \param a a BDD_ID argument.
         \param b a BDD_ID argument.
-        \return Return the computed ITE operator of BDD_IDs a and b according the NOR Boolean Logic.
+        \return Return the computed ITE operator of BDD_IDs a and b according to the NOR Function.
 */
 BDD_ID Manager::nor2(const BDD_ID a, const BDD_ID b){
     ite(a,BDD_ID_FALSE,neg(b));
@@ -294,7 +294,7 @@ void Manager::findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root){
     }
 }
 
-//! Function to return a Node from the uniqueTable according to its BDD_ID.
+//! Function to return a BDD_Node from the uniqueTable according to its BDD_ID.
 /*!  
         \param id a BDD_ID argument.
         \return Return a BDD_Node from the uniqueTable that has the corresponding BDD_ID.
