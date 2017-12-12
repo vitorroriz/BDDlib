@@ -117,11 +117,13 @@ TEST (coFactorFalsefxTest, Function)
     BDD_ID c = manager->createVar("c");
     BDD_ID d = manager->createVar("d");
     BDD_ID f = manager->ite(a,b,c);
+    BDD_ID g = manager->ite(b,c,d);
 
     ASSERT_EQ (c,manager->coFactorFalse(f,a));
     ASSERT_EQ (manager->ite(a,0,c),manager->coFactorFalse(f,b));
     ASSERT_EQ (manager->ite(a,b,0),manager->coFactorFalse(f,c));
     ASSERT_EQ (f, manager->coFactorFalse(f,d));
+    ASSERT_EQ (g, manager->coFactorFalse(g,a));
 }
 
 TEST (coFactorFalsefTest, Variable) {
@@ -163,11 +165,14 @@ TEST (coFactorTruefx, Function)
     BDD_ID c = manager->createVar("c");
     BDD_ID d = manager->createVar("d");
     BDD_ID f = manager->ite(a,b,c);
+    BDD_ID g = manager->ite(b,c,d);
 
     ASSERT_EQ (b,manager->coFactorTrue(f,a));
     ASSERT_EQ (manager->ite(a,1,c),manager->coFactorTrue(f,b));
     ASSERT_EQ (manager->ite(a,b,1),manager->coFactorTrue(f,c));
     ASSERT_EQ (f, manager->coFactorTrue(f,d));
+    ASSERT_EQ (g, manager->coFactorTrue(g,a));
+
 }
 
 TEST (coFactorTruef, Variable) {
@@ -185,6 +190,7 @@ TEST (coFactorTruef, Function)
     BDD_ID f = manager->ite(a,b,c);
 
     ASSERT_EQ (b, manager->coFactorTrue(f));
+
 }
 
 TEST (iteTest, TerminalCase) {
@@ -204,6 +210,7 @@ TEST (iteTest, TerminalCase) {
     ASSERT_EQ (a,manager->ite(b,a,a));
     ASSERT_EQ (falseId,manager->ite(b,falseId,falseId));
     ASSERT_EQ (trueId,manager->ite(b,trueId,trueId));
+    ASSERT_EQ(manager->ite(a,b,0),manager->ite(b,a,0));
 }
 
 TEST(iteTest, Function) {
@@ -318,11 +325,16 @@ TEST(nand2Test, Function)
 TEST(getTopVarNameTest, Function)
 {
     Manager *manager = new Manager();
-    BDD_Node* nodeA = manager->getBDDNode(manager->createVar("a"));
-    BDD_Node* nodeNegA = manager->getBDDNode(manager->neg(nodeA->id));
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID c = manager->createVar("c");
+    BDD_ID nega = manager->neg(a);
+    BDD_ID f = manager->ite(b,a,c);
 
-    ASSERT_EQ ("a",nodeA->label);
-    ASSERT_EQ ("f1",nodeNegA->label);
+
+    ASSERT_EQ ("a",manager->getTopVarName(a));
+    ASSERT_EQ ("a",manager->getTopVarName(nega));
+    ASSERT_EQ ("a",manager->getTopVarName(f));
 }
 
 TEST(findNodesTest, LeafNode)
