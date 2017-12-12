@@ -286,10 +286,8 @@ void Manager::findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root){
 void Manager::findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root){   
     if(!isConstant(root))
     {
-        if(!isConstant(coFactorFalse(root)))
-            findVars(coFactorFalse(root), vars_of_root);
-        if(!isConstant(coFactorTrue(root)))
-            findVars(coFactorTrue(root), vars_of_root);
+        findVars(coFactorFalse(root), vars_of_root);
+        findVars(coFactorTrue(root), vars_of_root);
         vars_of_root.insert(topVar(root));
     }
 }
