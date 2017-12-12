@@ -322,6 +322,17 @@ TEST(nand2Test, Function)
 
 }
 
+TEST(getTopVarNameTest, Variable)
+{
+    Manager *manager = new Manager();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+
+
+    ASSERT_EQ ("a",manager->getTopVarName(a));
+    ASSERT_EQ ("b",manager->getTopVarName(b));
+}
+
 TEST(getTopVarNameTest, Function)
 {
     Manager *manager = new Manager();
@@ -330,11 +341,14 @@ TEST(getTopVarNameTest, Function)
     BDD_ID c = manager->createVar("c");
     BDD_ID nega = manager->neg(a);
     BDD_ID f = manager->ite(b,a,c);
+    BDD_ID g = manager->ite(a,b,c);
+    BDD_ID h = manager->ite(c,b,a);
 
 
-    ASSERT_EQ ("a",manager->getTopVarName(a));
     ASSERT_EQ ("a",manager->getTopVarName(nega));
     ASSERT_EQ ("a",manager->getTopVarName(f));
+    ASSERT_EQ ("a",manager->getTopVarName(g));
+    ASSERT_EQ ("a",manager->getTopVarName(h));
 }
 
 TEST(findNodesTest, LeafNode)
