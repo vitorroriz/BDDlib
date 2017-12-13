@@ -91,8 +91,12 @@ TEST (topVarTest, Function)
     BDD_ID b = manager->createVar("b");
     BDD_ID c = manager->createVar("c");
     BDD_ID f = manager->ite(a,b,c);
+    BDD_ID g = manager->ite(b,c,a);
+    BDD_ID h = manager->ite(c,b,a);
 
     ASSERT_EQ (a, manager->getBDDNode(f)->top_var);
+    ASSERT_EQ (a, manager->getBDDNode(g)->top_var);
+    ASSERT_EQ (a, manager->getBDDNode(h)->top_var);
 }
 
 TEST (coFactorFalsefxTest, TerminalCase) {
@@ -339,16 +343,9 @@ TEST(getTopVarNameTest, Function)
     BDD_ID a = manager->createVar("a");
     BDD_ID b = manager->createVar("b");
     BDD_ID c = manager->createVar("c");
-    BDD_ID nega = manager->neg(a);
-    BDD_ID f = manager->ite(b,a,c);
-    BDD_ID g = manager->ite(a,b,c);
-    BDD_ID h = manager->ite(c,b,a);
+    BDD_ID f = manager->ite(a,b,c);
 
-
-    ASSERT_EQ ("a",manager->getTopVarName(nega));
     ASSERT_EQ ("a",manager->getTopVarName(f));
-    ASSERT_EQ ("a",manager->getTopVarName(g));
-    ASSERT_EQ ("a",manager->getTopVarName(h));
 }
 
 TEST(findNodesTest, LeafNode)

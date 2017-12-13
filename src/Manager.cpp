@@ -134,7 +134,7 @@ BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e){
     if(high == low)
         return high;
 
-    BDD_Node* node = new BDD_Node("f" + to_string(uniqueTableSize()-2),top_var,high,low,uniqueTableSize());
+    BDD_Node* node = new BDD_Node("f" + to_string(uniqueTableSize()),top_var,high,low,uniqueTableSize());
     auto it = unique_table.insert(node);
 
     if(it.second)
@@ -312,11 +312,12 @@ BDD_Node* Manager::getBDDNode(BDD_ID id){
 /*!  
 */
 void Manager::printUniqueTable(){
-    for(auto& pointer : pointers)
+    for(auto& node : unique_table)
     {
-        cout << "ID = " << pointer->id
-             << " TOP_VAR = " << pointer->top_var
-             << " HIGH = " << pointer->high
-             << " LOW = " << pointer->low << endl;
+        cout << "ID = " << node->id
+             << " TOP_VAR = " << node->top_var
+             << " HIGH = " << node->high
+             << " LOW = " << node->low
+             << " LABEL = " << node->label << endl;
     }
 }

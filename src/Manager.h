@@ -30,13 +30,18 @@ namespace ClassProject {
     } BDD_Node;
     //! typedef struct BDDComparer
     /*! 
-      Necessary method for the set for sorting elements. 
+      Necessary struct for sorting the elements of the unique_table. 
     */
     typedef struct BDDComparer {
         bool operator ()(const BDD_Node* node, const BDD_Node* anotherNode) const {
-            return (node->top_var < anotherNode->top_var || node->high < anotherNode->high || node->low < anotherNode->low);
+            if(node->top_var != anotherNode->top_var)
+            	return node->top_var < anotherNode->top_var;
+            if(node->high != anotherNode->high)
+            	return node->high < anotherNode->high;
+            if(node->low != anotherNode->low)
+            	return node->low < anotherNode->low;
+            return false;
         }
-
     } BDDComparer;
     //! Manager Class.
     /*!
@@ -45,8 +50,8 @@ namespace ClassProject {
     class Manager : ManagerInterface
     {
        private:
-            std::set<BDD_Node*,BDDComparer> unique_table;/*! set data member that represents the unique_table.*/
-            std::vector<BDD_Node*> pointers;/*! Vector containing pointers to the BDD_Nodes in the uniqueTable.*/
+            std::set<BDD_Node*,BDDComparer> unique_table;/*! Set that represents the unique_table.*/
+            std::vector<BDD_Node*> pointers;/*! Vector containing pointers to the BDD_Nodes in the unique_table.*/
 
        public:
             Manager();
@@ -96,8 +101,6 @@ namespace ClassProject {
             BDD_Node* getBDDNode(BDD_ID id);
 
             void printUniqueTable();
-
-            //bool evaluateBDD(BDD_ID id, std::vector<bool>);
     };
 
 }
