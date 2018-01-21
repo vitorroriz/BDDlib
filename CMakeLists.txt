@@ -7,9 +7,11 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 include_directories(${CMAKE_SOURCE_DIR}/src)
 link_directories(${CMAKE_SOURCE_DIR}/src)
 
+include_directories(${CMAKE_SOURCE_DIR}/src/bench/)
+link_directories(${CMAKE_SOURCE_DIR}/src/bench/)
+
 include_directories(${CMAKE_SOURCE_DIR}/src/test/)
 link_directories(${CMAKE_SOURCE_DIR}/src/test/)
-
 
 add_subdirectory(src)
 add_executable(VDSProject src/main.cpp)

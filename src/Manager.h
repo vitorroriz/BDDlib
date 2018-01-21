@@ -47,7 +47,7 @@ namespace ClassProject {
     /*!
       Declaration of the functions from the ManagerInterface.
     */
-    class Manager : ManagerInterface
+    class Manager : public ManagerInterface
     {
        private:
             std::set<BDD_Node*,BDDComparer> unique_table;/*! Set that represents the unique_table.*/
