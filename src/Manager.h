@@ -4,7 +4,7 @@
 
 #include "ManagerInterface.h"
 #include <iostream>
-#include <set>
+#include <unordered_map>
 #include <vector>
 
 #define BDD_ID_TRUE 1
@@ -17,32 +17,40 @@ namespace ClassProject {
     /*!
       Custom data type representing a BDD_Node. 
     */
+
     typedef struct BDD_Node{
         string label;/*! String value label. */
         BDD_ID top_var;/*! BDD_ID value top_var. */
         BDD_ID high;/*! BDD_ID of high Node. */
         BDD_ID low;/*! BDD_ID of low Node. */
-        BDD_ID id;/*! BDD_ID id. */
 
-        BDD_Node() {label = "", top_var = 0; high = 0, low = 0, id = 0;}
-        BDD_Node(string label, BDD_ID top_var, BDD_ID high, BDD_ID low, BDD_ID id):label(label), low(low),high(high),top_var(top_var), id(id){}
+        BDD_Node() {label = "", top_var = 0; high = 0, low = 0;}
+        BDD_Node(string label, BDD_ID top_var, BDD_ID high, BDD_ID low):label(label), low(low),high(high),top_var(top_var){}
 
     } BDD_Node;
+
     //! typedef struct BDDComparer
-    /*! 
-      Necessary struct for sorting the elements of the unique_table. 
+    /*!
+      Necessary struct for comparing the elements of the unique_table.
     */
     typedef struct BDDComparer {
         bool operator ()(const BDD_Node* node, const BDD_Node* anotherNode) const {
-            if(node->top_var != anotherNode->top_var)
-            	return node->top_var < anotherNode->top_var;
-            if(node->high != anotherNode->high)
-            	return node->high < anotherNode->high;
-            if(node->low != anotherNode->low)
-            	return node->low < anotherNode->low;
-            return false;
+            return (node->high == anotherNode->high && node->low == anotherNode->low && node->top_var == anotherNode->top_var);
         }
     } BDDComparer;
+
+    //! typedef struct BDDHasher
+    /*!
+      Necessary struct for organizing the elements of the unique_table.
+    */
+    typedef struct BDDHasher
+    {
+            std::size_t operator()(const BDD_Node* node) const
+            {
+                return ((hash<BDD_ID>()(node->low) ^ (hash<BDD_ID>()(node->high) <<1)) >>1) ^ (hash<BDD_ID>()(node->top_var) << 1);
+            }
+    } BDDHasher;
+
     //! Manager Class.
     /*!
       Declaration of the functions from the ManagerInterface.
@@ -50,7 +58,7 @@ namespace ClassProject {
     class Manager : public ManagerInterface
     {
        private:
-            std::set<BDD_Node*,BDDComparer> unique_table;/*! Set that represents the unique_table.*/
+            std::unordered_map<BDD_Node*,BDD_ID,BDDHasher,BDDComparer> unique_table;/*! Unordered Map that represents the unique_table.*/
             std::vector<BDD_Node*> pointers;/*! Vector containing pointers to the BDD_Nodes in the unique_table.*/
 
        public:
@@ -101,8 +109,9 @@ namespace ClassProject {
             BDD_Node* getBDDNode(BDD_ID id);
 
             void printUniqueTable();
-    };
 
+            void insertNode(BDD_Node* node);
+    };
 }
 
 #endif

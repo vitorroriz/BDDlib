@@ -36,8 +36,11 @@ TEST (uniqueTableSizeTest, Function)
     BDD_ID c = manager->createVar("c");
     BDD_ID f = manager->ite(a,b,c);
     size_t size1 = manager->uniqueTableSize();
+    manager->printUniqueTable();
     manager->ite(a,b,c);
     size_t size2 = manager->uniqueTableSize();
+
+    manager->printUniqueTable();
 
     ASSERT_EQ (6, size1);
     ASSERT_EQ (size1,size2);
@@ -51,7 +54,6 @@ TEST (createVarTest, varAttributes) {
     ASSERT_EQ (id, var->top_var);
     ASSERT_EQ (manager->True(), var->high);
     ASSERT_EQ (manager->False(), var->low);
-    ASSERT_EQ (id, var->id);
 }
 
 TEST (isConstantTest, LeafNode) {
