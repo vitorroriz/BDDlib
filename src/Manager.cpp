@@ -15,13 +15,13 @@ Manager::Manager(){
         /*Creating terminal vars */
         //! BDD_Node falseNode.
         /*! Initiates the FALSE leaf node of the Binary Tree.*/
-        BDD_Node* falseNode = new BDD_Node("FALSE", BDD_ID_FALSE, BDD_ID_FALSE, BDD_ID_FALSE);
+        BDD_Node falseNode("FALSE", BDD_ID_FALSE, BDD_ID_FALSE, BDD_ID_FALSE);
         /*Insert the new node into the uniqueTable*/
         insertNode(falseNode);
 
         //! BDD_Node trueNode.
         /*! Initiates the TRUE leaf of node the Binary Tree.*/
-        BDD_Node* trueNode = new BDD_Node("TRUE", BDD_ID_TRUE, BDD_ID_TRUE, BDD_ID_TRUE);
+        BDD_Node trueNode ("TRUE", BDD_ID_TRUE, BDD_ID_TRUE, BDD_ID_TRUE);
         /*Insert the new node into the uniqueTable*/
         insertNode(trueNode);
 }
@@ -31,7 +31,7 @@ Manager::Manager(){
         \return The id of the False leaf node in the Binary Tree.
 */
 const BDD_ID& Manager::False(){
-    return unique_table.find(getBDDNode(BDD_ID_FALSE))->second;
+    return (*unique_table.find(getBDDNode(BDD_ID_FALSE))).second;
 }
 
 //! Function to return the id of the TRUE leaf node in the Binary Tree.
@@ -39,7 +39,7 @@ const BDD_ID& Manager::False(){
         \return The id of the TRUE leaf node in the Binary Tree.
 */
 const BDD_ID& Manager::True(){
-    return unique_table.find(getBDDNode(BDD_ID_TRUE))->second;
+    return (*unique_table.find(getBDDNode(BDD_ID_TRUE))).second;
 }
 
 //! Function to return the size of the uniqueTable.
@@ -57,7 +57,7 @@ size_t Manager::uniqueTableSize(){
 */
 BDD_ID Manager::createVar(const std::string &label){
     BDD_ID id = unique_table.size();/*! BDD_ID value id. */
-    BDD_Node* node = new BDD_Node(label, id, True(), False());/*! BDD_Node value node. */
+    BDD_Node node(label, id, True(), False());/*! BDD_Node value node. */
     insertNode(node);
     return id;
 }
@@ -79,8 +79,8 @@ bool Manager::isConstant(const BDD_ID f){
         \return TRUE in case that the given BDD_ID x is a Variable, otherwise return FALSE.
 */
 bool Manager::isVariable(const BDD_ID x){
-    BDD_Node* node = getBDDNode(x);/*!< BDD_Node pointer value node.*/
-    if(!isConstant(x) && (node->top_var == x))
+    BDD_Node node = getBDDNode(x);/*!< BDD_Node pointer value node.*/
+    if(!isConstant(x) && (node.top_var == x))
         return true;
     return false;
 }
@@ -91,7 +91,7 @@ bool Manager::isVariable(const BDD_ID x){
         \return Return the top variable of the given BDD_ID.
 */
 BDD_ID  Manager::topVar(const BDD_ID f){
-    return getBDDNode(f)->top_var;
+    return getBDDNode(f).top_var;
 }
 
 //! Function to compute the IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator of a given BDD_ID with respect to its top variable.
@@ -116,6 +116,13 @@ BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e){
     if(t == e)
         return t;
 
+    ITE_Node iteNode(i,t,e);
+
+    auto iteIterator = computed_table.find(iteNode);
+
+    if(iteIterator != computed_table.end())
+        return (*iteIterator).second;
+
     BDD_ID top_var = topVar(i);
 
     if(!isConstant(t) && topVar(t) < top_var)
@@ -131,14 +138,22 @@ BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e){
     if(high == low)
         return high;
 
-    BDD_Node* newNode = new BDD_Node("f" + to_string(uniqueTableSize()),top_var,high,low);
+    BDD_ID id = uniqueTableSize();
+    BDD_Node newNode("f" + to_string(id),top_var,high,low);
 
-    if(unique_table.find(newNode) == unique_table.end())
+    auto node = unique_table.find(newNode);
+    if(node == unique_table.end())
     {
         insertNode(newNode);
     }
+    else
+    {
+        id = (*node).second;
+    }
 
-    return unique_table.find(newNode)->second;
+    computed_table.insert(make_pair(iteNode, id));
+
+    return id;
 }
 
 //! Function to compute the FALSE coFactor of a given BDD_ID f.
@@ -147,7 +162,7 @@ BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e){
         \return Return the FALSE coFactor of the given BDD_ID f.
 */
 BDD_ID Manager::coFactorFalse(const BDD_ID f){
-    return getBDDNode(f)->low;
+    return getBDDNode(f).low;
 }
 
 //! Function to compute the FALSE coFactor of a given BDD_ID f with respect to BDD_ID x.
@@ -158,13 +173,13 @@ BDD_ID Manager::coFactorFalse(const BDD_ID f){
 */
 BDD_ID Manager::coFactorFalse(const BDD_ID f, BDD_ID x){
     bool isTheSameVar = topVar(f) == x;/*! bool value isTheSameVar.*/
-    if(isConstant(f) || isConstant(x) || !isVariable(x) || (!isTheSameVar && isVariable(f)) || topVar(f) > x)
+    if(isConstant(f) || isConstant(x) || !isVariable(x) || /*(!isTheSameVar && isVariable(f)) ||*/ topVar(f) > x)
         return f;
     if(isTheSameVar)
-        return getBDDNode(f)->low;
+        return getBDDNode(f).low;
 
-    BDD_ID high = coFactorFalse(getBDDNode(f)->high,x);
-    BDD_ID low = coFactorFalse(getBDDNode(f)->low,x);
+    BDD_ID high = coFactorFalse(getBDDNode(f).high,x);
+    BDD_ID low = coFactorFalse(getBDDNode(f).low,x);
 
     return ite(topVar(f),high,low);
 }
@@ -175,7 +190,7 @@ BDD_ID Manager::coFactorFalse(const BDD_ID f, BDD_ID x){
         \return Return the TRUE coFactor of the given BDD_ID f.
 */
 BDD_ID Manager::coFactorTrue(const BDD_ID f){
-    return getBDDNode(f)->high;
+    return getBDDNode(f).high;
 }
 
 //! Function to compute the TRUE coFactor of a given BDD_ID f with respect to BDD_ID x.
@@ -186,13 +201,13 @@ BDD_ID Manager::coFactorTrue(const BDD_ID f){
 */
 BDD_ID Manager::coFactorTrue(const BDD_ID f, BDD_ID x){
     bool isTheSameVar = topVar(f) == x;/*! bool value isTheSameVar.*/
-    if(isConstant(f) || isConstant(x) || !isVariable(x) || (!isTheSameVar && isVariable(f)) || topVar(f) > x)
+    if(isConstant(f) || isConstant(x) || !isVariable(x) || /*(!isTheSameVar && isVariable(f)) ||*/ topVar(f) > x)
         return f;
     if(isTheSameVar)
-        return getBDDNode(f)->high;
+        return getBDDNode(f).high;
 
-    BDD_ID high = coFactorTrue(getBDDNode(f)->high,x);
-    BDD_ID low = coFactorTrue(getBDDNode(f)->low,x);
+    BDD_ID high = coFactorTrue(getBDDNode(f).high,x);
+    BDD_ID low = coFactorTrue(getBDDNode(f).low,x);
 
     return ite(topVar(f),high,low);
 }
@@ -264,7 +279,7 @@ BDD_ID Manager::nor2(const BDD_ID a, const BDD_ID b){
 */
 std::string Manager::getTopVarName(const BDD_ID &root)
 {
-    return getBDDNode(getBDDNode(root)->top_var)->label;
+    return getBDDNode(getBDDNode(root).top_var).label;
 }
 
 //! Function to find out all the reachable nodes in the Binary Tree starting from a given BDD_ID.
@@ -278,7 +293,7 @@ void Manager::findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root){
             findNodes(coFactorFalse(root), nodes_of_root);
             findNodes(coFactorTrue(root), nodes_of_root);
     }
-        nodes_of_root.insert(root);
+    nodes_of_root.insert(root);
 }
 
 //! Function to find out all the reachable Variables in the Binary Tree starting from a given BDD_ID.
@@ -300,7 +315,7 @@ void Manager::findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root){
         \param id a BDD_ID argument.
         \return Return a BDD_Node from the uniqueTable that has the corresponding BDD_ID.
 */
-BDD_Node* Manager::getBDDNode(BDD_ID id){
+const BDD_Node& Manager::getBDDNode(BDD_ID id){
     return pointers[id];
 }
 
@@ -311,14 +326,14 @@ void Manager::printUniqueTable(){
     for(auto& node : unique_table)
     {
         cout << "ID = " << node.second
-             << " TOP_VAR = " << node.first->top_var
-             << " HIGH = " << node.first->high
-             << " LOW = " << node.first->low
-             << " LABEL = " << node.first->label << endl;
+             << " TOP_VAR = " << node.first.top_var
+             << " HIGH = " << node.first.high
+             << " LOW = " << node.first.low
+             << " LABEL = " << node.first.label << endl;
     }
 }
 
-void Manager::insertNode(BDD_Node* node)
+void Manager::insertNode(BDD_Node &node)
 {
     unique_table.insert(make_pair(node,uniqueTableSize()));
     pointers.push_back(node);

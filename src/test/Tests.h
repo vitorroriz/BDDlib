@@ -34,13 +34,12 @@ TEST (uniqueTableSizeTest, Function)
     BDD_ID a = manager->createVar("a");
     BDD_ID b = manager->createVar("b");
     BDD_ID c = manager->createVar("c");
+    cout << "uniqueTableSizeTest" << endl;
     BDD_ID f = manager->ite(a,b,c);
+    cout << "uniqueTableSizeTest" << endl;
     size_t size1 = manager->uniqueTableSize();
-    manager->printUniqueTable();
     manager->ite(a,b,c);
     size_t size2 = manager->uniqueTableSize();
-
-    manager->printUniqueTable();
 
     ASSERT_EQ (6, size1);
     ASSERT_EQ (size1,size2);
@@ -49,11 +48,11 @@ TEST (uniqueTableSizeTest, Function)
 TEST (createVarTest, varAttributes) {
     Manager *manager = new Manager();
     BDD_ID id = manager->createVar("a");
-    BDD_Node* var = manager->getBDDNode(id);
-    ASSERT_EQ ("a", var->label);
-    ASSERT_EQ (id, var->top_var);
-    ASSERT_EQ (manager->True(), var->high);
-    ASSERT_EQ (manager->False(), var->low);
+    BDD_Node var = manager->getBDDNode(id);
+    ASSERT_EQ ("a", var.label);
+    ASSERT_EQ (id, var.top_var);
+    ASSERT_EQ (manager->True(), var.high);
+    ASSERT_EQ (manager->False(), var.low);
 }
 
 TEST (isConstantTest, LeafNode) {
@@ -96,9 +95,9 @@ TEST (topVarTest, Function)
     BDD_ID g = manager->ite(b,c,a);
     BDD_ID h = manager->ite(c,b,a);
 
-    ASSERT_EQ (a, manager->getBDDNode(f)->top_var);
-    ASSERT_EQ (a, manager->getBDDNode(g)->top_var);
-    ASSERT_EQ (a, manager->getBDDNode(h)->top_var);
+    ASSERT_EQ (a, manager->getBDDNode(f).top_var);
+    ASSERT_EQ (a, manager->getBDDNode(g).top_var);
+    ASSERT_EQ (a, manager->getBDDNode(h).top_var);
 }
 
 TEST (coFactorFalsefxTest, TerminalCase) {
@@ -325,7 +324,6 @@ TEST(nand2Test, Function)
     ASSERT_EQ (nega,manager->nand2(a,trueId));
     ASSERT_EQ (trueId,manager->nand2(a,falseId));
     ASSERT_EQ (manager->neg(manager->and2(a,b)),manager->nand2(a,b));
-
 }
 
 TEST(getTopVarNameTest, Variable)

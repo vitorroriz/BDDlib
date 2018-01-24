@@ -27,7 +27,7 @@ bool isEquivalent(uniqueTable* BDD1, uniqueTable* BDD2, int root1, int root2)
 		return true;
 	if(root1 != root2 && ( (root1 == 0 || root1 == 1) || (root2 == 0 || root2 == 1) ) )
 		return false;
-	if(BDD1->at(root1).var_id != BDD2->at(root2).var_id)
+	if(BDD1->at(root1).var_name != BDD2->at(root2).var_name)
 		return false;
 	return isEquivalent(BDD1, BDD2, BDD1->at(root1).low, BDD2->at(root2).low) and isEquivalent(BDD1, BDD2, BDD1->at(root1).high, BDD2->at(root2).high);
 }

@@ -15,7 +15,7 @@ namespace ClassProject {
 
     //! typedef struct BDD_Node
     /*!
-      Custom data type representing a BDD_Node. 
+      Custom data type representing a BDD_Node.
     */
 
     typedef struct BDD_Node{
@@ -29,15 +29,31 @@ namespace ClassProject {
 
     } BDD_Node;
 
+    typedef struct ITE_Node{
+        BDD_ID i;/*! BDD_ID value top_var. */
+        BDD_ID t;/*! BDD_ID of high Node. */
+        BDD_ID e;/*! BDD_ID of low Node. */
+
+        ITE_Node() {i = 0; t = 0, e = 0;}
+        ITE_Node(BDD_ID i, BDD_ID t, BDD_ID e):i(i), t(t),e(e){}
+
+    } ITE_Node;
+
     //! typedef struct BDDComparer
     /*!
       Necessary struct for comparing the elements of the unique_table.
     */
     typedef struct BDDComparer {
-        bool operator ()(const BDD_Node* node, const BDD_Node* anotherNode) const {
-            return (node->high == anotherNode->high && node->low == anotherNode->low && node->top_var == anotherNode->top_var);
+        bool operator ()(const BDD_Node& node, const BDD_Node& anotherNode) const {
+            return (node.high == anotherNode.high && node.low == anotherNode.low && node.top_var == anotherNode.top_var);
         }
     } BDDComparer;
+
+    typedef struct ITEComparer {
+        bool operator ()(const ITE_Node& node, const ITE_Node& anotherNode) const {
+            return (node.i == anotherNode.i && node.t == anotherNode.t && node.e == anotherNode.e);
+        }
+    } ITEComparer;
 
     //! typedef struct BDDHasher
     /*!
@@ -45,11 +61,25 @@ namespace ClassProject {
     */
     typedef struct BDDHasher
     {
-            std::size_t operator()(const BDD_Node* node) const
+            std::size_t operator()(const BDD_Node& node) const
             {
-                return ((hash<BDD_ID>()(node->low) ^ (hash<BDD_ID>()(node->high) <<1)) >>1) ^ (hash<BDD_ID>()(node->top_var) << 1);
+                BDD_ID seed = 0;
+                seed ^= hash<BDD_ID>()(node.low) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+                seed ^= hash<BDD_ID>()(node.high) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+                seed ^= hash<BDD_ID>()(node.top_var) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+                return seed;
+                //return ((hash<BDD_ID>()(node.low) ^ (hash<BDD_ID>()(node.high) <<1)) >>1) ^ (hash<BDD_ID>()(node.top_var) << 1);
             }
     } BDDHasher;
+
+    typedef struct ITEHasher
+    {
+            std::size_t operator()(const ITE_Node& node) const
+            {
+                return hash<BDD_ID>()(node.e) + hash<BDD_ID>()(node.t) + hash<BDD_ID>()(node.i);
+                //return ((hash<BDD_ID>()(node.e) ^ (hash<BDD_ID>()(node.t) <<1)) >>1) ^ (hash<BDD_ID>()(node.i) << 1);
+            }
+    } ITEHasher;
 
     //! Manager Class.
     /*!
@@ -58,8 +88,10 @@ namespace ClassProject {
     class Manager : public ManagerInterface
     {
        private:
-            std::unordered_map<BDD_Node*,BDD_ID,BDDHasher,BDDComparer> unique_table;/*! Unordered Map that represents the unique_table.*/
-            std::vector<BDD_Node*> pointers;/*! Vector containing pointers to the BDD_Nodes in the unique_table.*/
+            std::unordered_map<BDD_Node,BDD_ID,BDDHasher,BDDComparer> unique_table;/*! Unordered Map that represents the unique_table.*/
+            std::vector<BDD_Node> pointers;/*! Vector containing pointers to the BDD_Nodes in the unique_table.*/
+
+            unordered_map<ITE_Node,BDD_ID,ITEHasher,ITEComparer> computed_table;
 
        public:
             Manager();
@@ -106,11 +138,11 @@ namespace ClassProject {
 
             size_t uniqueTableSize() override;
 
-            BDD_Node* getBDDNode(BDD_ID id);
+            const BDD_Node& getBDDNode(BDD_ID id);
 
             void printUniqueTable();
 
-            void insertNode(BDD_Node* node);
+            void insertNode(BDD_Node& node);
     };
 }
 
