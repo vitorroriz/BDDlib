@@ -63,12 +63,12 @@ namespace ClassProject {
     {
             std::size_t operator()(const BDD_Node& node) const
             {
-                BDD_ID seed = 0;
+                /*BDD_ID seed = 0;
                 seed ^= hash<BDD_ID>()(node.low) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
                 seed ^= hash<BDD_ID>()(node.high) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
                 seed ^= hash<BDD_ID>()(node.top_var) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
-                return seed;
-                //return ((hash<BDD_ID>()(node.low) ^ (hash<BDD_ID>()(node.high) <<1)) >>1) ^ (hash<BDD_ID>()(node.top_var) << 1);
+                return seed;*/
+                return ((hash<BDD_ID>()(node.low) ^ (hash<BDD_ID>()(node.high) <<1)) >>1) ^ (hash<BDD_ID>()(node.top_var) << 1);
             }
     } BDDHasher;
 
@@ -76,8 +76,8 @@ namespace ClassProject {
     {
             std::size_t operator()(const ITE_Node& node) const
             {
-                return hash<BDD_ID>()(node.e) + hash<BDD_ID>()(node.t) + hash<BDD_ID>()(node.i);
-                //return ((hash<BDD_ID>()(node.e) ^ (hash<BDD_ID>()(node.t) <<1)) >>1) ^ (hash<BDD_ID>()(node.i) << 1);
+                //return hash<BDD_ID>()(node.e) + hash<BDD_ID>()(node.t) + hash<BDD_ID>()(node.i);
+                return ((hash<BDD_ID>()(node.e) ^ (hash<BDD_ID>()(node.t) <<1)) >>1) ^ (hash<BDD_ID>()(node.i) << 1);
             }
     } ITEHasher;
 
