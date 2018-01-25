@@ -68,7 +68,7 @@ BDD_ID Manager::createVar(const std::string &label){
         \return TRUE in case that the given BDD_ID f is a Constant, otherwise return FALSE.
 */
 bool Manager::isConstant(const BDD_ID f){
-    if(f == True() || f == False())
+    if(f == BDD_ID_FALSE || f == BDD_ID_TRUE)
         return true;
     return false;
 }
@@ -102,6 +102,13 @@ BDD_ID  Manager::topVar(const BDD_ID f){
         \return Return the id of the computed IF then ELSE Operator.
 */
 BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e){
+    BDD_ID ite_t = t;
+    BDD_ID ite_e = e;
+
+    if(i == t)
+       ite_t  = BDD_ID_TRUE;
+    if(i == e)
+        ite_e = BDD_ID_FALSE;
 
     if(isConstant(i))
     {
@@ -110,13 +117,13 @@ BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e){
         return t;
     }
 
-    if(isVariable(i) && t == BDD_ID_TRUE && e == BDD_ID_FALSE)
+    if(t == BDD_ID_TRUE && e == BDD_ID_FALSE)
         return i;
 
     if(t == e)
         return t;
 
-    ITE_Node iteNode(i,t,e);
+    ITE_Node iteNode(i,ite_t,ite_e);
 
     auto iteIterator = computed_table.find(iteNode);
 
@@ -173,7 +180,7 @@ BDD_ID Manager::coFactorFalse(const BDD_ID f){
 */
 BDD_ID Manager::coFactorFalse(const BDD_ID f, BDD_ID x){
     bool isTheSameVar = topVar(f) == x;/*! bool value isTheSameVar.*/
-    if(isConstant(f) || isConstant(x) || !isVariable(x) || /*(!isTheSameVar && isVariable(f)) ||*/ topVar(f) > x)
+    if(isConstant(f) || isConstant(x) || /* (!isTheSameVar && isVariable(f)) || */ topVar(f) > x)
         return f;
     if(isTheSameVar)
         return getBDDNode(f).low;
@@ -201,7 +208,7 @@ BDD_ID Manager::coFactorTrue(const BDD_ID f){
 */
 BDD_ID Manager::coFactorTrue(const BDD_ID f, BDD_ID x){
     bool isTheSameVar = topVar(f) == x;/*! bool value isTheSameVar.*/
-    if(isConstant(f) || isConstant(x) || !isVariable(x) || /*(!isTheSameVar && isVariable(f)) ||*/ topVar(f) > x)
+    if(isConstant(f) || isConstant(x) || /* (!isTheSameVar && isVariable(f)) || */ topVar(f) > x)
         return f;
     if(isTheSameVar)
         return getBDDNode(f).high;
