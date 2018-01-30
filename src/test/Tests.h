@@ -2,6 +2,7 @@
 #ifndef VDS_PROJECT_GTESTS_H
 #define VDS_PROJECT_GTESTS_H
 
+#define GTEST_HAS_TR1_TUPLE 0
 #include "gtest/gtest.h"
 #include "../Manager.h"
 
@@ -19,13 +20,13 @@ TEST (TrueTest, TrueID) {
 
 TEST (uniqueTableSizeTest, LeafNodes) {
     Manager *manager = new Manager();
-    ASSERT_EQ (2, manager->uniqueTableSize());
+    ASSERT_EQ (1, manager->uniqueTableSize());
 }
 
 TEST (uniqueTableSizeTest, Variable) {
     Manager *manager = new Manager();
     manager->createVar("a");
-    ASSERT_EQ (3, manager->uniqueTableSize());
+    ASSERT_EQ (2, manager->uniqueTableSize());
 }
 
 TEST (uniqueTableSizeTest, Function)
@@ -34,14 +35,12 @@ TEST (uniqueTableSizeTest, Function)
     BDD_ID a = manager->createVar("a");
     BDD_ID b = manager->createVar("b");
     BDD_ID c = manager->createVar("c");
-    cout << "uniqueTableSizeTest" << endl;
     BDD_ID f = manager->ite(a,b,c);
-    cout << "uniqueTableSizeTest" << endl;
     size_t size1 = manager->uniqueTableSize();
     manager->ite(a,b,c);
     size_t size2 = manager->uniqueTableSize();
 
-    ASSERT_EQ (6, size1);
+    ASSERT_EQ (5, size1);
     ASSERT_EQ (size1,size2);
 }
 
@@ -240,7 +239,6 @@ TEST(negTest, Function)
     ASSERT_EQ (falseId,manager->neg(trueId));
     ASSERT_EQ (trueId,manager->neg(falseId));
     ASSERT_EQ (a, manager->neg(nega));
-
 }
 
 TEST(or2Test, Function)

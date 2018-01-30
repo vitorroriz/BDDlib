@@ -10,6 +10,8 @@
 #define BDD_ID_TRUE 1
 #define BDD_ID_FALSE 0
 
+#define CACHE_SIZE 2048
+
 using namespace std;
 namespace ClassProject {
 
@@ -26,18 +28,9 @@ namespace ClassProject {
 
         BDD_Node() {label = "", top_var = 0; high = 0, low = 0;}
         BDD_Node(string label, BDD_ID top_var, BDD_ID high, BDD_ID low):label(label), low(low),high(high),top_var(top_var){}
+        BDD_Node(BDD_ID top_var, BDD_ID high, BDD_ID low):label(""), low(low),high(high),top_var(top_var){}
 
     } BDD_Node;
-
-    typedef struct ITE_Node{
-        BDD_ID i;/*! BDD_ID value top_var. */
-        BDD_ID t;/*! BDD_ID of high Node. */
-        BDD_ID e;/*! BDD_ID of low Node. */
-
-        ITE_Node() {i = 0; t = 0, e = 0;}
-        ITE_Node(BDD_ID i, BDD_ID t, BDD_ID e):i(i), t(t),e(e){}
-
-    } ITE_Node;
 
     //! typedef struct BDDComparer
     /*!
@@ -49,11 +42,6 @@ namespace ClassProject {
         }
     } BDDComparer;
 
-    typedef struct ITEComparer {
-        bool operator ()(const ITE_Node& node, const ITE_Node& anotherNode) const {
-            return (node.i == anotherNode.i && node.t == anotherNode.t && node.e == anotherNode.e);
-        }
-    } ITEComparer;
 
     //! typedef struct BDDHasher
     /*!
@@ -63,23 +51,14 @@ namespace ClassProject {
     {
             std::size_t operator()(const BDD_Node& node) const
             {
-                /*BDD_ID seed = 0;
+                BDD_ID seed = 0;
                 seed ^= hash<BDD_ID>()(node.low) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
                 seed ^= hash<BDD_ID>()(node.high) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
                 seed ^= hash<BDD_ID>()(node.top_var) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
-                return seed;*/
-                return ((hash<BDD_ID>()(node.low) ^ (hash<BDD_ID>()(node.high) <<1)) >>1) ^ (hash<BDD_ID>()(node.top_var) << 1);
+                return seed;
+                //return ((hash<BDD_ID>()(node.low) ^ (hash<BDD_ID>()(node.high) <<1)) >>1) ^ (hash<BDD_ID>()(node.top_var) << 1);
             }
     } BDDHasher;
-
-    typedef struct ITEHasher
-    {
-            std::size_t operator()(const ITE_Node& node) const
-            {
-                //return hash<BDD_ID>()(node.e) + hash<BDD_ID>()(node.t) + hash<BDD_ID>()(node.i);
-                return ((hash<BDD_ID>()(node.e) ^ (hash<BDD_ID>()(node.t) <<1)) >>1) ^ (hash<BDD_ID>()(node.i) << 1);
-            }
-    } ITEHasher;
 
     //! Manager Class.
     /*!
@@ -88,10 +67,12 @@ namespace ClassProject {
     class Manager : public ManagerInterface
     {
        private:
-            std::unordered_map<BDD_Node,BDD_ID,BDDHasher,BDDComparer> unique_table;/*! Unordered Map that represents the unique_table.*/
-            std::vector<BDD_Node> pointers;/*! Vector containing pointers to the BDD_Nodes in the unique_table.*/
-
-            unordered_map<ITE_Node,BDD_ID,ITEHasher,ITEComparer> computed_table;
+            BDD_ID falseNode = BDD_ID_FALSE;
+            BDD_ID trueNode = BDD_ID_TRUE;
+            vector<BDD_Node> unique_table;/*! Unordered Map that represents the unique_table.*/
+            //vector<BDD_Node> pointers;
+            unordered_map<BDD_Node,BDD_ID,BDDHasher,BDDComparer> nodes;
+            unordered_map<BDD_Node,BDD_ID,BDDHasher,BDDComparer> computed_table;
 
        public:
             Manager();
@@ -110,9 +91,19 @@ namespace ClassProject {
 
             BDD_ID ite(const BDD_ID i, const BDD_ID t, const BDD_ID e) override;
 
+            BDD_ID iteST(const BDD_ID i, const BDD_ID t, const BDD_ID e);
+
+            BDD_ID ite(const BDD_ID i, const BDD_ID t, const BDD_ID e, const BDD_ID top_var);
+
+            BDD_ID iteC(const BDD_ID i, const BDD_ID t, const BDD_ID e, const BDD_ID top_var);
+
             BDD_ID coFactorTrue(const BDD_ID f, BDD_ID x) override;
 
             BDD_ID coFactorFalse(const BDD_ID f, BDD_ID x) override;
+
+            BDD_ID coFactorTrueC(const BDD_ID f, BDD_ID x);
+
+            BDD_ID coFactorFalseC(const BDD_ID f, BDD_ID x);
 
             BDD_ID coFactorTrue(const BDD_ID f) override;
 
@@ -142,7 +133,13 @@ namespace ClassProject {
 
             void printUniqueTable();
 
-            void insertNode(BDD_Node& node);
+            void insertNode(BDD_Node& node, BDD_ID id);
+
+            BDD_ID getComplement(BDD_ID f);
+
+            bool isComplement(BDD_ID f);
+
+            BDD_ID getNextId(BDD_ID f);
     };
 }
 
