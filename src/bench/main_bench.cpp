@@ -67,7 +67,7 @@ int main(int argc, char* argv[])
     std::cout << " VM: " << vm2-vm1 << "; RSS: " << rss2-rss1 << endl << endl;
 
     cout << " Unique Table Size: " << static_cast<ClassProject::Manager*>(BDD_manager)->uniqueTableSize() << endl;
-    cout << " Nodes Size: " << static_cast<ClassProject::Manager*>(BDD_manager)->nodesSize() << endl;
+    cout << " New Nodes Size: " << static_cast<ClassProject::Manager*>(BDD_manager)->newNodesSize() << endl;
     cout << " Computed Table Size: " << static_cast<ClassProject::Manager*>(BDD_manager)->computedTableSize() << endl;
     return 0;
 }

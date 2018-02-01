@@ -6,7 +6,6 @@
 #include <iostream>
 #include <unordered_map>
 #include <vector>
-//#include <google/dense_hash_map>
 
 #define BDD_ID_TRUE 1
 #define BDD_ID_FALSE 0
@@ -54,8 +53,7 @@ namespace ClassProject {
                 seed ^= hash<BDD_ID>()(node.low) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
                 seed ^= hash<BDD_ID>()(node.high) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
                 seed ^= hash<BDD_ID>()(node.top_var) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
-                return seed;
-                //return ((hash<BDD_ID>()(node.low) ^ (hash<BDD_ID>()(node.high) <<1)) >>1) ^ (hash<BDD_ID>()(node.top_var) << 1);
+                return seed;               
             }
     } BDDHasher;
 
@@ -68,12 +66,15 @@ namespace ClassProject {
        private:
             BDD_ID falseNode = BDD_ID_FALSE;
             BDD_ID trueNode = BDD_ID_TRUE;
-            vector<BDD_Node> unique_table;/*!Vector that represents the unique_table.*/
-            //vector<BDD_Node> pointers;
-	    unordered_map<BDD_Node,BDD_ID,BDDHasher,BDDComparer> newNodes;
+            vector<BDD_Node> unique_table; /*!Vector that represents the unique_table.*/
+            unordered_map<BDD_Node,BDD_ID,BDDHasher,BDDComparer> new_nodes;
             unordered_map<BDD_Node,BDD_ID,BDDHasher,BDDComparer> computed_table;
-            //google::dense_hash_map<BDD_Node,BDD_ID,BDDHasher,BDDComparer> nodes;
-            //google::dense_hash_map<BDD_Node,BDD_ID,BDDHasher,BDDComparer> computed_table;
+
+            bool isComplement(BDD_ID f);
+
+            BDD_ID getNextId(BDD_ID f);
+
+            void insertNode(BDD_Node& node, BDD_ID id);
 
        public:
             Manager();
@@ -130,25 +131,17 @@ namespace ClassProject {
 
             size_t uniqueTableSize() override;
 
-            size_t nodesSize();
+            size_t newNodesSize();
 
             size_t computedTableSize();
 
-            const BDD_Node& getBDDNode(BDD_ID id);
-
-            void printUniqueTable();
-
-            void insertNode(BDD_Node& node, BDD_ID id);
-
             BDD_ID getComplement(BDD_ID f);
 
-            bool isComplement(BDD_ID f);
+            const BDD_Node& getBDDNode(BDD_ID id);
 
-            BDD_ID getNextId(BDD_ID f);
+            void printUniqueTable();            
 
-            //BDD_ID iteConstant(const BDD_ID i, const BDD_ID t, const BDD_ID e);
 
-           //BDD_ID iteConstant(const BDD_ID i, const BDD_ID t, const BDD_ID e,  const BDD_ID top_var, const BDD_ID cti, const BDD_ID ctt, const BDD_ID cte, const BDD_ID cfi , const BDD_ID cft, const BDD_ID cfe);
     };
 }
 

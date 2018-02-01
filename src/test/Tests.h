@@ -434,4 +434,23 @@ TEST(findVarsTest, Function)
 
     ASSERT_EQ (vars,varsFound);
 }
+
+TEST(XOR3Test, Function)
+{
+    Manager* manager = new Manager();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID c = manager->createVar("c");
+    BDD_ID XORab = manager->xor2(a,b);
+    BDD_ID XORabc = manager->xor2(XORab,c);
+
+    ASSERT_EQ (manager->ite(c,manager->getComplement(XORab),XORab),XORabc);
+    ASSERT_EQ (manager->getComplement(manager->xor2(c,b)),manager->coFactorTrue(XORabc,a));
+    ASSERT_EQ (manager->getComplement(manager->xor2(c,a)),manager->coFactorTrue(XORabc,b));
+    ASSERT_EQ (manager->getComplement(manager->xor2(b,a)),manager->coFactorTrue(XORabc,c));
+    ASSERT_EQ (manager->xor2(c,b),manager->coFactorFalse(XORabc,a));
+    ASSERT_EQ (manager->xor2(c,a),manager->coFactorFalse(XORabc,b));
+    ASSERT_EQ (manager->xor2(b,a),manager->coFactorFalse(XORabc,c));
+}
+
 #endif
