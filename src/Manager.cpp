@@ -9,7 +9,7 @@ using namespace ClassProject;
 
 //! Manager Constructor.
 /*
-        Initiates the Manager class by creating two BDD_Nodes(FALSE,TRUE) that represents the leaf nodes of the Binary Tree.
+        Initiates the Manager class by creating the BDD_Node(TRUE) that represents the leaf node of the Binary Tree.
 */
 Manager::Manager(){
         /*Creating terminal var */
@@ -17,7 +17,7 @@ Manager::Manager(){
         /*! Initiates the TRUE leaf of node the Binary Tree.*/
         BDD_Node trueNode ("TRUE", BDD_ID_TRUE, BDD_ID_TRUE, BDD_ID_TRUE);
         /*Insert the new node into the uniqueTable*/
-        insertNode(trueNode, BDD_ID_TRUE);
+        unique_table.push_back(trueNode);
 }
 
 //! Function to return the id of the FALSE leaf node in the Binary Tree.
@@ -59,8 +59,8 @@ size_t Manager::computedTableSize(){
 */
 BDD_ID Manager::createVar(const std::string &label){
     BDD_ID id = (unique_table.size()) << 1;/*! BDD_ID value id. */
-    BDD_Node node(label, id, True(), False());/*! BDD_Node value node. */
-    insertNode(node,id);
+    BDD_Node var(label, id, BDD_ID_TRUE, BDD_ID_FALSE);/*! BDD_Node value var. */
+    unique_table.push_back(var);
     return id;
 }
 
@@ -70,7 +70,7 @@ BDD_ID Manager::createVar(const std::string &label){
         \return TRUE in case that the given BDD_ID f is a Constant, otherwise return FALSE.
 */
 bool Manager::isConstant(const BDD_ID f){
-    if(f == False() || f == True())
+    if(f == BDD_ID_FALSE || f == BDD_ID_TRUE)
         return true;
     return false;
 }
@@ -236,7 +236,7 @@ BDD_ID Manager::iteST(const BDD_ID i, const BDD_ID t, const BDD_ID e)
     {
         if(isTConstant)
         {
-            if(t == True())
+            if(t == BDD_ID_TRUE)
                 return ite(e,t,i,top_var);
             else
             {
@@ -245,7 +245,7 @@ BDD_ID Manager::iteST(const BDD_ID i, const BDD_ID t, const BDD_ID e)
         }
         else if(isEConstant)
         {
-            if(e == False())
+            if(e == BDD_ID_FALSE)
                 return ite(t,i,e,top_var);
             else
             {
@@ -291,18 +291,18 @@ BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID top_v
 
     BDD_Node iteNode(top_var,t,e);
 
-    auto iteIterator = new_nodes.find(iteNode);
-    if(iteIterator != new_nodes.end())
+    auto node = new_nodes.find(iteNode);
+    if(node != new_nodes.end())
     {
-        return (*iteIterator).second;
+        return (*node).second;
     }
 
     iteNode.top_var = i;
 
-    iteIterator = computed_table.find(iteNode);
-    if(iteIterator != computed_table.end())
+    node = computed_table.find(iteNode);
+    if(node != computed_table.end())
     {
-        return (*iteIterator).second;
+        return (*node).second;
     }
 
     BDD_ID high = ite(coFactorTrue(i,top_var),coFactorTrue(t,top_var),coFactorTrue(e,top_var));
@@ -317,10 +317,10 @@ BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID top_v
 
     BDD_Node newNode(top_var,high,low);
 
-    auto node = new_nodes.find(newNode);
+    node = new_nodes.find(newNode);
     if(node == new_nodes.end())
     {
-        insertNode(newNode, id);
+        unique_table.push_back(newNode);
         new_nodes.insert(make_pair(newNode, id));
         if(i != top_var || t != high || e != low)
         {
@@ -339,15 +339,15 @@ BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID top_v
 BDD_ID Manager::iteC(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID top_var){
     BDD_Node iteNode(top_var,t,e);
 
-    auto iteIterator = new_nodes.find(iteNode);
-    if(iteIterator != new_nodes.end())
-        return getComplement((*iteIterator).second);
+    auto node = new_nodes.find(iteNode);
+    if(node != new_nodes.end())
+        return getComplement((*node).second);
 
     iteNode.top_var = i;
 
-    iteIterator = computed_table.find(iteNode);
-    if(iteIterator != computed_table.end())
-        return getComplement((*iteIterator).second);   
+    node = computed_table.find(iteNode);
+    if(node != computed_table.end())
+        return getComplement((*node).second);
 
     BDD_ID high = ite(coFactorTrue(i,top_var),coFactorTrue(t,top_var),coFactorTrue(e,top_var));
     BDD_ID low = ite(coFactorFalse(i,top_var),coFactorFalse(t,top_var),coFactorFalse(e,top_var));
@@ -361,10 +361,10 @@ BDD_ID Manager::iteC(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID top_
 
     BDD_Node newNode(top_var,high,low);
 
-    auto node = new_nodes.find(newNode);
+    node = new_nodes.find(newNode);
     if(node == new_nodes.end())
     {
-        insertNode(newNode, id);
+        unique_table.push_back(newNode);
         new_nodes.insert(make_pair(newNode, id));
         if(i != top_var || t != high || e != low)
             computed_table.insert(make_pair(iteNode, id));
@@ -617,9 +617,4 @@ void Manager::printUniqueTable(){
              << " LOW = " << node.first.low
              << " LABEL = " << node.first.label << endl;
     }
-}
-
-void Manager::insertNode(BDD_Node& node, BDD_ID id)
-{
-    unique_table.push_back(node);
 }

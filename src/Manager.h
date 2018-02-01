@@ -74,8 +74,6 @@ namespace ClassProject {
 
             BDD_ID getNextId(BDD_ID f);
 
-            void insertNode(BDD_Node& node, BDD_ID id);
-
        public:
             Manager();
 
