@@ -145,7 +145,7 @@ bool Manager::isComplement(BDD_ID f)
     return false;
 }
 
-//! Function to compute the IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator of a given BDD_ID with respect to its top variable.
+//! Function to compute the IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator.
 /*!
         \param i a BDD_ID argument.
         \param t a BDD_ID argument.
@@ -221,12 +221,12 @@ BDD_ID Manager::getNextId(BDD_ID f)
         return f+2;
 }
 
-//! Function to compute the ite according to the  standard triples.
+//! Function to compute the ite according to the standard triples.
 /*!
 	\param i a BDD_ID argument.
 	\param t a BDD_ID argument.
 	\param e a BDD_ID argument.
-	\return the ID of the computed IF THEN ELSE operator according the standard triples.
+        \return the ID of the computed IF THEN ELSE operator according to the standard triples.
 */  
 BDD_ID Manager::iteST(const BDD_ID i, const BDD_ID t, const BDD_ID e)
 {
