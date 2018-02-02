@@ -245,24 +245,28 @@ BDD_ID Manager::iteST(const BDD_ID i, const BDD_ID t, const BDD_ID e)
     bool isTConstant = isConstant(t);
     bool isEConstant = isConstant(e);
 
-    BDD_ID top_var = topVar(i);
+    BDD_ID topVarI = topVar(i);
+    BDD_ID topVarT = topVar(t);
+    BDD_ID topVarE = topVar(e);
+
+    BDD_ID top_var = topVarI;
 
     if(!isTConstant)
-    {
-        if(topVar(t) < topVar(i))
-            top_var = topVar(t);
+    {        
+        if(topVarT < top_var)
+            top_var = topVarT;
 
-        if(!isEConstant && topVar(e) < top_var)
-            top_var = topVar(e);
+        if(!isEConstant && topVarE < top_var)
+            top_var = topVarE;
     }
     else
     {
-        if(topVar(e) < top_var)
-            top_var = topVar(e);
+        if(topVarE < top_var)
+            top_var = topVarE;
     }
 
-    if(top_var != topVar(i) ||
-       (top_var == topVar(i) && ((top_var == topVar(t) && i >= getNextId(t)) || (top_var == topVar(e) && i >= getNextId(e)))))
+    if(top_var != topVarI ||
+       (top_var == topVarI && ((top_var == topVarT && i >= getNextId(t)) || (top_var == topVarE && i >= getNextId(e)))))
     {
         if(isTConstant)
         {
@@ -290,7 +294,6 @@ BDD_ID Manager::iteST(const BDD_ID i, const BDD_ID t, const BDD_ID e)
     }
 
     return ite(i,t,e,top_var);
-
 }
 
 //! Function to compute the IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator of a given BDD_ID with respect to its top variable.
