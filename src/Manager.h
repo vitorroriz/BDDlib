@@ -1,4 +1,3 @@
-
 #ifndef MANAGER_H
 #define MANAGER_H
 
@@ -19,10 +18,10 @@ namespace ClassProject {
     */
 
     typedef struct BDD_Node{
-        string label;/*! String value label. */
+        string label;  /*! String value label. */
         BDD_ID top_var;/*! BDD_ID value top_var. */
-        BDD_ID high;/*! BDD_ID of high Node. */
-        BDD_ID low;/*! BDD_ID of low Node. */
+        BDD_ID high;   /*! BDD_ID of high Node. */
+        BDD_ID low;    /*! BDD_ID of low Node. */
 
         BDD_Node() {label = "", top_var = 0; high = 0, low = 0;}
         BDD_Node(string label, BDD_ID top_var, BDD_ID high, BDD_ID low):label(label), low(low),high(high),top_var(top_var){}
@@ -65,10 +64,10 @@ namespace ClassProject {
     {
        private:
             BDD_ID falseNode = BDD_ID_FALSE;
-            BDD_ID trueNode = BDD_ID_TRUE;
-            vector<BDD_Node> unique_table; /*!Vector that represents the unique_table.*/
-            unordered_map<BDD_Node,BDD_ID,BDDHasher,BDDComparer> new_nodes;
-            unordered_map<BDD_Node,BDD_ID,BDDHasher,BDDComparer> computed_table;
+            BDD_ID trueNode  = BDD_ID_TRUE;
+            vector<BDD_Node> unique_table; 						/*!Vector that represents the unique_table.*/
+            unordered_map<BDD_Node,BDD_ID,BDDHasher,BDDComparer> new_nodes;             /*!Holds the nodes from the unique table.*/
+            unordered_map<BDD_Node,BDD_ID,BDDHasher,BDDComparer> computed_table;	/*!Table that contains the computed ite calculations in order to eliminate reptition on the computations.*/
 
             bool isComplement(BDD_ID f);
 
@@ -102,10 +101,6 @@ namespace ClassProject {
             BDD_ID coFactorTrue(const BDD_ID f, BDD_ID x) override;
 
             BDD_ID coFactorFalse(const BDD_ID f, BDD_ID x) override;
-
-            BDD_ID coFactorTrueC(const BDD_ID f, BDD_ID x);
-
-            BDD_ID coFactorFalseC(const BDD_ID f, BDD_ID x);
 
             BDD_ID coFactorTrue(const BDD_ID f) override;
 

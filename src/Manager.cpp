@@ -44,10 +44,18 @@ size_t Manager::uniqueTableSize(){
     return unique_table.size();
 }
 
+//! Function to return the size of the new_nodes.
+/*!
+	\return the size of new_nodes. 
+*/
 size_t Manager::newNodesSize(){
     return new_nodes.size();
 }
 
+//! Function to return the size of the Computed Table.
+/*!
+	\return the size of computed_table.
+*/
 size_t Manager::computedTableSize(){
     return computed_table.size();
 }
@@ -96,6 +104,12 @@ BDD_ID  Manager::topVar(const BDD_ID f){
     return getBDDNode(f).top_var;
 }
 
+
+//! Function to return the coplement of a given BDD_ID.
+/*!
+	\param f a BDD_ID argument.
+	\return BDD_ID_TRUE or FALSE if f is a constant, otherwise return the BDD_ID of f +1 if BDD_ID is even, or BDD_ID -1 if it's odd. 
+*/
 BDD_ID Manager::getComplement(BDD_ID f)
 {
     if(isConstant(f))
@@ -112,6 +126,11 @@ BDD_ID Manager::getComplement(BDD_ID f)
          return f-1;
 }
 
+//! Function check if a given BDD_ID is a complement of a previous BDD_ID.
+/*!
+	\param f a BDD_ID argument.
+	\return TRUE in the case of f be a complent BDD_ID, otherwise return FALSE.
+*/
 bool Manager::isComplement(BDD_ID f)
 {
     if(isConstant(f))
@@ -189,6 +208,11 @@ BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e)
     }
 }
 
+//! Function to get the next ID of a given BDD_ID.
+/*!
+	\param f a BDD_ID argument.
+	\return the next BDD_ID of f.
+*/
 BDD_ID Manager::getNextId(BDD_ID f)
 {
     if(isComplement(f))
@@ -197,6 +221,13 @@ BDD_ID Manager::getNextId(BDD_ID f)
         return f+2;
 }
 
+//! Function to compute the ite according to the  standard triples.
+/*!
+	\param i a BDD_ID argument.
+	\param t a BDD_ID argument.
+	\param e a BDD_ID argument.
+	\return the ID of the computed IF THEN ELSE operator according the standard triples.
+*/  
 BDD_ID Manager::iteST(const BDD_ID i, const BDD_ID t, const BDD_ID e)
 {
     if(t == e)
@@ -263,6 +294,14 @@ BDD_ID Manager::iteST(const BDD_ID i, const BDD_ID t, const BDD_ID e)
 
 }
 
+//! Function to compute the IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator of a given BDD_ID with respect to its top variable.
+/*!
+        \param i a BDD_ID argument.
+        \param t a BDD_ID argument.
+        \param e a BDD_ID argument.
+	\param top_var a BDD_ID argument.
+        \return Return the id of the computed IF then ELSE Operator.
+*/
 BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID top_var){
 
     if(t == e)
@@ -336,6 +375,14 @@ BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID top_v
     }
 }
 
+//! Function to compute the COMPLEMENT IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator of a given BDD_ID with respect to its top variable.
+/*!
+        \param i a BDD_ID argument.
+        \param t a BDD_ID argument.
+        \param e a BDD_ID argument.
+	\param top_var a BDD_ID argument.
+        \return Return the id of the computed IF then ELSE Operator.
+*/
 BDD_ID Manager::iteC(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID top_var){
     BDD_Node iteNode(top_var,t,e);
 
@@ -576,7 +623,7 @@ const BDD_Node& Manager::getBDDNode(BDD_ID id){
 }
 
 
-//! Function to print all the BDD_Nodes present in the uniqueTable.
+//! Function to print all the BDD_Nodes present in the uniqueTable, new_nodes table and in the computed table.
 /*!
 */
 void Manager::printUniqueTable(){

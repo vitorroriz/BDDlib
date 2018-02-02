@@ -49,6 +49,8 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classClassProject_1_1Manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ClassProject::Manager Class Reference</div>  </div>
@@ -137,13 +139,56 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0b54ce30834a6044fc9eb8e85550c5a8"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a0b54ce30834a6044fc9eb8e85550c5a8">uniqueTableSize</a> () override</td></tr>
 <tr class="memdesc:a0b54ce30834a6044fc9eb8e85550c5a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return the size of the uniqueTable.  <a href="#a0b54ce30834a6044fc9eb8e85550c5a8">More...</a><br /></td></tr>
 <tr class="separator:a0b54ce30834a6044fc9eb8e85550c5a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f4669617591b7c3d9e36620a547e282"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode</a> (BDD_ID id)</td></tr>
-<tr class="memdesc:a1f4669617591b7c3d9e36620a547e282"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return a <a class="el" href="structClassProject_1_1BDD__Node.html" title="typedef struct BDD_Node ">BDD_Node</a> from the uniqueTable according to its BDD_ID.  <a href="#a1f4669617591b7c3d9e36620a547e282">More...</a><br /></td></tr>
-<tr class="separator:a1f4669617591b7c3d9e36620a547e282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a1039bfd40a5b78c8d7dc992815e5ec"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a6a1039bfd40a5b78c8d7dc992815e5ec">newNodesSize</a> ()</td></tr>
+<tr class="memdesc:a6a1039bfd40a5b78c8d7dc992815e5ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return the size of the new_nodes.  <a href="#a6a1039bfd40a5b78c8d7dc992815e5ec">More...</a><br /></td></tr>
+<tr class="separator:a6a1039bfd40a5b78c8d7dc992815e5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa41070bf454641df27e9d4dfd30ce4"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a6fa41070bf454641df27e9d4dfd30ce4">computedTableSize</a> ()</td></tr>
+<tr class="memdesc:a6fa41070bf454641df27e9d4dfd30ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return the size of the Computed Table.  <a href="#a6fa41070bf454641df27e9d4dfd30ce4">More...</a><br /></td></tr>
+<tr class="separator:a6fa41070bf454641df27e9d4dfd30ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b72bfe987f1b424c42141172defa321"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a8b72bfe987f1b424c42141172defa321">getBDDNode</a> (BDD_ID id)</td></tr>
+<tr class="memdesc:a8b72bfe987f1b424c42141172defa321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return a <a class="el" href="structClassProject_1_1BDD__Node.html" title="typedef struct BDD_Node ">BDD_Node</a> from the uniqueTable according to its BDD_ID.  <a href="#a8b72bfe987f1b424c42141172defa321">More...</a><br /></td></tr>
+<tr class="separator:a8b72bfe987f1b424c42141172defa321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe9e70c59d3ee82369a9176fa53b20a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe9e70c59d3ee82369a9176fa53b20a6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#afe9e70c59d3ee82369a9176fa53b20a6">printUniqueTable</a> ()</td></tr>
-<tr class="memdesc:afe9e70c59d3ee82369a9176fa53b20a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to print all the BDD_Nodes present in the uniqueTable. <br /></td></tr>
+<tr class="memdesc:afe9e70c59d3ee82369a9176fa53b20a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to print all the BDD_Nodes present in the uniqueTable, new_nodes table and in the computed table. <br /></td></tr>
 <tr class="separator:afe9e70c59d3ee82369a9176fa53b20a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a5e47cffe40b3f094fb29715526740f50"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a5e47cffe40b3f094fb29715526740f50">isComplement</a> (BDD_ID f)</td></tr>
+<tr class="memdesc:a5e47cffe40b3f094fb29715526740f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function check if a given BDD_ID is a complement of a previous BDD_ID.  <a href="#a5e47cffe40b3f094fb29715526740f50">More...</a><br /></td></tr>
+<tr class="separator:a5e47cffe40b3f094fb29715526740f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11656a3ce5a4ba0e71a65ac874d89813"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a11656a3ce5a4ba0e71a65ac874d89813">getComplement</a> (BDD_ID f)</td></tr>
+<tr class="memdesc:a11656a3ce5a4ba0e71a65ac874d89813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return the coplement of a given BDD_ID.  <a href="#a11656a3ce5a4ba0e71a65ac874d89813">More...</a><br /></td></tr>
+<tr class="separator:a11656a3ce5a4ba0e71a65ac874d89813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0baa1de7f305b8a6d972784c3399ee73"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a0baa1de7f305b8a6d972784c3399ee73">getNextId</a> (BDD_ID f)</td></tr>
+<tr class="memdesc:a0baa1de7f305b8a6d972784c3399ee73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get the next ID of a given BDD_ID.  <a href="#a0baa1de7f305b8a6d972784c3399ee73">More...</a><br /></td></tr>
+<tr class="separator:a0baa1de7f305b8a6d972784c3399ee73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c82345b580058836d1cd8a1c09399b6"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a6c82345b580058836d1cd8a1c09399b6">iteST</a> (const BDD_ID i, const BDD_ID t, const BDD_ID e)</td></tr>
+<tr class="memdesc:a6c82345b580058836d1cd8a1c09399b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute the ite according to the standard triples.  <a href="#a6c82345b580058836d1cd8a1c09399b6">More...</a><br /></td></tr>
+<tr class="separator:a6c82345b580058836d1cd8a1c09399b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f754fae1fd3b2322cf5dcd2eec095f"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite</a> (const BDD_ID i, const BDD_ID t, const BDD_ID e, const BDD_ID top_var)</td></tr>
+<tr class="memdesc:a12f754fae1fd3b2322cf5dcd2eec095f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute the IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator of a given BDD_ID with respect to its top variable.  <a href="#a12f754fae1fd3b2322cf5dcd2eec095f">More...</a><br /></td></tr>
+<tr class="separator:a12f754fae1fd3b2322cf5dcd2eec095f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60bfd3e2c706f5b7d96f3739aefd30fd"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a60bfd3e2c706f5b7d96f3739aefd30fd">iteC</a> (const BDD_ID i, const BDD_ID t, const BDD_ID e, const BDD_ID top_var)</td></tr>
+<tr class="memdesc:a60bfd3e2c706f5b7d96f3739aefd30fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute the COMPLEMENT IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator of a given BDD_ID with respect to its top variable.  <a href="#a60bfd3e2c706f5b7d96f3739aefd30fd">More...</a><br /></td></tr>
+<tr class="separator:a60bfd3e2c706f5b7d96f3739aefd30fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa3b1a27b556d3983d07265337818cdc4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3b1a27b556d3983d07265337818cdc4"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>falseNode</b> = BDD_ID_FALSE</td></tr>
+<tr class="separator:aa3b1a27b556d3983d07265337818cdc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e5b193e33ce258286f1413ea1930d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81e5b193e33ce258286f1413ea1930d0"></a>
+BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><b>trueNode</b> = BDD_ID_TRUE</td></tr>
+<tr class="separator:a81e5b193e33ce258286f1413ea1930d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae2e50ceb565e95f1ee2a10199bf90b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acae2e50ceb565e95f1ee2a10199bf90b"></a>
+vector&lt; <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>unique_table</b></td></tr>
+<tr class="separator:acae2e50ceb565e95f1ee2a10199bf90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05746c6672ddda6a4e9cfbe874d4076"><td class="memItemLeft" align="right" valign="top">unordered_map&lt; <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a>, BDD_ID, <a class="el" href="structClassProject_1_1BDDHasher.html">BDDHasher</a>, <a class="el" href="structClassProject_1_1BDDComparer.html">BDDComparer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#ab05746c6672ddda6a4e9cfbe874d4076">new_nodes</a></td></tr>
+<tr class="separator:ab05746c6672ddda6a4e9cfbe874d4076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1da261b1c3050efc7d5ce7006aa61630"><td class="memItemLeft" align="right" valign="top">unordered_map&lt; <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a>, BDD_ID, <a class="el" href="structClassProject_1_1BDDHasher.html">BDDHasher</a>, <a class="el" href="structClassProject_1_1BDDComparer.html">BDDComparer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a1da261b1c3050efc7d5ce7006aa61630">computed_table</a></td></tr>
+<tr class="separator:a1da261b1c3050efc7d5ce7006aa61630"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classClassProject_1_1Manager.html" title="Manager Class. ">Manager</a> Class. </p>
@@ -163,10 +208,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p><a class="el" href="classClassProject_1_1Manager.html" title="Manager Class. ">Manager</a> Class. </p>
-<p>Vector containing pointers to the BDD_Nodes in the unique_table.</p>
 <p>Implements the virtual functions from the ManagerInterface.Manager Constructor. </p>
-<p><a class="el" href="structClassProject_1_1BDD__Node.html" title="typedef struct BDD_Node ">BDD_Node</a> falseNode.</p>
-<p>Initiates the FALSE leaf node of the Binary Tree.</p>
 <p><a class="el" href="structClassProject_1_1BDD__Node.html" title="typedef struct BDD_Node ">BDD_Node</a> trueNode.</p>
 <p>Initiates the TRUE leaf of node the Binary Tree. </p>
 
@@ -209,7 +251,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>a BDD_ID argument. </td></tr>
-    <tr><td class="paramname">b</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">b</td><td>a BDD_ID argument.id </td></tr>
   </table>
   </dd>
 </dl>
@@ -217,7 +259,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>.</p>
 
 </div>
 </div>
@@ -262,13 +304,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Return the computed ITE operator of the TRUE, and FALSE branches of BDD_ID f with respect to BDD_ID x. </dd></dl>
-<p>bool value isTheSameVar. </p>
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode()</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, <a class="el" href="classClassProject_1_1Manager.html#a84c7144dc3c74e39dfb50a053da626a0">isVariable()</a>, <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, <a class="el" href="structClassProject_1_1BDD__Node.html#a263243c7dc98c163f1b6f076cc948a2c">ClassProject::BDD_Node::low</a>, and <a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar()</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a11656a3ce5a4ba0e71a65ac874d89813">getComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a5e47cffe40b3f094fb29715526740f50">isComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar()</a>.</p>
 
-<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a9d465fdff670b0bd9ef4a35ab9611f25">findNodes()</a>, <a class="el" href="classClassProject_1_1Manager.html#a759513c0bb7447bfb05a82a818ab22eb">findVars()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a9d465fdff670b0bd9ef4a35ab9611f25">findNodes()</a>, <a class="el" href="classClassProject_1_1Manager.html#a759513c0bb7447bfb05a82a818ab22eb">findVars()</a>, <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a60bfd3e2c706f5b7d96f3739aefd30fd">iteC()</a>.</p>
 
 </div>
 </div>
@@ -305,7 +346,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode()</a>, and <a class="el" href="structClassProject_1_1BDD__Node.html#a263243c7dc98c163f1b6f076cc948a2c">ClassProject::BDD_Node::low</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a8b72bfe987f1b424c42141172defa321">getBDDNode()</a>, and <a class="el" href="structClassProject_1_1BDD__Node.html#a263243c7dc98c163f1b6f076cc948a2c">ClassProject::BDD_Node::low</a>.</p>
 
 </div>
 </div>
@@ -350,13 +391,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Return the computed ITE operator of the TRUE, and FALSE branches of BDD_ID f with respect to BDD_ID x. </dd></dl>
-<p>bool value isTheSameVar. </p>
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode()</a>, <a class="el" href="structClassProject_1_1BDD__Node.html#a1b094c78ca5aabfbf8b2ca3908ebc0d8">ClassProject::BDD_Node::high</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, <a class="el" href="classClassProject_1_1Manager.html#a84c7144dc3c74e39dfb50a053da626a0">isVariable()</a>, <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar()</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#a11656a3ce5a4ba0e71a65ac874d89813">getComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a5e47cffe40b3f094fb29715526740f50">isComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar()</a>.</p>
 
-<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a9d465fdff670b0bd9ef4a35ab9611f25">findNodes()</a>, <a class="el" href="classClassProject_1_1Manager.html#a759513c0bb7447bfb05a82a818ab22eb">findVars()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#a9d465fdff670b0bd9ef4a35ab9611f25">findNodes()</a>, <a class="el" href="classClassProject_1_1Manager.html#a759513c0bb7447bfb05a82a818ab22eb">findVars()</a>, <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a60bfd3e2c706f5b7d96f3739aefd30fd">iteC()</a>.</p>
 
 </div>
 </div>
@@ -393,7 +433,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode()</a>, and <a class="el" href="structClassProject_1_1BDD__Node.html#a1b094c78ca5aabfbf8b2ca3908ebc0d8">ClassProject::BDD_Node::high</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a8b72bfe987f1b424c42141172defa321">getBDDNode()</a>, and <a class="el" href="structClassProject_1_1BDD__Node.html#a1b094c78ca5aabfbf8b2ca3908ebc0d8">ClassProject::BDD_Node::high</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6fa41070bf454641df27e9d4dfd30ce4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Manager::computedTableSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to return the size of the Computed Table. </p>
+<dl class="section return"><dt>Returns</dt><dd>the size of computed_table. </dd></dl>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a1da261b1c3050efc7d5ce7006aa61630">computed_table</a>.</p>
 
 </div>
 </div>
@@ -428,11 +488,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The id of the new variable which correspond to the size of the uniqueTable. </dd></dl>
 <p>BDD_ID value id.</p>
-<p><a class="el" href="structClassProject_1_1BDD__Node.html" title="typedef struct BDD_Node ">BDD_Node</a> value node. </p>
+<p><a class="el" href="structClassProject_1_1BDD__Node.html" title="typedef struct BDD_Node ">BDD_Node</a> value var. </p>
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
-
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a699638a290747c865312b4c130260a06">False()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a7229b49af4aebfd32af558a18e17e243">True()</a>.</p>
 
 </div>
 </div>
@@ -461,8 +519,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <dl class="section return"><dt>Returns</dt><dd>The id of the False leaf node in the Binary Tree. </dd></dl>
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
-
-<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#aa3fe08b0b002032a13a5ff9d05f39cfd">createVar()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>.</p>
 
 </div>
 </div>
@@ -560,12 +616,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a class="anchor" id="a1f4669617591b7c3d9e36620a547e282"></a>
+<a class="anchor" id="a8b72bfe987f1b424c42141172defa321"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> * Manager::getBDDNode </td>
+          <td class="memname">const <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a> &amp; Manager::getBDDNode </td>
           <td>(</td>
           <td class="paramtype">BDD_ID&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
@@ -583,7 +639,83 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Return a <a class="el" href="structClassProject_1_1BDD__Node.html" title="typedef struct BDD_Node ">BDD_Node</a> from the uniqueTable that has the corresponding BDD_ID. </dd></dl>
 
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>.</p>
+
 <p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#ac9621e396f35aebfefa623a5c67e32a1">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#abc6417257171d6032a7dee6ea2ecd8d3">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a7238da7832b931611dbfd273800360e2">getTopVarName()</a>, <a class="el" href="classClassProject_1_1Manager.html#a84c7144dc3c74e39dfb50a053da626a0">isVariable()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a11656a3ce5a4ba0e71a65ac874d89813"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::getComplement </td>
+          <td>(</td>
+          <td class="paramtype">BDD_ID&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to return the coplement of a given BDD_ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BDD_ID_TRUE or FALSE if f is a constant, otherwise return the BDD_ID of f +1 if BDD_ID is even, or BDD_ID -1 if it's odd. </dd></dl>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, <a class="el" href="classClassProject_1_1Manager.html#a60bfd3e2c706f5b7d96f3739aefd30fd">iteC()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a6c82345b580058836d1cd8a1c09399b6">iteST()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0baa1de7f305b8a6d972784c3399ee73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::getNextId </td>
+          <td>(</td>
+          <td class="paramtype">BDD_ID&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to get the next ID of a given BDD_ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the next BDD_ID of f. </dd></dl>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a5e47cffe40b3f094fb29715526740f50">isComplement()</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a6c82345b580058836d1cd8a1c09399b6">iteST()</a>.</p>
 
 </div>
 </div>
@@ -620,7 +752,45 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode()</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a8b72bfe987f1b424c42141172defa321">getBDDNode()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e47cffe40b3f094fb29715526740f50"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Manager::isComplement </td>
+          <td>(</td>
+          <td class="paramtype">BDD_ID&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function check if a given BDD_ID is a complement of a previous BDD_ID. </p>
+<p>Table that contains the computed ite calculations in order to eliminate reptition on the computations.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TRUE in the case of f be a complent BDD_ID, otherwise return FALSE. </dd></dl>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a0baa1de7f305b8a6d972784c3399ee73">getNextId()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>.</p>
 
 </div>
 </div>
@@ -657,9 +827,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a699638a290747c865312b4c130260a06">False()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a7229b49af4aebfd32af558a18e17e243">True()</a>.</p>
-
-<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a9d465fdff670b0bd9ef4a35ab9611f25">findNodes()</a>, <a class="el" href="classClassProject_1_1Manager.html#a759513c0bb7447bfb05a82a818ab22eb">findVars()</a>, <a class="el" href="classClassProject_1_1Manager.html#a84c7144dc3c74e39dfb50a053da626a0">isVariable()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a9d465fdff670b0bd9ef4a35ab9611f25">findNodes()</a>, <a class="el" href="classClassProject_1_1Manager.html#a759513c0bb7447bfb05a82a818ab22eb">findVars()</a>, <a class="el" href="classClassProject_1_1Manager.html#a8b72bfe987f1b424c42141172defa321">getBDDNode()</a>, <a class="el" href="classClassProject_1_1Manager.html#a11656a3ce5a4ba0e71a65ac874d89813">getComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a5e47cffe40b3f094fb29715526740f50">isComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a84c7144dc3c74e39dfb50a053da626a0">isVariable()</a>, <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a6c82345b580058836d1cd8a1c09399b6">iteST()</a>.</p>
 
 </div>
 </div>
@@ -697,9 +865,69 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode()</a>, <a class="el" href="structClassProject_1_1BDD__Node.html#a3b0b7736bfb22fd65bf790cb308450a5">ClassProject::BDD_Node::id</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, and <a class="el" href="structClassProject_1_1BDD__Node.html#a334b891f34eac8419a6402c6e7c730dd">ClassProject::BDD_Node::top_var</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a8b72bfe987f1b424c42141172defa321">getBDDNode()</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, and <a class="el" href="structClassProject_1_1BDD__Node.html#a334b891f34eac8419a6402c6e7c730dd">ClassProject::BDD_Node::top_var</a>.</p>
 
-<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a12f754fae1fd3b2322cf5dcd2eec095f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::ite </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>top_var</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to compute the IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator of a given BDD_ID with respect to its top variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">t</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">e</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">top_var</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the id of the computed IF then ELSE Operator. </dd></dl>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a1da261b1c3050efc7d5ce7006aa61630">computed_table</a>, <a class="el" href="classClassProject_1_1Manager.html#a11656a3ce5a4ba0e71a65ac874d89813">getComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a5e47cffe40b3f094fb29715526740f50">isComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a60bfd3e2c706f5b7d96f3739aefd30fd">iteC()</a>, <a class="el" href="classClassProject_1_1Manager.html#ab05746c6672ddda6a4e9cfbe874d4076">new_nodes</a>, <a class="el" href="structClassProject_1_1BDD__Node.html#a334b891f34eac8419a6402c6e7c730dd">ClassProject::BDD_Node::top_var</a>, and <a class="el" href="classClassProject_1_1Manager.html#a0b54ce30834a6044fc9eb8e85550c5a8">uniqueTableSize()</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a75bd703f518ab88006bb2b493569ba08">and2()</a>, <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, <a class="el" href="classClassProject_1_1Manager.html#a60bfd3e2c706f5b7d96f3739aefd30fd">iteC()</a>, <a class="el" href="classClassProject_1_1Manager.html#a6c82345b580058836d1cd8a1c09399b6">iteST()</a>, <a class="el" href="classClassProject_1_1Manager.html#a94abdd8d633d6e52a052838305f97f36">nand2()</a>, <a class="el" href="classClassProject_1_1Manager.html#a6c83a83001023096dd68183f40ee80b3">neg()</a>, <a class="el" href="classClassProject_1_1Manager.html#a3271fba879ca737e9566c079629841c5">nor2()</a>, <a class="el" href="classClassProject_1_1Manager.html#a0b0f8f45f547343dd165357900f155d0">or2()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a210d71defa6813536c7c4e4007bdd67e">xor2()</a>.</p>
 
 </div>
 </div>
@@ -754,9 +982,124 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, <a class="el" href="classClassProject_1_1Manager.html#a84c7144dc3c74e39dfb50a053da626a0">isVariable()</a>, <a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a0b54ce30834a6044fc9eb8e85550c5a8">uniqueTableSize()</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a11656a3ce5a4ba0e71a65ac874d89813">getComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, <a class="el" href="classClassProject_1_1Manager.html#a6c82345b580058836d1cd8a1c09399b6">iteST()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar()</a>.</p>
 
-<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a75bd703f518ab88006bb2b493569ba08">and2()</a>, <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a94abdd8d633d6e52a052838305f97f36">nand2()</a>, <a class="el" href="classClassProject_1_1Manager.html#a6c83a83001023096dd68183f40ee80b3">neg()</a>, <a class="el" href="classClassProject_1_1Manager.html#a3271fba879ca737e9566c079629841c5">nor2()</a>, <a class="el" href="classClassProject_1_1Manager.html#a0b0f8f45f547343dd165357900f155d0">or2()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a210d71defa6813536c7c4e4007bdd67e">xor2()</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a60bfd3e2c706f5b7d96f3739aefd30fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::iteC </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>top_var</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to compute the COMPLEMENT IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator of a given BDD_ID with respect to its top variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">t</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">e</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">top_var</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the id of the computed IF then ELSE Operator. </dd></dl>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a1da261b1c3050efc7d5ce7006aa61630">computed_table</a>, <a class="el" href="classClassProject_1_1Manager.html#a11656a3ce5a4ba0e71a65ac874d89813">getComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, <a class="el" href="classClassProject_1_1Manager.html#ab05746c6672ddda6a4e9cfbe874d4076">new_nodes</a>, <a class="el" href="structClassProject_1_1BDD__Node.html#a334b891f34eac8419a6402c6e7c730dd">ClassProject::BDD_Node::top_var</a>, and <a class="el" href="classClassProject_1_1Manager.html#a0b54ce30834a6044fc9eb8e85550c5a8">uniqueTableSize()</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6c82345b580058836d1cd8a1c09399b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BDD_ID Manager::iteST </td>
+          <td>(</td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BDD_ID&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to compute the ite according to the standard triples. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">t</td><td>a BDD_ID argument. </td></tr>
+    <tr><td class="paramname">e</td><td>a BDD_ID argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the ID of the computed IF THEN ELSE operator according the standard triples. </dd></dl>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a11656a3ce5a4ba0e71a65ac874d89813">getComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a0baa1de7f305b8a6d972784c3399ee73">getNextId()</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar()</a>.</p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
 
 </div>
 </div>
@@ -804,7 +1147,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a6c83a83001023096dd68183f40ee80b3">neg()</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a6c83a83001023096dd68183f40ee80b3">neg()</a>.</p>
 
 </div>
 </div>
@@ -841,9 +1184,29 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>.</p>
 
 <p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a94abdd8d633d6e52a052838305f97f36">nand2()</a>, <a class="el" href="classClassProject_1_1Manager.html#a3271fba879ca737e9566c079629841c5">nor2()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a210d71defa6813536c7c4e4007bdd67e">xor2()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6a1039bfd40a5b78c8d7dc992815e5ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Manager::newNodesSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to return the size of the new_nodes. </p>
+<dl class="section return"><dt>Returns</dt><dd>the size of new_nodes. </dd></dl>
+
+<p>References <a class="el" href="classClassProject_1_1Manager.html#ab05746c6672ddda6a4e9cfbe874d4076">new_nodes</a>.</p>
 
 </div>
 </div>
@@ -891,7 +1254,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a6c83a83001023096dd68183f40ee80b3">neg()</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a6c83a83001023096dd68183f40ee80b3">neg()</a>.</p>
 
 </div>
 </div>
@@ -939,7 +1302,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>.</p>
 
 </div>
 </div>
@@ -976,9 +1339,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a1f4669617591b7c3d9e36620a547e282">getBDDNode()</a>, and <a class="el" href="structClassProject_1_1BDD__Node.html#a334b891f34eac8419a6402c6e7c730dd">ClassProject::BDD_Node::top_var</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a8b72bfe987f1b424c42141172defa321">getBDDNode()</a>, and <a class="el" href="structClassProject_1_1BDD__Node.html#a334b891f34eac8419a6402c6e7c730dd">ClassProject::BDD_Node::top_var</a>.</p>
 
-<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a759513c0bb7447bfb05a82a818ab22eb">findVars()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a759513c0bb7447bfb05a82a818ab22eb">findVars()</a>, <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a6c82345b580058836d1cd8a1c09399b6">iteST()</a>.</p>
 
 </div>
 </div>
@@ -1008,8 +1371,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#aa3fe08b0b002032a13a5ff9d05f39cfd">createVar()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a0b54ce30834a6044fc9eb8e85550c5a8"></a>
@@ -1038,7 +1399,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>.</p>
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a60bfd3e2c706f5b7d96f3739aefd30fd">iteC()</a>.</p>
 
 </div>
 </div>
@@ -1086,13 +1447,60 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Implements <a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a>.</p>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a6c83a83001023096dd68183f40ee80b3">neg()</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a6c83a83001023096dd68183f40ee80b3">neg()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a1da261b1c3050efc7d5ce7006aa61630"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unordered_map&lt;<a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a>,BDD_ID,<a class="el" href="structClassProject_1_1BDDHasher.html">BDDHasher</a>,<a class="el" href="structClassProject_1_1BDDComparer.html">BDDComparer</a>&gt; ClassProject::Manager::computed_table</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Holds the nodes from the unique table. </p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a6fa41070bf454641df27e9d4dfd30ce4">computedTableSize()</a>, <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, <a class="el" href="classClassProject_1_1Manager.html#a60bfd3e2c706f5b7d96f3739aefd30fd">iteC()</a>, and <a class="el" href="classClassProject_1_1Manager.html#afe9e70c59d3ee82369a9176fa53b20a6">printUniqueTable()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab05746c6672ddda6a4e9cfbe874d4076"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unordered_map&lt;<a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a>,BDD_ID,<a class="el" href="structClassProject_1_1BDDHasher.html">BDDHasher</a>,<a class="el" href="structClassProject_1_1BDDComparer.html">BDDComparer</a>&gt; ClassProject::Manager::new_nodes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vector that represents the unique_table. </p>
+
+<p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, <a class="el" href="classClassProject_1_1Manager.html#a60bfd3e2c706f5b7d96f3739aefd30fd">iteC()</a>, <a class="el" href="classClassProject_1_1Manager.html#a6a1039bfd40a5b78c8d7dc992815e5ec">newNodesSize()</a>, and <a class="el" href="classClassProject_1_1Manager.html#afe9e70c59d3ee82369a9176fa53b20a6">printUniqueTable()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/felipe/Desktop/vdscp_04/src/<a class="el" href="Manager_8h_source.html">Manager.h</a></li>
-<li>/home/felipe/Desktop/vdscp_04/src/Manager.cpp</li>
+<li>/import/home/vdscp04/Luiz/vdscp_04/src/<a class="el" href="Manager_8h_source.html">Manager.h</a></li>
+<li>/import/home/vdscp04/Luiz/vdscp_04/src/Manager.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

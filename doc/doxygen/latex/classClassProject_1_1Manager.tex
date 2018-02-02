@@ -62,11 +62,46 @@ void {\bf find\+Vars} (const B\+D\+D\+\_\+\+ID \&root, std\+::set$<$ B\+D\+D\+\_
 \begin{DoxyCompactList}\small\item\em Function to find out all the reachable Variables in the Binary Tree starting from a given B\+D\+D\+\_\+\+ID. \end{DoxyCompactList}\item 
 size\+\_\+t {\bf unique\+Table\+Size} () override
 \begin{DoxyCompactList}\small\item\em Function to return the size of the unique\+Table. \end{DoxyCompactList}\item 
-{\bf B\+D\+D\+\_\+\+Node} $\ast$ {\bf get\+B\+D\+D\+Node} (B\+D\+D\+\_\+\+ID id)
+size\+\_\+t {\bf new\+Nodes\+Size} ()
+\begin{DoxyCompactList}\small\item\em Function to return the size of the new\+\_\+nodes. \end{DoxyCompactList}\item 
+size\+\_\+t {\bf computed\+Table\+Size} ()
+\begin{DoxyCompactList}\small\item\em Function to return the size of the Computed Table. \end{DoxyCompactList}\item 
+const {\bf B\+D\+D\+\_\+\+Node} \& {\bf get\+B\+D\+D\+Node} (B\+D\+D\+\_\+\+ID id)
 \begin{DoxyCompactList}\small\item\em Function to return a \doxyref{B\+D\+D\+\_\+\+Node}{p.}{structClassProject_1_1BDD__Node} from the unique\+Table according to its B\+D\+D\+\_\+\+ID. \end{DoxyCompactList}\item 
 void {\bf print\+Unique\+Table} ()\label{classClassProject_1_1Manager_afe9e70c59d3ee82369a9176fa53b20a6}
 
-\begin{DoxyCompactList}\small\item\em Function to print all the B\+D\+D\+\_\+\+Nodes present in the unique\+Table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function to print all the B\+D\+D\+\_\+\+Nodes present in the unique\+Table, new\+\_\+nodes table and in the computed table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf is\+Complement} (B\+D\+D\+\_\+\+ID f)
+\begin{DoxyCompactList}\small\item\em Function check if a given B\+D\+D\+\_\+\+ID is a complement of a previous B\+D\+D\+\_\+\+ID. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf get\+Complement} (B\+D\+D\+\_\+\+ID f)
+\begin{DoxyCompactList}\small\item\em Function to return the coplement of a given B\+D\+D\+\_\+\+ID. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf get\+Next\+Id} (B\+D\+D\+\_\+\+ID f)
+\begin{DoxyCompactList}\small\item\em Function to get the next ID of a given B\+D\+D\+\_\+\+ID. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf ite\+ST} (const B\+D\+D\+\_\+\+ID i, const B\+D\+D\+\_\+\+ID t, const B\+D\+D\+\_\+\+ID e)
+\begin{DoxyCompactList}\small\item\em Function to compute the ite according to the standard triples. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf ite} (const B\+D\+D\+\_\+\+ID i, const B\+D\+D\+\_\+\+ID t, const B\+D\+D\+\_\+\+ID e, const B\+D\+D\+\_\+\+ID top\+\_\+var)
+\begin{DoxyCompactList}\small\item\em Function to compute the I\+F(\+B\+D\+D\+\_\+\+I\+D i) then(\+B\+D\+D\+\_\+\+I\+D t) E\+L\+S\+E(\+B\+D\+D\+\_\+\+I\+D e) Operator of a given B\+D\+D\+\_\+\+ID with respect to its top variable. \end{DoxyCompactList}\item 
+B\+D\+D\+\_\+\+ID {\bf iteC} (const B\+D\+D\+\_\+\+ID i, const B\+D\+D\+\_\+\+ID t, const B\+D\+D\+\_\+\+ID e, const B\+D\+D\+\_\+\+ID top\+\_\+var)
+\begin{DoxyCompactList}\small\item\em Function to compute the C\+O\+M\+P\+L\+E\+M\+E\+NT I\+F(\+B\+D\+D\+\_\+\+I\+D i) then(\+B\+D\+D\+\_\+\+I\+D t) E\+L\+S\+E(\+B\+D\+D\+\_\+\+I\+D e) Operator of a given B\+D\+D\+\_\+\+ID with respect to its top variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+B\+D\+D\+\_\+\+ID {\bfseries false\+Node} = B\+D\+D\+\_\+\+I\+D\+\_\+\+F\+A\+L\+SE\label{classClassProject_1_1Manager_aa3b1a27b556d3983d07265337818cdc4}
+
+\item 
+B\+D\+D\+\_\+\+ID {\bfseries true\+Node} = B\+D\+D\+\_\+\+I\+D\+\_\+\+T\+R\+UE\label{classClassProject_1_1Manager_a81e5b193e33ce258286f1413ea1930d0}
+
+\item 
+vector$<$ {\bf B\+D\+D\+\_\+\+Node} $>$ {\bfseries unique\+\_\+table}\label{classClassProject_1_1Manager_acae2e50ceb565e95f1ee2a10199bf90b}
+
+\item 
+unordered\+\_\+map$<$ {\bf B\+D\+D\+\_\+\+Node}, B\+D\+D\+\_\+\+ID, {\bf B\+D\+D\+Hasher}, {\bf B\+D\+D\+Comparer} $>$ {\bf new\+\_\+nodes}
+\item 
+unordered\+\_\+map$<$ {\bf B\+D\+D\+\_\+\+Node}, B\+D\+D\+\_\+\+ID, {\bf B\+D\+D\+Hasher}, {\bf B\+D\+D\+Comparer} $>$ {\bf computed\+\_\+table}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -86,13 +121,7 @@ Declaration of the functions from the \doxyref{Manager\+Interface}{p.}{classClas
 
 \doxyref{Manager}{p.}{classClassProject_1_1Manager} Class. 
 
-Vector containing pointers to the B\+D\+D\+\_\+\+Nodes in the unique\+\_\+table.
-
-Implements the virtual functions from the Manager\+Interface.\+Manager Constructor. \doxyref{B\+D\+D\+\_\+\+Node}{p.}{structClassProject_1_1BDD__Node} false\+Node.
-
-Initiates the F\+A\+L\+SE leaf node of the Binary Tree.
-
-\doxyref{B\+D\+D\+\_\+\+Node}{p.}{structClassProject_1_1BDD__Node} true\+Node.
+Implements the virtual functions from the Manager\+Interface.\+Manager Constructor. \doxyref{B\+D\+D\+\_\+\+Node}{p.}{structClassProject_1_1BDD__Node} true\+Node.
 
 Initiates the T\+R\+UE leaf of node the Binary Tree. 
 
@@ -113,7 +142,7 @@ Function to compute an A\+ND Boolean Function of two given B\+D\+D\+\_\+\+I\+Ds 
 \begin{DoxyParams}{Parameters}
 {\em a} & a B\+D\+D\+\_\+\+ID argument. \\
 \hline
-{\em b} & a B\+D\+D\+\_\+\+ID argument. \\
+{\em b} & a B\+D\+D\+\_\+\+ID argument.\+id \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -149,17 +178,17 @@ Function to compute the F\+A\+L\+SE co\+Factor of a given B\+D\+D\+\_\+\+ID f wi
 \begin{DoxyReturn}{Returns}
 Return the computed I\+TE operator of the T\+R\+UE, and F\+A\+L\+SE branches of B\+D\+D\+\_\+\+ID f with respect to B\+D\+D\+\_\+\+ID x. 
 \end{DoxyReturn}
-bool value is\+The\+Same\+Var. 
+
 
 Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
 
 
 
-References get\+B\+D\+D\+Node(), is\+Constant(), is\+Variable(), ite(), Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::low, and top\+Var().
+References co\+Factor\+True(), get\+Complement(), is\+Complement(), is\+Constant(), ite(), and top\+Var().
 
 
 
-Referenced by find\+Nodes(), find\+Vars(), and ite().
+Referenced by co\+Factor\+True(), find\+Nodes(), find\+Vars(), ite(), and ite\+C().
 
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!co\+Factor\+False@{co\+Factor\+False}}
 \index{co\+Factor\+False@{co\+Factor\+False}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
@@ -210,17 +239,17 @@ Function to compute the T\+R\+UE co\+Factor of a given B\+D\+D\+\_\+\+ID f with 
 \begin{DoxyReturn}{Returns}
 Return the computed I\+TE operator of the T\+R\+UE, and F\+A\+L\+SE branches of B\+D\+D\+\_\+\+ID f with respect to B\+D\+D\+\_\+\+ID x. 
 \end{DoxyReturn}
-bool value is\+The\+Same\+Var. 
+
 
 Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
 
 
 
-References get\+B\+D\+D\+Node(), Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::high, is\+Constant(), is\+Variable(), ite(), and top\+Var().
+References co\+Factor\+False(), get\+Complement(), is\+Complement(), is\+Constant(), ite(), and top\+Var().
 
 
 
-Referenced by find\+Nodes(), find\+Vars(), and ite().
+Referenced by co\+Factor\+False(), find\+Nodes(), find\+Vars(), ite(), and ite\+C().
 
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!co\+Factor\+True@{co\+Factor\+True}}
 \index{co\+Factor\+True@{co\+Factor\+True}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
@@ -249,6 +278,24 @@ Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClas
 
 References get\+B\+D\+D\+Node(), and Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::high.
 
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!computed\+Table\+Size@{computed\+Table\+Size}}
+\index{computed\+Table\+Size@{computed\+Table\+Size}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{computed\+Table\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Manager\+::computed\+Table\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classClassProject_1_1Manager_a6fa41070bf454641df27e9d4dfd30ce4}
+
+
+Function to return the size of the Computed Table. 
+
+\begin{DoxyReturn}{Returns}
+the size of computed\+\_\+table. 
+\end{DoxyReturn}
+
+
+References computed\+\_\+table.
+
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!create\+Var@{create\+Var}}
 \index{create\+Var@{create\+Var}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
 \subsubsection[{create\+Var(const std\+::string \&label) override}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::create\+Var (
@@ -270,13 +317,9 @@ The id of the new variable which correspond to the size of the unique\+Table.
 \end{DoxyReturn}
 B\+D\+D\+\_\+\+ID value id.
 
-\doxyref{B\+D\+D\+\_\+\+Node}{p.}{structClassProject_1_1BDD__Node} value node. 
+\doxyref{B\+D\+D\+\_\+\+Node}{p.}{structClassProject_1_1BDD__Node} value var. 
 
 Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
-
-
-
-References False(), and True().
 
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!False@{False}}
 \index{False@{False}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
@@ -295,10 +338,6 @@ The id of the False leaf node in the Binary Tree.
 
 
 Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
-
-
-
-Referenced by create\+Var(), and is\+Constant().
 
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!find\+Nodes@{find\+Nodes}}
 \index{find\+Nodes@{find\+Nodes}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
@@ -358,11 +397,11 @@ References co\+Factor\+False(), co\+Factor\+True(), is\+Constant(), and top\+Var
 
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!get\+B\+D\+D\+Node@{get\+B\+D\+D\+Node}}
 \index{get\+B\+D\+D\+Node@{get\+B\+D\+D\+Node}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
-\subsubsection[{get\+B\+D\+D\+Node(\+B\+D\+D\+\_\+\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+D\+D\+\_\+\+Node} $\ast$ Manager\+::get\+B\+D\+D\+Node (
+\subsubsection[{get\+B\+D\+D\+Node(\+B\+D\+D\+\_\+\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf B\+D\+D\+\_\+\+Node} \& Manager\+::get\+B\+D\+D\+Node (
 \begin{DoxyParamCaption}
 \item[{B\+D\+D\+\_\+\+ID}]{id}
 \end{DoxyParamCaption}
-)}\label{classClassProject_1_1Manager_a1f4669617591b7c3d9e36620a547e282}
+)}\label{classClassProject_1_1Manager_a8b72bfe987f1b424c42141172defa321}
 
 
 Function to return a \doxyref{B\+D\+D\+\_\+\+Node}{p.}{structClassProject_1_1BDD__Node} from the unique\+Table according to its B\+D\+D\+\_\+\+ID. 
@@ -377,7 +416,65 @@ Return a \doxyref{B\+D\+D\+\_\+\+Node}{p.}{structClassProject_1_1BDD__Node} from
 \end{DoxyReturn}
 
 
+References is\+Constant().
+
+
+
 Referenced by co\+Factor\+False(), co\+Factor\+True(), get\+Top\+Var\+Name(), is\+Variable(), and top\+Var().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!get\+Complement@{get\+Complement}}
+\index{get\+Complement@{get\+Complement}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{get\+Complement(\+B\+D\+D\+\_\+\+I\+D f)}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::get\+Complement (
+\begin{DoxyParamCaption}
+\item[{B\+D\+D\+\_\+\+ID}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classClassProject_1_1Manager_a11656a3ce5a4ba0e71a65ac874d89813}
+
+
+Function to return the coplement of a given B\+D\+D\+\_\+\+ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+D\+D\+\_\+\+I\+D\+\_\+\+T\+R\+UE or F\+A\+L\+SE if f is a constant, otherwise return the B\+D\+D\+\_\+\+ID of f +1 if B\+D\+D\+\_\+\+ID is even, or B\+D\+D\+\_\+\+ID -\/1 if it\textquotesingle{}s odd. 
+\end{DoxyReturn}
+
+
+References is\+Constant().
+
+
+
+Referenced by co\+Factor\+False(), co\+Factor\+True(), ite(), ite\+C(), and ite\+S\+T().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!get\+Next\+Id@{get\+Next\+Id}}
+\index{get\+Next\+Id@{get\+Next\+Id}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{get\+Next\+Id(\+B\+D\+D\+\_\+\+I\+D f)}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::get\+Next\+Id (
+\begin{DoxyParamCaption}
+\item[{B\+D\+D\+\_\+\+ID}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classClassProject_1_1Manager_a0baa1de7f305b8a6d972784c3399ee73}
+
+
+Function to get the next ID of a given B\+D\+D\+\_\+\+ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the next B\+D\+D\+\_\+\+ID of f. 
+\end{DoxyReturn}
+
+
+References is\+Complement().
+
+
+
+Referenced by ite\+S\+T().
 
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!get\+Top\+Var\+Name@{get\+Top\+Var\+Name}}
 \index{get\+Top\+Var\+Name@{get\+Top\+Var\+Name}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
@@ -406,6 +503,35 @@ Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClas
 
 References get\+B\+D\+D\+Node().
 
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!is\+Complement@{is\+Complement}}
+\index{is\+Complement@{is\+Complement}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{is\+Complement(\+B\+D\+D\+\_\+\+I\+D f)}]{\setlength{\rightskip}{0pt plus 5cm}bool Manager\+::is\+Complement (
+\begin{DoxyParamCaption}
+\item[{B\+D\+D\+\_\+\+ID}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classClassProject_1_1Manager_a5e47cffe40b3f094fb29715526740f50}
+
+
+Function check if a given B\+D\+D\+\_\+\+ID is a complement of a previous B\+D\+D\+\_\+\+ID. 
+
+Table that contains the computed ite calculations in order to eliminate reptition on the computations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE in the case of f be a complent B\+D\+D\+\_\+\+ID, otherwise return F\+A\+L\+SE. 
+\end{DoxyReturn}
+
+
+References is\+Constant().
+
+
+
+Referenced by co\+Factor\+False(), co\+Factor\+True(), get\+Next\+Id(), and ite().
+
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!is\+Constant@{is\+Constant}}
 \index{is\+Constant@{is\+Constant}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
 \subsubsection[{is\+Constant(const B\+D\+D\+\_\+\+I\+D f) override}]{\setlength{\rightskip}{0pt plus 5cm}bool Manager\+::is\+Constant (
@@ -431,11 +557,7 @@ Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClas
 
 
 
-References False(), and True().
-
-
-
-Referenced by co\+Factor\+False(), co\+Factor\+True(), find\+Nodes(), find\+Vars(), is\+Variable(), and ite().
+Referenced by co\+Factor\+False(), co\+Factor\+True(), find\+Nodes(), find\+Vars(), get\+B\+D\+D\+Node(), get\+Complement(), is\+Complement(), is\+Variable(), ite(), and ite\+S\+T().
 
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!is\+Variable@{is\+Variable}}
 \index{is\+Variable@{is\+Variable}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
@@ -462,11 +584,43 @@ Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClas
 
 
 
-References get\+B\+D\+D\+Node(), Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::id, is\+Constant(), and Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::top\+\_\+var.
+References get\+B\+D\+D\+Node(), is\+Constant(), and Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::top\+\_\+var.
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!ite@{ite}}
+\index{ite@{ite}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{ite(const B\+D\+D\+\_\+\+I\+D i, const B\+D\+D\+\_\+\+I\+D t, const B\+D\+D\+\_\+\+I\+D e, const B\+D\+D\+\_\+\+I\+D top\+\_\+var)}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::ite (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{i, }
+\item[{const B\+D\+D\+\_\+\+ID}]{t, }
+\item[{const B\+D\+D\+\_\+\+ID}]{e, }
+\item[{const B\+D\+D\+\_\+\+ID}]{top\+\_\+var}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classClassProject_1_1Manager_a12f754fae1fd3b2322cf5dcd2eec095f}
+
+
+Function to compute the I\+F(\+B\+D\+D\+\_\+\+I\+D i) then(\+B\+D\+D\+\_\+\+I\+D t) E\+L\+S\+E(\+B\+D\+D\+\_\+\+I\+D e) Operator of a given B\+D\+D\+\_\+\+ID with respect to its top variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em t} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em e} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em top\+\_\+var} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the id of the computed IF then E\+L\+SE Operator. 
+\end{DoxyReturn}
+
+
+References co\+Factor\+False(), co\+Factor\+True(), computed\+\_\+table, get\+Complement(), is\+Complement(), ite\+C(), new\+\_\+nodes, Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::top\+\_\+var, and unique\+Table\+Size().
 
 
 
-Referenced by co\+Factor\+False(), co\+Factor\+True(), and ite().
+Referenced by and2(), co\+Factor\+False(), co\+Factor\+True(), ite(), ite\+C(), ite\+S\+T(), nand2(), neg(), nor2(), or2(), and xor2().
 
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!ite@{ite}}
 \index{ite@{ite}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
@@ -499,11 +653,76 @@ Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClas
 
 
 
-References co\+Factor\+False(), co\+Factor\+True(), is\+Constant(), is\+Variable(), top\+Var(), and unique\+Table\+Size().
+References get\+Complement(), is\+Constant(), ite(), ite\+S\+T(), and top\+Var().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!iteC@{iteC}}
+\index{iteC@{iteC}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{ite\+C(const B\+D\+D\+\_\+\+I\+D i, const B\+D\+D\+\_\+\+I\+D t, const B\+D\+D\+\_\+\+I\+D e, const B\+D\+D\+\_\+\+I\+D top\+\_\+var)}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::iteC (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{i, }
+\item[{const B\+D\+D\+\_\+\+ID}]{t, }
+\item[{const B\+D\+D\+\_\+\+ID}]{e, }
+\item[{const B\+D\+D\+\_\+\+ID}]{top\+\_\+var}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classClassProject_1_1Manager_a60bfd3e2c706f5b7d96f3739aefd30fd}
+
+
+Function to compute the C\+O\+M\+P\+L\+E\+M\+E\+NT I\+F(\+B\+D\+D\+\_\+\+I\+D i) then(\+B\+D\+D\+\_\+\+I\+D t) E\+L\+S\+E(\+B\+D\+D\+\_\+\+I\+D e) Operator of a given B\+D\+D\+\_\+\+ID with respect to its top variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em t} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em e} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em top\+\_\+var} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the id of the computed IF then E\+L\+SE Operator. 
+\end{DoxyReturn}
+
+
+References co\+Factor\+False(), co\+Factor\+True(), computed\+\_\+table, get\+Complement(), ite(), new\+\_\+nodes, Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::top\+\_\+var, and unique\+Table\+Size().
 
 
 
-Referenced by and2(), co\+Factor\+False(), co\+Factor\+True(), nand2(), neg(), nor2(), or2(), and xor2().
+Referenced by ite().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!ite\+ST@{ite\+ST}}
+\index{ite\+ST@{ite\+ST}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{ite\+S\+T(const B\+D\+D\+\_\+\+I\+D i, const B\+D\+D\+\_\+\+I\+D t, const B\+D\+D\+\_\+\+I\+D e)}]{\setlength{\rightskip}{0pt plus 5cm}B\+D\+D\+\_\+\+ID Manager\+::ite\+ST (
+\begin{DoxyParamCaption}
+\item[{const B\+D\+D\+\_\+\+ID}]{i, }
+\item[{const B\+D\+D\+\_\+\+ID}]{t, }
+\item[{const B\+D\+D\+\_\+\+ID}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classClassProject_1_1Manager_a6c82345b580058836d1cd8a1c09399b6}
+
+
+Function to compute the ite according to the standard triples. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em t} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+{\em e} & a B\+D\+D\+\_\+\+ID argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the ID of the computed IF T\+H\+EN E\+L\+SE operator according the standard triples. 
+\end{DoxyReturn}
+
+
+References get\+Complement(), get\+Next\+Id(), is\+Constant(), ite(), and top\+Var().
+
+
+
+Referenced by ite().
 
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!nand2@{nand2}}
 \index{nand2@{nand2}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
@@ -565,6 +784,24 @@ References ite().
 
 
 Referenced by nand2(), nor2(), and xor2().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!new\+Nodes\+Size@{new\+Nodes\+Size}}
+\index{new\+Nodes\+Size@{new\+Nodes\+Size}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{new\+Nodes\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Manager\+::new\+Nodes\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classClassProject_1_1Manager_a6a1039bfd40a5b78c8d7dc992815e5ec}
+
+
+Function to return the size of the new\+\_\+nodes. 
+
+\begin{DoxyReturn}{Returns}
+the size of new\+\_\+nodes. 
+\end{DoxyReturn}
+
+
+References new\+\_\+nodes.
 
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!nor2@{nor2}}
 \index{nor2@{nor2}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
@@ -655,7 +892,7 @@ References get\+B\+D\+D\+Node(), and Class\+Project\+::\+B\+D\+D\+\_\+\+Node\+::
 
 
 
-Referenced by co\+Factor\+False(), co\+Factor\+True(), find\+Vars(), and ite().
+Referenced by co\+Factor\+False(), co\+Factor\+True(), find\+Vars(), ite(), and ite\+S\+T().
 
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!True@{True}}
 \index{True@{True}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
@@ -674,10 +911,6 @@ The id of the T\+R\+UE leaf node in the Binary Tree.
 
 
 Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClassProject_1_1ManagerInterface}.
-
-
-
-Referenced by create\+Var(), and is\+Constant().
 
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!unique\+Table\+Size@{unique\+Table\+Size}}
 \index{unique\+Table\+Size@{unique\+Table\+Size}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
@@ -699,7 +932,7 @@ Implements {\bf Class\+Project\+::\+Manager\+Interface} \doxyref{}{p.}{classClas
 
 
 
-Referenced by ite().
+Referenced by ite(), and ite\+C().
 
 \index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!xor2@{xor2}}
 \index{xor2@{xor2}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
@@ -733,7 +966,24 @@ References ite(), and neg().
 
 
 
+\subsection{Member Data Documentation}
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!computed\+\_\+table@{computed\+\_\+table}}
+\index{computed\+\_\+table@{computed\+\_\+table}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{computed\+\_\+table}]{\setlength{\rightskip}{0pt plus 5cm}unordered\+\_\+map$<${\bf B\+D\+D\+\_\+\+Node},B\+D\+D\+\_\+\+ID,{\bf B\+D\+D\+Hasher},{\bf B\+D\+D\+Comparer}$>$ Class\+Project\+::\+Manager\+::computed\+\_\+table\hspace{0.3cm}{\ttfamily [private]}}\label{classClassProject_1_1Manager_a1da261b1c3050efc7d5ce7006aa61630}
+Holds the nodes from the unique table. 
+
+Referenced by computed\+Table\+Size(), ite(), ite\+C(), and print\+Unique\+Table().
+
+\index{Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}!new\+\_\+nodes@{new\+\_\+nodes}}
+\index{new\+\_\+nodes@{new\+\_\+nodes}!Class\+Project\+::\+Manager@{Class\+Project\+::\+Manager}}
+\subsubsection[{new\+\_\+nodes}]{\setlength{\rightskip}{0pt plus 5cm}unordered\+\_\+map$<${\bf B\+D\+D\+\_\+\+Node},B\+D\+D\+\_\+\+ID,{\bf B\+D\+D\+Hasher},{\bf B\+D\+D\+Comparer}$>$ Class\+Project\+::\+Manager\+::new\+\_\+nodes\hspace{0.3cm}{\ttfamily [private]}}\label{classClassProject_1_1Manager_ab05746c6672ddda6a4e9cfbe874d4076}
+Vector that represents the unique\+\_\+table. 
+
+Referenced by ite(), ite\+C(), new\+Nodes\+Size(), and print\+Unique\+Table().
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/felipe/\+Desktop/vdscp\+\_\+04/src/Manager.\+h\item 
-/home/felipe/\+Desktop/vdscp\+\_\+04/src/Manager.\+cpp\end{DoxyCompactItemize}
+/import/home/vdscp04/\+Luiz/vdscp\+\_\+04/src/Manager.\+h\item 
+/import/home/vdscp04/\+Luiz/vdscp\+\_\+04/src/Manager.\+cpp\end{DoxyCompactItemize}
