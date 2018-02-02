@@ -278,6 +278,7 @@ TEST(xor2Test, Function)
     BDD_ID trueId = manager->True();
     BDD_ID falseId = manager->False();
     BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
     BDD_ID nega = manager->neg(a);
 
     ASSERT_EQ (falseId,manager->xor2(falseId,falseId));
@@ -286,6 +287,7 @@ TEST(xor2Test, Function)
     ASSERT_EQ (falseId,manager->xor2(trueId,trueId));
     ASSERT_EQ (nega,manager->xor2(a,trueId));
     ASSERT_EQ (a,manager->xor2(a,falseId));
+    ASSERT_EQ (manager->neg(manager->xor2(a,b)),manager->ite(a,b,manager->neg(b)));
 }
 
 TEST(nor2Test, Function)
@@ -433,6 +435,39 @@ TEST(findVarsTest, Function)
     std::set<BDD_ID> vars = {a,b,c,d};
 
     ASSERT_EQ (vars,varsFound);
+}
+
+TEST(ComplementEdgesTest, LeafNode)
+{
+    Manager *manager = new Manager();
+    BDD_ID trueId = manager->True();
+    BDD_ID falseId = manager->False();
+
+    ASSERT_EQ (falseId,manager->neg(trueId));
+    ASSERT_EQ (trueId,manager->neg(falseId));
+    ASSERT_EQ (trueId,manager->neg(manager->neg(trueId)));
+    ASSERT_EQ (falseId,manager->neg(manager->neg(falseId)));
+}
+
+TEST(ComplementEdgesTest, Variable)
+{
+    Manager *manager = new Manager();
+    BDD_ID a = manager->createVar("a");
+
+    ASSERT_EQ (a+1,manager->neg(a));
+}
+
+TEST(ComplementEdgesTest, Function)
+{
+    Manager *manager = new Manager();
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID c = manager->createVar("c");
+
+    BDD_ID F = manager->or2(manager->and2(a,b),manager->and2(manager->neg(a),c));
+    BDD_ID G = manager->or2(manager->and2(a,manager->neg(b)),manager->and2(manager->neg(a),manager->neg(c)));
+
+    ASSERT_EQ (manager->neg(F),G);
 }
 
 TEST(StandardTriplesTest, Function)
