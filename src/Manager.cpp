@@ -328,17 +328,18 @@ BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID top_v
         return iteC(i,getComplement(t),getComplement(e),top_var);
     }
 
-    BDD_Node iteNode(top_var,t,e);
+    BDD_Node iteNode(i,t,e);
 
-    auto node = new_nodes.find(iteNode);
-    if(node != new_nodes.end())
+    if(i == top_var)
     {
-        return (*node).second;
+        auto node = new_nodes.find(iteNode);
+        if(node != new_nodes.end())
+        {
+            return (*node).second;
+        }
     }
 
-    iteNode.top_var = i;
-
-    node = computed_table.find(iteNode);
+    auto node = computed_table.find(iteNode);
     if(node != computed_table.end())
     {
         return (*node).second;
@@ -384,15 +385,16 @@ BDD_ID Manager::ite(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID top_v
         \return Return the id of the computed IF then ELSE Operator.
 */
 BDD_ID Manager::iteC(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID top_var){
-    BDD_Node iteNode(top_var,t,e);
+    BDD_Node iteNode(i,t,e);
 
-    auto node = new_nodes.find(iteNode);
-    if(node != new_nodes.end())
-        return getComplement((*node).second);
+    if(i == top_var)
+    {
+        auto node = new_nodes.find(iteNode);
+        if(node != new_nodes.end())
+            return getComplement((*node).second);
+    }
 
-    iteNode.top_var = i;
-
-    node = computed_table.find(iteNode);
+    auto node = computed_table.find(iteNode);
     if(node != computed_table.end())
         return getComplement((*node).second);
 

@@ -26,7 +26,6 @@ namespace ClassProject {
         BDD_Node() {label = "", top_var = 0; high = 0, low = 0;}
         BDD_Node(string label, BDD_ID top_var, BDD_ID high, BDD_ID low):label(label), low(low),high(high),top_var(top_var){}
         BDD_Node(BDD_ID top_var, BDD_ID high, BDD_ID low):label(""), low(low),high(high),top_var(top_var){}
-
     } BDD_Node;
 
     //! typedef struct BDDComparer
@@ -46,14 +45,14 @@ namespace ClassProject {
     */
     typedef struct BDDHasher
     {
-            std::size_t operator()(const BDD_Node& node) const
-            {
-                BDD_ID seed = 0;
-                seed ^= hash<BDD_ID>()(node.low) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
-                seed ^= hash<BDD_ID>()(node.high) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
-                seed ^= hash<BDD_ID>()(node.top_var) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
-                return seed;               
-            }
+        std::size_t operator()(const BDD_Node& node) const
+        {
+            BDD_ID seed = 0;
+            seed ^= hash<BDD_ID>()(node.low) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+            seed ^= hash<BDD_ID>()(node.high) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+            seed ^= hash<BDD_ID>()(node.top_var) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+            return seed;
+        }
     } BDDHasher;
 
     //! Manager Class.
