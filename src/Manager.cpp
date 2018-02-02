@@ -627,7 +627,7 @@ const BDD_Node& Manager::getBDDNode(BDD_ID id){
 /*!
 */
 void Manager::printUniqueTable(){
-    cout<< "unique_table" << endl;
+    cout<< "Unique Table:" << endl;
     BDD_ID i = 0;
     BDD_Node node = unique_table[i];
     cout << " ID = " << ++i
@@ -645,7 +645,7 @@ void Manager::printUniqueTable(){
              << " LABEL = " << node.label << endl;
     }
 
-    cout<< "computed_table" << endl;
+    cout<< "Computed Table:" << endl;
     for(auto& node : computed_table)
     {
         cout<< " ID = " << node.second
@@ -655,7 +655,7 @@ void Manager::printUniqueTable(){
              << " LABEL = " << node.first.label << endl;
     }
 
-    cout<< "new nodes" << endl;
+    cout<< "New Nodes" << endl;
     for(auto& node : new_nodes)
     {
         cout<< " ID = " << node.second
