@@ -214,7 +214,7 @@ TEST (iteTest, TerminalCase) {
     ASSERT_EQ (a,manager->ite(b,a,a));
     ASSERT_EQ (falseId,manager->ite(b,falseId,falseId));
     ASSERT_EQ (trueId,manager->ite(b,trueId,trueId));
-    ASSERT_EQ(manager->ite(a,b,0),manager->ite(b,a,0));
+    ASSERT_EQ(manager->ite(a,b,falseId),manager->ite(b,a,falseId));
 }
 
 TEST(iteTest, Function) {
@@ -435,6 +435,53 @@ TEST(findVarsTest, Function)
     ASSERT_EQ (vars,varsFound);
 }
 
+TEST(StandardTriplesTest, Function)
+{
+    Manager* manager = new Manager();
+
+    BDD_ID falseNode = manager->False();
+    BDD_ID trueNode = manager->True();
+
+    BDD_ID a = manager->createVar("a");
+    BDD_ID b = manager->createVar("b");
+    BDD_ID c = manager->createVar("c");
+    BDD_ID d = manager->createVar("d");
+
+    BDD_ID F = manager->and2(manager->and2(a,b),c);
+    BDD_ID negF = manager->neg(F);
+    BDD_ID G = manager->or2(manager->or2(a,b),c);
+    BDD_ID negG = manager->neg(G);
+
+    ASSERT_EQ (manager->ite(F,F,G),manager->ite(F,trueNode,G));
+    ASSERT_EQ (manager->ite(F,G,F),manager->ite(F,G,falseNode));
+    ASSERT_EQ (manager->ite(F,G,negF),manager->ite(F,G,trueNode));
+    ASSERT_EQ (manager->ite(F,negF,G),manager->ite(F,falseNode,G));
+
+    //topVar(F) == topVar(G)
+    ASSERT_EQ (manager->ite(F,trueNode,G),manager->ite(G,trueNode,F));
+    ASSERT_EQ (manager->ite(F,G,falseNode),manager->ite(G,F,falseNode));
+    ASSERT_EQ (manager->ite(F,G,trueNode),manager->ite(negG,negF,trueNode));
+    ASSERT_EQ (manager->ite(F,falseNode,G),manager->ite(negG,falseNode,negF));
+    ASSERT_EQ (manager->ite(F,G,negG),manager->ite(G,F,negF));
+
+    G = manager->or2(manager->or2(b,c),d);
+    negG = manager->neg(G);
+
+    //topVar(F) != topVar(G)
+    ASSERT_EQ (manager->ite(F,trueNode,G),manager->ite(G,trueNode,F));
+    ASSERT_EQ (manager->ite(F,G,falseNode),manager->ite(G,F,falseNode));
+    ASSERT_EQ (manager->ite(F,G,trueNode),manager->ite(negG,negF,trueNode));
+    ASSERT_EQ (manager->ite(F,falseNode,G),manager->ite(negG,falseNode,negF));
+    ASSERT_EQ (manager->ite(F,G,negG),manager->ite(G,F,negF));
+
+    BDD_ID H = manager->xor2(manager->xor2(a,c),d);
+    BDD_ID negH = manager->neg(H);
+
+    ASSERT_EQ (manager->ite(F,G,H),manager->ite(negF,H,G));
+    ASSERT_EQ (manager->ite(F,G,H),manager->neg(manager->ite(F,negG,negH)));
+    ASSERT_EQ (manager->ite(F,G,H),manager->neg(manager->ite(negF,negH,negG)));
+}
+
 TEST(XOR3Test, Function)
 {
     Manager* manager = new Manager();
@@ -444,10 +491,10 @@ TEST(XOR3Test, Function)
     BDD_ID XORab = manager->xor2(a,b);
     BDD_ID XORabc = manager->xor2(XORab,c);
 
-    ASSERT_EQ (manager->ite(c,manager->getComplement(XORab),XORab),XORabc);
-    ASSERT_EQ (manager->getComplement(manager->xor2(c,b)),manager->coFactorTrue(XORabc,a));
-    ASSERT_EQ (manager->getComplement(manager->xor2(c,a)),manager->coFactorTrue(XORabc,b));
-    ASSERT_EQ (manager->getComplement(manager->xor2(b,a)),manager->coFactorTrue(XORabc,c));
+    ASSERT_EQ (manager->ite(c,manager->neg(XORab),XORab),XORabc);
+    ASSERT_EQ (manager->neg(manager->xor2(c,b)),manager->coFactorTrue(XORabc,a));
+    ASSERT_EQ (manager->neg(manager->xor2(c,a)),manager->coFactorTrue(XORabc,b));
+    ASSERT_EQ (manager->neg(manager->xor2(b,a)),manager->coFactorTrue(XORabc,c));
     ASSERT_EQ (manager->xor2(c,b),manager->coFactorFalse(XORabc,a));
     ASSERT_EQ (manager->xor2(c,a),manager->coFactorFalse(XORabc,b));
     ASSERT_EQ (manager->xor2(b,a),manager->coFactorFalse(XORabc,c));

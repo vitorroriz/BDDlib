@@ -72,7 +72,15 @@ namespace ClassProject {
 
             bool isComplement(BDD_ID f);
 
+            BDD_ID getComplement(BDD_ID f);
+
             BDD_ID getNextId(BDD_ID f);
+
+            BDD_ID iteST(const BDD_ID i, const BDD_ID t, const BDD_ID e);
+
+            BDD_ID ite(const BDD_ID i, const BDD_ID t, const BDD_ID e, const BDD_ID top_var);
+
+            BDD_ID iteC(const BDD_ID i, const BDD_ID t, const BDD_ID e, const BDD_ID top_var);
 
        public:
             Manager();
@@ -89,13 +97,7 @@ namespace ClassProject {
 
             BDD_ID topVar(const BDD_ID f) override;
 
-            BDD_ID ite(const BDD_ID i, const BDD_ID t, const BDD_ID e) override;
-
-            BDD_ID iteST(const BDD_ID i, const BDD_ID t, const BDD_ID e);
-
-            BDD_ID ite(const BDD_ID i, const BDD_ID t, const BDD_ID e, const BDD_ID top_var);
-
-            BDD_ID iteC(const BDD_ID i, const BDD_ID t, const BDD_ID e, const BDD_ID top_var);
+            BDD_ID ite(const BDD_ID i, const BDD_ID t, const BDD_ID e) override;            
 
             BDD_ID coFactorTrue(const BDD_ID f, BDD_ID x) override;
 
@@ -131,15 +133,11 @@ namespace ClassProject {
 
             size_t newNodesSize();
 
-            size_t computedTableSize();
-
-            BDD_ID getComplement(BDD_ID f);
+            size_t computedTableSize();            
 
             const BDD_Node& getBDDNode(BDD_ID id);
 
-            void printUniqueTable();            
-
-
+            void printUniqueTable();
     };
 }
 
