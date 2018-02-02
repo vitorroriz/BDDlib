@@ -46,6 +46,8 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classbench__circuit__manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">bench_circuit_manager Class Reference</div>  </div>
@@ -71,6 +73,115 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5459b47ba3b32b1a0a6a4de8cdf22ad6"><td class="memItemLeft" align="right" valign="top">std::set&lt; label_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a5459b47ba3b32b1a0a6a4de8cdf22ad6">GetListOfOutputLabels</a> (void)</td></tr>
 <tr class="memdesc:a5459b47ba3b32b1a0a6a4de8cdf22ad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a list with the labels of the OUTPUT gates of the circuit.  <a href="#a5459b47ba3b32b1a0a6a4de8cdf22ad6">More...</a><br /></td></tr>
 <tr class="separator:a5459b47ba3b32b1a0a6a4de8cdf22ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a26d9bb58223d45c8cd431921ce0dfcd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a26d9bb58223d45c8cd431921ce0dfcd1">PrintLabelsTable</a> (void)</td></tr>
+<tr class="memdesc:a26d9bb58223d45c8cd431921ce0dfcd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the labels2node_table table.  <a href="#a26d9bb58223d45c8cd431921ce0dfcd1">More...</a><br /></td></tr>
+<tr class="separator:a26d9bb58223d45c8cd431921ce0dfcd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93d125d2e6f37bf2f7d809677fcf6edc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a93d125d2e6f37bf2f7d809677fcf6edc">PrintUUIDCircuitTable</a> (void)</td></tr>
+<tr class="memdesc:a93d125d2e6f37bf2f7d809677fcf6edc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the uuid2circuitNode_table table.  <a href="#a93d125d2e6f37bf2f7d809677fcf6edc">More...</a><br /></td></tr>
+<tr class="separator:a93d125d2e6f37bf2f7d809677fcf6edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717b0a52495073b2973c756e3708a585"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a717b0a52495073b2973c756e3708a585">PrintOutputList</a> (void)</td></tr>
+<tr class="memdesc:a717b0a52495073b2973c756e3708a585"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the set_of_output_labels list.  <a href="#a717b0a52495073b2973c756e3708a585">More...</a><br /></td></tr>
+<tr class="separator:a717b0a52495073b2973c756e3708a585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94d61a9739a6c230676ec6d6f59b665f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a94d61a9739a6c230676ec6d6f59b665f">PrintLabels2UUIDTable</a> (void)</td></tr>
+<tr class="memdesc:a94d61a9739a6c230676ec6d6f59b665f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the labels2uuid_table table.  <a href="#a94d61a9739a6c230676ec6d6f59b665f">More...</a><br /></td></tr>
+<tr class="separator:a94d61a9739a6c230676ec6d6f59b665f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b3faf292184b198fca9d9fc4b60282c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a0b3faf292184b198fca9d9fc4b60282c">PrintCircuit</a> (unique_ID_t circuit_ID, int indent)</td></tr>
+<tr class="memdesc:a0b3faf292184b198fca9d9fc4b60282c"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints the circuit starting from the given unique identificator.  <a href="#a0b3faf292184b198fca9d9fc4b60282c">More...</a><br /></td></tr>
+<tr class="separator:a0b3faf292184b198fca9d9fc4b60282c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a936f5c058ec5b07302936ce7a87884d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a936f5c058ec5b07302936ce7a87884d1">PrintCircuitByLabel</a> (label_t node_label)</td></tr>
+<tr class="memdesc:a936f5c058ec5b07302936ce7a87884d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints the circuit starting from the given label's node.  <a href="#a936f5c058ec5b07302936ce7a87884d1">More...</a><br /></td></tr>
+<tr class="separator:a936f5c058ec5b07302936ce7a87884d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ed078b79bdaa72c73d63aa78210e893"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a6ed078b79bdaa72c73d63aa78210e893">PrintCircuitsOfOutputSet</a> (void)</td></tr>
+<tr class="memdesc:a6ed078b79bdaa72c73d63aa78210e893"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints all circuits from the set of circuit OUTPUTS.  <a href="#a6ed078b79bdaa72c73d63aa78210e893">More...</a><br /></td></tr>
+<tr class="separator:a6ed078b79bdaa72c73d63aa78210e893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adde5485afe84b4aa0f849e15c1924102"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#adde5485afe84b4aa0f849e15c1924102">PrintSortedCircuitList</a> (void)</td></tr>
+<tr class="memdesc:adde5485afe84b4aa0f849e15c1924102"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints the list of topological sorted circuit's node.  <a href="#adde5485afe84b4aa0f849e15c1924102">More...</a><br /></td></tr>
+<tr class="separator:adde5485afe84b4aa0f849e15c1924102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ef44f29ad4660810d82bf47c75fdb3"><td class="memItemLeft" align="right" valign="top">set_of_circuit_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#ab5ef44f29ad4660810d82bf47c75fdb3">GetListOfCircuitsInputs</a> (void)</td></tr>
+<tr class="memdesc:ab5ef44f29ad4660810d82bf47c75fdb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a list with the UUID of the INPUT gates of the circuit.  <a href="#ab5ef44f29ad4660810d82bf47c75fdb3">More...</a><br /></td></tr>
+<tr class="separator:ab5ef44f29ad4660810d82bf47c75fdb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa544609f33a3eb48ae7a299edfc05a"><td class="memItemLeft" align="right" valign="top">set_of_circuit_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#aafa544609f33a3eb48ae7a299edfc05a">GetListOfCircuitsOutputs</a> (void)</td></tr>
+<tr class="memdesc:aafa544609f33a3eb48ae7a299edfc05a"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a list with the UUID of the OUTPUT gates of the circuit.  <a href="#aafa544609f33a3eb48ae7a299edfc05a">More...</a><br /></td></tr>
+<tr class="separator:aafa544609f33a3eb48ae7a299edfc05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d9a279f0e566c109a3b9153a3fdc30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcircuit__node__type.html">circuit_node_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a00d9a279f0e566c109a3b9153a3fdc30">GetCircuitNode</a> (unique_ID_t circuit_node_uuid)</td></tr>
+<tr class="memdesc:a00d9a279f0e566c109a3b9153a3fdc30"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a circuit node, given a its unique ID.  <a href="#a00d9a279f0e566c109a3b9153a3fdc30">More...</a><br /></td></tr>
+<tr class="separator:a00d9a279f0e566c109a3b9153a3fdc30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a696f25d855d475de0e3284766f867ef6"><td class="memItemLeft" align="right" valign="top">boost::unordered_map&lt; unique_ID_t, <a class="el" href="structcircuit__node__type.html">circuit_node_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a696f25d855d475de0e3284766f867ef6">GetCircuit</a> (void)</td></tr>
+<tr class="memdesc:a696f25d855d475de0e3284766f867ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the table representing the circuit.  <a href="#a696f25d855d475de0e3284766f867ef6">More...</a><br /></td></tr>
+<tr class="separator:a696f25d855d475de0e3284766f867ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7efc2e1ab4f2c8a205cf5f4b188cfd5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#ad7efc2e1ab4f2c8a205cf5f4b188cfd5">ParseFile</a> (std::string bench_file)</td></tr>
+<tr class="memdesc:ad7efc2e1ab4f2c8a205cf5f4b188cfd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the file containing the circuit in the bench format.  <a href="#ad7efc2e1ab4f2c8a205cf5f4b188cfd5">More...</a><br /></td></tr>
+<tr class="separator:ad7efc2e1ab4f2c8a205cf5f4b188cfd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7941a63098c9647a69e4c6ae5bf8ba8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#ac7941a63098c9647a69e4c6ae5bf8ba8">AddToLabelsTable</a> (<a class="el" href="structbench__format_1_1bench__node__type.html">bench_node_t</a> bench_node)</td></tr>
+<tr class="memdesc:ac7941a63098c9647a69e4c6ae5bf8ba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the list of circuit nodes topologically sorted.  <a href="#ac7941a63098c9647a69e4c6ae5bf8ba8">More...</a><br /></td></tr>
+<tr class="separator:ac7941a63098c9647a69e4c6ae5bf8ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d2d99b46b1499de5896a6591dc647e"><td class="memItemLeft" align="right" valign="top">unique_ID_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a66d2d99b46b1499de5896a6591dc647e">FindOrAddToCircuit</a> (<a class="el" href="structbench__format_1_1bench__node__type.html">bench_node_t</a> bench_node)</td></tr>
+<tr class="memdesc:a66d2d99b46b1499de5896a6591dc647e"><td class="mdescLeft">&#160;</td><td class="mdescRight">search or add the node to the circuit.  <a href="#a66d2d99b46b1499de5896a6591dc647e">More...</a><br /></td></tr>
+<tr class="separator:a66d2d99b46b1499de5896a6591dc647e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a825453443e25b10a70b0eb971d1d1f57"><td class="memItemLeft" align="right" valign="top">unique_ID_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a825453443e25b10a70b0eb971d1d1f57">FindOrAddToCircuitbyLabel</a> (label_t node_label)</td></tr>
+<tr class="memdesc:a825453443e25b10a70b0eb971d1d1f57"><td class="mdescLeft">&#160;</td><td class="mdescRight">find or add a node to the circuit given its label.  <a href="#a825453443e25b10a70b0eb971d1d1f57">More...</a><br /></td></tr>
+<tr class="separator:a825453443e25b10a70b0eb971d1d1f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56fccf1f3b64c4325ca288c14c9dbec3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcircuit__node__type.html">circuit_node_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a56fccf1f3b64c4325ca288c14c9dbec3">BenchNode2CircuitNode</a> (<a class="el" href="structbench__format_1_1bench__node__type.html">bench_node_t</a> bench_node)</td></tr>
+<tr class="memdesc:a56fccf1f3b64c4325ca288c14c9dbec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts bench node to circuit node.  <a href="#a56fccf1f3b64c4325ca288c14c9dbec3">More...</a><br /></td></tr>
+<tr class="separator:a56fccf1f3b64c4325ca288c14c9dbec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadda69b0a4c2814425fcc55a3fb46c62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#aadda69b0a4c2814425fcc55a3fb46c62">CreateCircuitFromOutputList</a> (void)</td></tr>
+<tr class="memdesc:aadda69b0a4c2814425fcc55a3fb46c62"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a circuit from the labels in the set_of_output_labels.  <a href="#aadda69b0a4c2814425fcc55a3fb46c62">More...</a><br /></td></tr>
+<tr class="separator:aadda69b0a4c2814425fcc55a3fb46c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ece11730c6be2811ccf9fd05f30f2f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a2ece11730c6be2811ccf9fd05f30f2f9">CreateCircuitbyLabel</a> (label_t bnode_label)</td></tr>
+<tr class="memdesc:a2ece11730c6be2811ccf9fd05f30f2f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a circuit from the given node's label.  <a href="#a2ece11730c6be2811ccf9fd05f30f2f9">More...</a><br /></td></tr>
+<tr class="separator:a2ece11730c6be2811ccf9fd05f30f2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d57b5a1a510cd113df07cc36c3ab2f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a3d57b5a1a510cd113df07cc36c3ab2f4">TopologicalSortKahnsAlgorithm</a> (void)</td></tr>
+<tr class="memdesc:a3d57b5a1a510cd113df07cc36c3ab2f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of Kahn's Algorithm for topological sort.  <a href="#a3d57b5a1a510cd113df07cc36c3ab2f4">More...</a><br /></td></tr>
+<tr class="separator:a3d57b5a1a510cd113df07cc36c3ab2f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1c70d608460bd3f05d1372b42ec9c7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#ac1c70d608460bd3f05d1372b42ec9c7f">IsUniqueOutgoingEdge</a> (unique_ID_t src_node, unique_ID_t dst_node)</td></tr>
+<tr class="memdesc:ac1c70d608460bd3f05d1372b42ec9c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">auxiliar function for topological sort algorithms.  <a href="#ac1c70d608460bd3f05d1372b42ec9c7f">More...</a><br /></td></tr>
+<tr class="separator:ac1c70d608460bd3f05d1372b42ec9c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa29b6db19515bcc6e196fe4f2151a2bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa29b6db19515bcc6e196fe4f2151a2bb"></a>
+unique_ID_t&#160;</td><td class="memItemRight" valign="bottom"><b>ID_counter</b></td></tr>
+<tr class="separator:aa29b6db19515bcc6e196fe4f2151a2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20bf59848cce81112187ee6b907bd0fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20bf59848cce81112187ee6b907bd0fe"></a>
+boost::uuids::random_generator&#160;</td><td class="memItemRight" valign="bottom"><b>generator</b></td></tr>
+<tr class="separator:a20bf59848cce81112187ee6b907bd0fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f99369a0ed9e8367d5e284468bf1f38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f99369a0ed9e8367d5e284468bf1f38"></a>
+std::set&lt; label_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a0f99369a0ed9e8367d5e284468bf1f38">set_of_output_labels</a></td></tr>
+<tr class="memdesc:a0f99369a0ed9e8367d5e284468bf1f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set containing bench node labels of all OUTPUT gates. <br /></td></tr>
+<tr class="separator:a0f99369a0ed9e8367d5e284468bf1f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a461263b1b126077e3c340997344dc9ea"><td class="memItemLeft" align="right" valign="top">std::set&lt; label_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a461263b1b126077e3c340997344dc9ea">set_of_flipflop_labels</a></td></tr>
+<tr class="memdesc:a461263b1b126077e3c340997344dc9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set containing bench node labels of all FLIP FLOP gates.  <a href="#a461263b1b126077e3c340997344dc9ea">More...</a><br /></td></tr>
+<tr class="separator:a461263b1b126077e3c340997344dc9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae51844818c3987b0ca24ea118a3e7777"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae51844818c3987b0ca24ea118a3e7777"></a>
+std::set&lt; label_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>outputs</b></td></tr>
+<tr class="separator:ae51844818c3987b0ca24ea118a3e7777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70fb36f7125dba13a75aba3b7282a71c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70fb36f7125dba13a75aba3b7282a71c"></a>
+set_of_circuit_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a70fb36f7125dba13a75aba3b7282a71c">set_of_circuit_OUT</a></td></tr>
+<tr class="memdesc:a70fb36f7125dba13a75aba3b7282a71c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set containing the unique ID of all OUTPUT gates. <br /></td></tr>
+<tr class="separator:a70fb36f7125dba13a75aba3b7282a71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5476b7904bf8a6cdfc5f904d42fe01a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5476b7904bf8a6cdfc5f904d42fe01a"></a>
+set_of_circuit_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#aa5476b7904bf8a6cdfc5f904d42fe01a">set_of_circuit_IN</a></td></tr>
+<tr class="memdesc:aa5476b7904bf8a6cdfc5f904d42fe01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set containing the unique ID of all INPUT gates. <br /></td></tr>
+<tr class="separator:aa5476b7904bf8a6cdfc5f904d42fe01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72239bd576f9c229eab5fd43bbefd99f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72239bd576f9c229eab5fd43bbefd99f"></a>
+std::unordered_map&lt; label_t, <a class="el" href="structbench__format_1_1bench__node__type.html">bench_node_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a72239bd576f9c229eab5fd43bbefd99f">labels2node_table</a></td></tr>
+<tr class="memdesc:a72239bd576f9c229eab5fd43bbefd99f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping from bench node labels to bench node. <br /></td></tr>
+<tr class="separator:a72239bd576f9c229eab5fd43bbefd99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a70e7232c7fa7b86da66d1be0adf2df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a70e7232c7fa7b86da66d1be0adf2df"></a>
+std::unordered_map&lt; label_t, unique_ID_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a3a70e7232c7fa7b86da66d1be0adf2df">labels2uuid_table</a></td></tr>
+<tr class="memdesc:a3a70e7232c7fa7b86da66d1be0adf2df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping from bench node labels to circuit unique IDs. <br /></td></tr>
+<tr class="separator:a3a70e7232c7fa7b86da66d1be0adf2df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a507e2cc6af7a21a4f96b23892b35c596"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a507e2cc6af7a21a4f96b23892b35c596"></a>
+boost::unordered_map&lt; unique_ID_t, <a class="el" href="structcircuit__node__type.html">circuit_node_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a507e2cc6af7a21a4f96b23892b35c596">uuid2circuitNode_table</a></td></tr>
+<tr class="memdesc:a507e2cc6af7a21a4f96b23892b35c596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping from circuit unique IDs to circuit nodes. <br /></td></tr>
+<tr class="separator:a507e2cc6af7a21a4f96b23892b35c596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6419c128581cefce2d6bd33b61e964b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6419c128581cefce2d6bd33b61e964b9"></a>
+list_of_circuit_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbench__circuit__manager.html#a6419c128581cefce2d6bd33b61e964b9">sorted_circuit</a></td></tr>
+<tr class="memdesc:a6419c128581cefce2d6bd33b61e964b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">List contained the topological sorted circuit nodes. <br /></td></tr>
+<tr class="separator:a6419c128581cefce2d6bd33b61e964b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to convert bench nodes into circuits nodes. </p>
@@ -99,6 +210,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p>References <a class="el" href="classbench__circuit__manager.html#aadda69b0a4c2814425fcc55a3fb46c62">CreateCircuitFromOutputList()</a>, <a class="el" href="classbench__circuit__manager.html#a72239bd576f9c229eab5fd43bbefd99f">labels2node_table</a>, <a class="el" href="classbench__circuit__manager.html#a3a70e7232c7fa7b86da66d1be0adf2df">labels2uuid_table</a>, <a class="el" href="classbench__circuit__manager.html#ad7efc2e1ab4f2c8a205cf5f4b188cfd5">ParseFile()</a>, <a class="el" href="classbench__circuit__manager.html#aa5476b7904bf8a6cdfc5f904d42fe01a">set_of_circuit_IN</a>, <a class="el" href="classbench__circuit__manager.html#a70fb36f7125dba13a75aba3b7282a71c">set_of_circuit_OUT</a>, <a class="el" href="classbench__circuit__manager.html#a461263b1b126077e3c340997344dc9ea">set_of_flipflop_labels</a>, <a class="el" href="classbench__circuit__manager.html#a0f99369a0ed9e8367d5e284468bf1f38">set_of_output_labels</a>, <a class="el" href="classbench__circuit__manager.html#a3d57b5a1a510cd113df07cc36c3ab2f4">TopologicalSortKahnsAlgorithm()</a>, and <a class="el" href="classbench__circuit__manager.html#a507e2cc6af7a21a4f96b23892b35c596">uuid2circuitNode_table</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a9bae32db63988e78092dbe12563e6f2a"></a>
@@ -122,11 +235,379 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>References <a class="el" href="structcircuit__node__type.html#a6d3b4331c5ad9a248154bfbada6ef9df">circuit_node_type::gate_type</a>, <a class="el" href="classbench__circuit__manager.html#ab2c34fc07b9f3fe4591cede486b7ad17">GetSortedCircuit()</a>, <a class="el" href="structcircuit__node__type.html#afacb1e6847ed44fac3331f71f5ec04b6">circuit_node_type::ID</a>, <a class="el" href="structcircuit__node__type.html#a569f94035014dfc750d4070aee13876e">circuit_node_type::input_ID_list</a>, <a class="el" href="structcircuit__node__type.html#af8938c10e6a23cf894a7fa8c7ed1418c">circuit_node_type::label</a>, and <a class="el" href="structcircuit__node__type.html#abeef1f2b534968593864f1193c964660">circuit_node_type::output_ID_list</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ac7941a63098c9647a69e4c6ae5bf8ba8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bench_circuit_manager::AddToLabelsTable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structbench__format_1_1bench__node__type.html">bench_node_t</a>&#160;</td>
+          <td class="paramname"><em>bench_node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return the list of circuit nodes topologically sorted. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bench_node</td><td>is bench_node_t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool: true -&gt; Node successfully added false -&gt; Node already exist and could not be added</dd></dl>
+<p>Adds a node to the labels table (labels2node) and to the sets_of_outputs in case it is of gate type OUTPUT. </p>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a72239bd576f9c229eab5fd43bbefd99f">labels2node_table</a>, <a class="el" href="classbench__circuit__manager.html#a461263b1b126077e3c340997344dc9ea">set_of_flipflop_labels</a>, and <a class="el" href="classbench__circuit__manager.html#a0f99369a0ed9e8367d5e284468bf1f38">set_of_output_labels</a>.</p>
+
+<p>Referenced by <a class="el" href="classbench__circuit__manager.html#ad7efc2e1ab4f2c8a205cf5f4b188cfd5">ParseFile()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a56fccf1f3b64c4325ca288c14c9dbec3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcircuit__node__type.html">circuit_node_type</a> bench_circuit_manager::BenchNode2CircuitNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structbench__format_1_1bench__node__type.html">bench_node_t</a>&#160;</td>
+          <td class="paramname"><em>bench_node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>converts bench node to circuit node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bench_node</td><td>is bench_node_t and represents the node to be converted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structcircuit__node__type.html" title="Struct that represents a node from a circuit. ">circuit_node_type</a></dd></dl>
+<p>Given a bench_node_t, it converts the node into an <a class="el" href="structcircuit__node__type.html" title="Struct that represents a node from a circuit. ">circuit_node_type</a>. </p>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a825453443e25b10a70b0eb971d1d1f57">FindOrAddToCircuitbyLabel()</a>, <a class="el" href="structcircuit__node__type.html#a6d3b4331c5ad9a248154bfbada6ef9df">circuit_node_type::gate_type</a>, <a class="el" href="structcircuit__node__type.html#afacb1e6847ed44fac3331f71f5ec04b6">circuit_node_type::ID</a>, <a class="el" href="structcircuit__node__type.html#a569f94035014dfc750d4070aee13876e">circuit_node_type::input_ID_list</a>, <a class="el" href="structcircuit__node__type.html#af8938c10e6a23cf894a7fa8c7ed1418c">circuit_node_type::label</a>, <a class="el" href="classbench__circuit__manager.html#aa5476b7904bf8a6cdfc5f904d42fe01a">set_of_circuit_IN</a>, and <a class="el" href="classbench__circuit__manager.html#a507e2cc6af7a21a4f96b23892b35c596">uuid2circuitNode_table</a>.</p>
+
+<p>Referenced by <a class="el" href="classbench__circuit__manager.html#a66d2d99b46b1499de5896a6591dc647e">FindOrAddToCircuit()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2ece11730c6be2811ccf9fd05f30f2f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bench_circuit_manager::CreateCircuitbyLabel </td>
+          <td>(</td>
+          <td class="paramtype">label_t&#160;</td>
+          <td class="paramname"><em>bnode_label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>create a circuit from the given node's label. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bnode_label</td><td>is label_t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a825453443e25b10a70b0eb971d1d1f57">FindOrAddToCircuitbyLabel()</a>, and <a class="el" href="classbench__circuit__manager.html#a70fb36f7125dba13a75aba3b7282a71c">set_of_circuit_OUT</a>.</p>
+
+<p>Referenced by <a class="el" href="classbench__circuit__manager.html#aadda69b0a4c2814425fcc55a3fb46c62">CreateCircuitFromOutputList()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aadda69b0a4c2814425fcc55a3fb46c62"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bench_circuit_manager::CreateCircuitFromOutputList </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>create a circuit from the labels in the set_of_output_labels. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a2ece11730c6be2811ccf9fd05f30f2f9">CreateCircuitbyLabel()</a>, <a class="el" href="classbench__circuit__manager.html#a3a70e7232c7fa7b86da66d1be0adf2df">labels2uuid_table</a>, <a class="el" href="classbench__circuit__manager.html#a461263b1b126077e3c340997344dc9ea">set_of_flipflop_labels</a>, <a class="el" href="classbench__circuit__manager.html#a0f99369a0ed9e8367d5e284468bf1f38">set_of_output_labels</a>, and <a class="el" href="classbench__circuit__manager.html#a507e2cc6af7a21a4f96b23892b35c596">uuid2circuitNode_table</a>.</p>
+
+<p>Referenced by <a class="el" href="classbench__circuit__manager.html#a22746f8dacdbe5f5928b795afd409a0e">bench_circuit_manager()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a66d2d99b46b1499de5896a6591dc647e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unique_ID_t bench_circuit_manager::FindOrAddToCircuit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structbench__format_1_1bench__node__type.html">bench_node_t</a>&#160;</td>
+          <td class="paramname"><em>bench_node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>search or add the node to the circuit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bench_node</td><td>is bench_node_t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>unique_ID_t representing the given bench_node</dd></dl>
+<p>It searches if the bench node exist in the label2uuid_table. If it does't, adds it to the table and return the unique ID. Otherwise, simply return the unique ID of the node. </p>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a56fccf1f3b64c4325ca288c14c9dbec3">BenchNode2CircuitNode()</a>, <a class="el" href="structcircuit__node__type.html#afacb1e6847ed44fac3331f71f5ec04b6">circuit_node_type::ID</a>, <a class="el" href="classbench__circuit__manager.html#a3a70e7232c7fa7b86da66d1be0adf2df">labels2uuid_table</a>, and <a class="el" href="classbench__circuit__manager.html#a507e2cc6af7a21a4f96b23892b35c596">uuid2circuitNode_table</a>.</p>
+
+<p>Referenced by <a class="el" href="classbench__circuit__manager.html#a825453443e25b10a70b0eb971d1d1f57">FindOrAddToCircuitbyLabel()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a825453443e25b10a70b0eb971d1d1f57"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unique_ID_t bench_circuit_manager::FindOrAddToCircuitbyLabel </td>
+          <td>(</td>
+          <td class="paramtype">label_t&#160;</td>
+          <td class="paramname"><em>node_label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>find or add a node to the circuit given its label. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node_label</td><td>is label_t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>unique_ID_t representing the given label</dd></dl>
+<p>It searches if the node corresponding to the given label is already inserted into the labels2uuid_table table. If it is, returns its id. If not, creates a new node into the circuit and add it to the table. </p>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a66d2d99b46b1499de5896a6591dc647e">FindOrAddToCircuit()</a>, and <a class="el" href="classbench__circuit__manager.html#a72239bd576f9c229eab5fd43bbefd99f">labels2node_table</a>.</p>
+
+<p>Referenced by <a class="el" href="classbench__circuit__manager.html#a56fccf1f3b64c4325ca288c14c9dbec3">BenchNode2CircuitNode()</a>, and <a class="el" href="classbench__circuit__manager.html#a2ece11730c6be2811ccf9fd05f30f2f9">CreateCircuitbyLabel()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a696f25d855d475de0e3284766f867ef6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::unordered_map&lt; unique_ID_t, <a class="el" href="structcircuit__node__type.html">circuit_node_type</a> &gt; bench_circuit_manager::GetCircuit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return the table representing the circuit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>boost::unordered_map&lt;unique_ID_t, circuit_node_type&gt; </dd></dl>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a507e2cc6af7a21a4f96b23892b35c596">uuid2circuitNode_table</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a00d9a279f0e566c109a3b9153a3fdc30"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcircuit__node__type.html">circuit_node_type</a> bench_circuit_manager::GetCircuitNode </td>
+          <td>(</td>
+          <td class="paramtype">unique_ID_t&#160;</td>
+          <td class="paramname"><em>circuit_node_uuid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return a circuit node, given a its unique ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circuit_node_uuid</td><td>is unique_ID_t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structcircuit__node__type.html" title="Struct that represents a node from a circuit. ">circuit_node_type</a> </dd></dl>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a507e2cc6af7a21a4f96b23892b35c596">uuid2circuitNode_table</a>.</p>
+
+<p>Referenced by <a class="el" href="classbench__circuit__manager.html#a3d57b5a1a510cd113df07cc36c3ab2f4">TopologicalSortKahnsAlgorithm()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5ef44f29ad4660810d82bf47c75fdb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">set_of_circuit_t bench_circuit_manager::GetListOfCircuitsInputs </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return a list with the UUID of the INPUT gates of the circuit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>set_of_circuit_t </dd></dl>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#aa5476b7904bf8a6cdfc5f904d42fe01a">set_of_circuit_IN</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aafa544609f33a3eb48ae7a299edfc05a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">set_of_circuit_t bench_circuit_manager::GetListOfCircuitsOutputs </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return a list with the UUID of the OUTPUT gates of the circuit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>set_of_circuit_t </dd></dl>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a70fb36f7125dba13a75aba3b7282a71c">set_of_circuit_OUT</a>.</p>
+
+<p>Referenced by <a class="el" href="classbench__circuit__manager.html#a3d57b5a1a510cd113df07cc36c3ab2f4">TopologicalSortKahnsAlgorithm()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a5459b47ba3b32b1a0a6a4de8cdf22ad6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -175,15 +656,463 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>list_of_circuit_t </dd></dl>
 
-<p>References <a class="el" href="structcircuit__node__type.html#a6d3b4331c5ad9a248154bfbada6ef9df">circuit_node_type::gate_type</a>, <a class="el" href="structcircuit__node__type.html#afacb1e6847ed44fac3331f71f5ec04b6">circuit_node_type::ID</a>, <a class="el" href="structcircuit__node__type.html#a569f94035014dfc750d4070aee13876e">circuit_node_type::input_ID_list</a>, and <a class="el" href="structcircuit__node__type.html#af8938c10e6a23cf894a7fa8c7ed1418c">circuit_node_type::label</a>.</p>
+<p>References <a class="el" href="classbench__circuit__manager.html#a6419c128581cefce2d6bd33b61e964b9">sorted_circuit</a>.</p>
 
-<p>Referenced by <a class="el" href="classbench__circuit__manager.html#a9bae32db63988e78092dbe12563e6f2a">~bench_circuit_manager()</a>.</p>
+<p>Referenced by <a class="el" href="classbench__circuit__manager.html#adde5485afe84b4aa0f849e15c1924102">PrintSortedCircuitList()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac1c70d608460bd3f05d1372b42ec9c7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bench_circuit_manager::IsUniqueOutgoingEdge </td>
+          <td>(</td>
+          <td class="paramtype">unique_ID_t&#160;</td>
+          <td class="paramname"><em>src_node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unique_ID_t&#160;</td>
+          <td class="paramname"><em>dst_node</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>auxiliar function for topological sort algorithms. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src_node</td><td>is unique_ID_t </td></tr>
+    <tr><td class="paramname">dst_node</td><td>is unique_ID_t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if it was the only outgoing edge. False, otherwise.</dd></dl>
+<p>It removes the edge from src-&gt;dst at the table uuid2circuitNode and then checks if it was the only outgoing edge. </p>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a507e2cc6af7a21a4f96b23892b35c596">uuid2circuitNode_table</a>.</p>
+
+<p>Referenced by <a class="el" href="classbench__circuit__manager.html#a3d57b5a1a510cd113df07cc36c3ab2f4">TopologicalSortKahnsAlgorithm()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad7efc2e1ab4f2c8a205cf5f4b188cfd5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bench_circuit_manager::ParseFile </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>bench_file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads the file containing the circuit in the bench format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bench_file</td><td>is std::string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool returns true in case of success.</dd></dl>
+<p>Reads the file containing the circuit in the bench format. </p>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#ac7941a63098c9647a69e4c6ae5bf8ba8">AddToLabelsTable()</a>.</p>
+
+<p>Referenced by <a class="el" href="classbench__circuit__manager.html#a22746f8dacdbe5f5928b795afd409a0e">bench_circuit_manager()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b3faf292184b198fca9d9fc4b60282c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bench_circuit_manager::PrintCircuit </td>
+          <td>(</td>
+          <td class="paramtype">unique_ID_t&#160;</td>
+          <td class="paramname"><em>circuit_ID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>indent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>prints the circuit starting from the given unique identificator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circuit_ID</td><td>is unique_ID_t corresponding to a node circuit. </td></tr>
+    <tr><td class="paramname">indent</td><td>is int and represents the depth of the node in the circuit. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none</dd></dl>
+<p>It prints the circuit starting from circuit_ID node. Indent is an integer corresponding to the depth of the node in the circuit. Each unity will add four spaces as identation before printing the node's data. </p>
+
+<p>References <a class="el" href="structcircuit__node__type.html#a6d3b4331c5ad9a248154bfbada6ef9df">circuit_node_type::gate_type</a>, <a class="el" href="structcircuit__node__type.html#afacb1e6847ed44fac3331f71f5ec04b6">circuit_node_type::ID</a>, <a class="el" href="structcircuit__node__type.html#a569f94035014dfc750d4070aee13876e">circuit_node_type::input_ID_list</a>, <a class="el" href="structcircuit__node__type.html#af8938c10e6a23cf894a7fa8c7ed1418c">circuit_node_type::label</a>, <a class="el" href="structcircuit__node__type.html#abeef1f2b534968593864f1193c964660">circuit_node_type::output_ID_list</a>, and <a class="el" href="classbench__circuit__manager.html#a507e2cc6af7a21a4f96b23892b35c596">uuid2circuitNode_table</a>.</p>
+
+<p>Referenced by <a class="el" href="classbench__circuit__manager.html#a936f5c058ec5b07302936ce7a87884d1">PrintCircuitByLabel()</a>, and <a class="el" href="classbench__circuit__manager.html#a6ed078b79bdaa72c73d63aa78210e893">PrintCircuitsOfOutputSet()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a936f5c058ec5b07302936ce7a87884d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bench_circuit_manager::PrintCircuitByLabel </td>
+          <td>(</td>
+          <td class="paramtype">label_t&#160;</td>
+          <td class="paramname"><em>node_label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>prints the circuit starting from the given label's node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node_label</td><td>is label_t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a3a70e7232c7fa7b86da66d1be0adf2df">labels2uuid_table</a>, and <a class="el" href="classbench__circuit__manager.html#a0b3faf292184b198fca9d9fc4b60282c">PrintCircuit()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6ed078b79bdaa72c73d63aa78210e893"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bench_circuit_manager::PrintCircuitsOfOutputSet </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>prints all circuits from the set of circuit OUTPUTS. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a0b3faf292184b198fca9d9fc4b60282c">PrintCircuit()</a>, and <a class="el" href="classbench__circuit__manager.html#a70fb36f7125dba13a75aba3b7282a71c">set_of_circuit_OUT</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94d61a9739a6c230676ec6d6f59b665f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bench_circuit_manager::PrintLabels2UUIDTable </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print the labels2uuid_table table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none</dd></dl>
+<p>It prints all the labels and its associates unique circuit ID. </p>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a3a70e7232c7fa7b86da66d1be0adf2df">labels2uuid_table</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a26d9bb58223d45c8cd431921ce0dfcd1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bench_circuit_manager::PrintLabelsTable </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print the labels2node_table table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none</dd></dl>
+<p>It prints all the labels and the data associated to bench nodes. </p>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a72239bd576f9c229eab5fd43bbefd99f">labels2node_table</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a717b0a52495073b2973c756e3708a585"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bench_circuit_manager::PrintOutputList </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print the set_of_output_labels list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none</dd></dl>
+<p>It prints the list containing the label of all output nodes. </p>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a0f99369a0ed9e8367d5e284468bf1f38">set_of_output_labels</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adde5485afe84b4aa0f849e15c1924102"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bench_circuit_manager::PrintSortedCircuitList </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>prints the list of topological sorted circuit's node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#ab2c34fc07b9f3fe4591cede486b7ad17">GetSortedCircuit()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a93d125d2e6f37bf2f7d809677fcf6edc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bench_circuit_manager::PrintUUIDCircuitTable </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print the uuid2circuitNode_table table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none</dd></dl>
+<p>It prints all the unique IDs and the data associated to circuit nodes. </p>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a507e2cc6af7a21a4f96b23892b35c596">uuid2circuitNode_table</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3d57b5a1a510cd113df07cc36c3ab2f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bench_circuit_manager::TopologicalSortKahnsAlgorithm </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementation of Kahn's Algorithm for topological sort. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none (the result is stored at sorted_circuit variable) </dd></dl>
+
+<p>References <a class="el" href="classbench__circuit__manager.html#a00d9a279f0e566c109a3b9153a3fdc30">GetCircuitNode()</a>, <a class="el" href="classbench__circuit__manager.html#aafa544609f33a3eb48ae7a299edfc05a">GetListOfCircuitsOutputs()</a>, <a class="el" href="structcircuit__node__type.html#afacb1e6847ed44fac3331f71f5ec04b6">circuit_node_type::ID</a>, <a class="el" href="structcircuit__node__type.html#a569f94035014dfc750d4070aee13876e">circuit_node_type::input_ID_list</a>, <a class="el" href="classbench__circuit__manager.html#ac1c70d608460bd3f05d1372b42ec9c7f">IsUniqueOutgoingEdge()</a>, <a class="el" href="classbench__circuit__manager.html#a6419c128581cefce2d6bd33b61e964b9">sorted_circuit</a>, and <a class="el" href="classbench__circuit__manager.html#a507e2cc6af7a21a4f96b23892b35c596">uuid2circuitNode_table</a>.</p>
+
+<p>Referenced by <a class="el" href="classbench__circuit__manager.html#a22746f8dacdbe5f5928b795afd409a0e">bench_circuit_manager()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a461263b1b126077e3c340997344dc9ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;label_t&gt; bench_circuit_manager::set_of_flipflop_labels</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set containing bench node labels of all FLIP FLOP gates. </p>
+<p>When a FLIP FLOP bench gate is parsed, it is splitted into two circuit's gates: one will be handled as INPUT gate and the other one as OUTPUT gate. </p>
+
+<p>Referenced by <a class="el" href="classbench__circuit__manager.html#ac7941a63098c9647a69e4c6ae5bf8ba8">AddToLabelsTable()</a>, <a class="el" href="classbench__circuit__manager.html#a22746f8dacdbe5f5928b795afd409a0e">bench_circuit_manager()</a>, and <a class="el" href="classbench__circuit__manager.html#aadda69b0a4c2814425fcc55a3fb46c62">CreateCircuitFromOutputList()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/import/home/vdscp04/Luiz/vdscp_04/src/bench/<a class="el" href="bench__circuit__manager_8hpp_source.html">bench_circuit_manager.hpp</a></li>
-<li>/import/home/vdscp04/Luiz/vdscp_04/src/bench/bench_circuit_manager.cpp</li>
+<li>/home/felipe/Desktop/vdsproject/vdscp_04/src/bench/<a class="el" href="bench__circuit__manager_8hpp_source.html">bench_circuit_manager.hpp</a></li>
+<li>/home/felipe/Desktop/vdsproject/vdscp_04/src/bench/bench_circuit_manager.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

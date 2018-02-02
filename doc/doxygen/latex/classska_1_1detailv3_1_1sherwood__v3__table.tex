@@ -1,0 +1,342 @@
+\section{ska\+:\+:detailv3\+:\+:sherwood\+\_\+v3\+\_\+table$<$ T, Find\+Key, Argument\+Hash, Hasher, Argument\+Equal, Equal, Argument\+Alloc, Entry\+Alloc $>$ Class Template Reference}
+\label{classska_1_1detailv3_1_1sherwood__v3__table}\index{ska\+::detailv3\+::sherwood\+\_\+v3\+\_\+table$<$ T, Find\+Key, Argument\+Hash, Hasher, Argument\+Equal, Equal, Argument\+Alloc, Entry\+Alloc $>$@{ska\+::detailv3\+::sherwood\+\_\+v3\+\_\+table$<$ T, Find\+Key, Argument\+Hash, Hasher, Argument\+Equal, Equal, Argument\+Alloc, Entry\+Alloc $>$}}
+Inheritance diagram for ska\+:\+:detailv3\+:\+:sherwood\+\_\+v3\+\_\+table$<$ T, Find\+Key, Argument\+Hash, Hasher, Argument\+Equal, Equal, Argument\+Alloc, Entry\+Alloc $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.512821cm]{classska_1_1detailv3_1_1sherwood__v3__table}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf convertible\+\_\+to\+\_\+iterator}
+\item 
+struct {\bf templated\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries value\+\_\+type} = T\label{classska_1_1detailv3_1_1sherwood__v3__table_a7a330655116a4689d2773e70c2cce1e9}
+
+\item 
+using {\bfseries size\+\_\+type} = size\+\_\+t\label{classska_1_1detailv3_1_1sherwood__v3__table_a3eb8f63db4c50b2320d338080e168256}
+
+\item 
+using {\bfseries difference\+\_\+type} = std\+::ptrdiff\+\_\+t\label{classska_1_1detailv3_1_1sherwood__v3__table_a4c2b338c837bd856f7be26bdce7b07d3}
+
+\item 
+using {\bfseries hasher} = Argument\+Hash\label{classska_1_1detailv3_1_1sherwood__v3__table_aea93b8f5328be725ee604a83030bac78}
+
+\item 
+using {\bfseries key\+\_\+equal} = Argument\+Equal\label{classska_1_1detailv3_1_1sherwood__v3__table_a379f2dfd91ff26565494627c05ff6601}
+
+\item 
+using {\bfseries allocator\+\_\+type} = Entry\+Alloc\label{classska_1_1detailv3_1_1sherwood__v3__table_aadeab54e08794b84096f0121ae34b20f}
+
+\item 
+using {\bfseries reference} = value\+\_\+type \&\label{classska_1_1detailv3_1_1sherwood__v3__table_a5ceebd69a463a2b22bf0309d94a5845e}
+
+\item 
+using {\bfseries const\+\_\+reference} = const value\+\_\+type \&\label{classska_1_1detailv3_1_1sherwood__v3__table_a51ed14b89b4f0a2686ef8f3e2e04e627}
+
+\item 
+using {\bfseries pointer} = value\+\_\+type $\ast$\label{classska_1_1detailv3_1_1sherwood__v3__table_ad88e1efd3999da1b71222b1e879c20ce}
+
+\item 
+using {\bfseries const\+\_\+pointer} = const value\+\_\+type $\ast$\label{classska_1_1detailv3_1_1sherwood__v3__table_afbb2322b78493266fbe1051532079218}
+
+\item 
+using {\bfseries iterator} = {\bf templated\+\_\+iterator}$<$ value\+\_\+type $>$\label{classska_1_1detailv3_1_1sherwood__v3__table_a6e73347b55cd49666d63f765e2afbfbe}
+
+\item 
+using {\bfseries const\+\_\+iterator} = {\bf templated\+\_\+iterator}$<$ const value\+\_\+type $>$\label{classska_1_1detailv3_1_1sherwood__v3__table_a381786dc71b4f6f2793ceabe496f7d04}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries sherwood\+\_\+v3\+\_\+table} (size\+\_\+type bucket\+\_\+count, const Argument\+Hash \&hash=Argument\+Hash(), const Argument\+Equal \&equal=Argument\+Equal(), const Argument\+Alloc \&alloc=Argument\+Alloc())\label{classska_1_1detailv3_1_1sherwood__v3__table_aaa32511bc24a205d8361f0a9ec9dd8d0}
+
+\item 
+{\bfseries sherwood\+\_\+v3\+\_\+table} (size\+\_\+type bucket\+\_\+count, const Argument\+Alloc \&alloc)\label{classska_1_1detailv3_1_1sherwood__v3__table_a34f202ef559b7bae86948154c170fe6d}
+
+\item 
+{\bfseries sherwood\+\_\+v3\+\_\+table} (size\+\_\+type bucket\+\_\+count, const Argument\+Hash \&hash, const Argument\+Alloc \&alloc)\label{classska_1_1detailv3_1_1sherwood__v3__table_aef224d1aef9b1942b4a89299aee13506}
+
+\item 
+{\bfseries sherwood\+\_\+v3\+\_\+table} (const Argument\+Alloc \&alloc)\label{classska_1_1detailv3_1_1sherwood__v3__table_a868295f536ae6050093ef518d59e3213}
+
+\item 
+{\footnotesize template$<$typename It $>$ }\\{\bfseries sherwood\+\_\+v3\+\_\+table} (It first, It last, size\+\_\+type bucket\+\_\+count=0, const Argument\+Hash \&hash=Argument\+Hash(), const Argument\+Equal \&equal=Argument\+Equal(), const Argument\+Alloc \&alloc=Argument\+Alloc())\label{classska_1_1detailv3_1_1sherwood__v3__table_acbf66852282c6be341c36de86ca5fd9d}
+
+\item 
+{\footnotesize template$<$typename It $>$ }\\{\bfseries sherwood\+\_\+v3\+\_\+table} (It first, It last, size\+\_\+type bucket\+\_\+count, const Argument\+Alloc \&alloc)\label{classska_1_1detailv3_1_1sherwood__v3__table_a81743251db070241f67d26c6490a8f18}
+
+\item 
+{\footnotesize template$<$typename It $>$ }\\{\bfseries sherwood\+\_\+v3\+\_\+table} (It first, It last, size\+\_\+type bucket\+\_\+count, const Argument\+Hash \&hash, const Argument\+Alloc \&alloc)\label{classska_1_1detailv3_1_1sherwood__v3__table_a4804a170f10afceacdcaea04f4fd4fce}
+
+\item 
+{\bfseries sherwood\+\_\+v3\+\_\+table} (std\+::initializer\+\_\+list$<$ T $>$ il, size\+\_\+type bucket\+\_\+count=0, const Argument\+Hash \&hash=Argument\+Hash(), const Argument\+Equal \&equal=Argument\+Equal(), const Argument\+Alloc \&alloc=Argument\+Alloc())\label{classska_1_1detailv3_1_1sherwood__v3__table_a1e01d0f0bc2bef91111cc3725650c8b9}
+
+\item 
+{\bfseries sherwood\+\_\+v3\+\_\+table} (std\+::initializer\+\_\+list$<$ T $>$ il, size\+\_\+type bucket\+\_\+count, const Argument\+Alloc \&alloc)\label{classska_1_1detailv3_1_1sherwood__v3__table_a2b1d486b1600c22433ea307edc9439c7}
+
+\item 
+{\bfseries sherwood\+\_\+v3\+\_\+table} (std\+::initializer\+\_\+list$<$ T $>$ il, size\+\_\+type bucket\+\_\+count, const Argument\+Hash \&hash, const Argument\+Alloc \&alloc)\label{classska_1_1detailv3_1_1sherwood__v3__table_ac1274798f4e5daff51a970ce42b33208}
+
+\item 
+{\bfseries sherwood\+\_\+v3\+\_\+table} (const {\bf sherwood\+\_\+v3\+\_\+table} \&other)\label{classska_1_1detailv3_1_1sherwood__v3__table_a4ec00a345a75c7c174ce208e8a84606d}
+
+\item 
+{\bfseries sherwood\+\_\+v3\+\_\+table} (const {\bf sherwood\+\_\+v3\+\_\+table} \&other, const Argument\+Alloc \&alloc)\label{classska_1_1detailv3_1_1sherwood__v3__table_ac26c91c80f8c1fa92d1a575d63ae924f}
+
+\item 
+{\bfseries sherwood\+\_\+v3\+\_\+table} ({\bf sherwood\+\_\+v3\+\_\+table} \&\&other) noexcept\label{classska_1_1detailv3_1_1sherwood__v3__table_a97d71f431ff7b23a666995dc75d0d0bc}
+
+\item 
+{\bfseries sherwood\+\_\+v3\+\_\+table} ({\bf sherwood\+\_\+v3\+\_\+table} \&\&other, const Argument\+Alloc \&alloc) noexcept\label{classska_1_1detailv3_1_1sherwood__v3__table_aed772a8cfa891330a49369fcb681ab49}
+
+\item 
+{\bf sherwood\+\_\+v3\+\_\+table} \& {\bfseries operator=} (const {\bf sherwood\+\_\+v3\+\_\+table} \&other)\label{classska_1_1detailv3_1_1sherwood__v3__table_aab785e138889f48f453aeb56f9cb3a5f}
+
+\item 
+{\bf sherwood\+\_\+v3\+\_\+table} \& {\bfseries operator=} ({\bf sherwood\+\_\+v3\+\_\+table} \&\&other) noexcept\label{classska_1_1detailv3_1_1sherwood__v3__table_a014e26f08f8e3209e26c32b74e602556}
+
+\item 
+const allocator\+\_\+type \& {\bfseries get\+\_\+allocator} () const \label{classska_1_1detailv3_1_1sherwood__v3__table_a7a839ab56d3a3a4b658139d313a5d96e}
+
+\item 
+const Argument\+Equal \& {\bfseries key\+\_\+eq} () const \label{classska_1_1detailv3_1_1sherwood__v3__table_a5c03df7a5c53d4d1370650071b903753}
+
+\item 
+const Argument\+Hash \& {\bfseries hash\+\_\+function} () const \label{classska_1_1detailv3_1_1sherwood__v3__table_a7297e9096c61b4f7eb62d208f68954f4}
+
+\item 
+{\bf iterator} {\bfseries begin} ()\label{classska_1_1detailv3_1_1sherwood__v3__table_a1a10add3f012ca6b718e77e22b1a566e}
+
+\item 
+{\bf const\+\_\+iterator} {\bfseries begin} () const \label{classska_1_1detailv3_1_1sherwood__v3__table_a0ef070b8634cd1bae3d22b2b461042ad}
+
+\item 
+{\bf const\+\_\+iterator} {\bfseries cbegin} () const \label{classska_1_1detailv3_1_1sherwood__v3__table_a4c2d0f8ecdecde9d53fe8c41b201508e}
+
+\item 
+{\bf iterator} {\bfseries end} ()\label{classska_1_1detailv3_1_1sherwood__v3__table_a85d44a1eb013c5aadd40c12085c096b4}
+
+\item 
+{\bf const\+\_\+iterator} {\bfseries end} () const \label{classska_1_1detailv3_1_1sherwood__v3__table_a70539c3fc38253b7422d87194eb84ee1}
+
+\item 
+{\bf const\+\_\+iterator} {\bfseries cend} () const \label{classska_1_1detailv3_1_1sherwood__v3__table_afc653322e9d63349f0009052a8b22887}
+
+\item 
+{\bf iterator} {\bfseries find} (const Find\+Key \&key)\label{classska_1_1detailv3_1_1sherwood__v3__table_a4f77659654fc9b95f780d631fcb8ba3c}
+
+\item 
+{\bf const\+\_\+iterator} {\bfseries find} (const Find\+Key \&key) const \label{classska_1_1detailv3_1_1sherwood__v3__table_a3f03b08e81232765292c8b5938816256}
+
+\item 
+size\+\_\+t {\bfseries count} (const Find\+Key \&key) const \label{classska_1_1detailv3_1_1sherwood__v3__table_a722d57e22f121bab592d749f29f1bc7b}
+
+\item 
+std\+::pair$<$ {\bf iterator}, {\bf iterator} $>$ {\bfseries equal\+\_\+range} (const Find\+Key \&key)\label{classska_1_1detailv3_1_1sherwood__v3__table_a3b64e1e928246b3c288b99416d8a7bc3}
+
+\item 
+std\+::pair$<$ {\bf const\+\_\+iterator}, {\bf const\+\_\+iterator} $>$ {\bfseries equal\+\_\+range} (const Find\+Key \&key) const \label{classska_1_1detailv3_1_1sherwood__v3__table_aa0742f22c59133513a73edae201d259d}
+
+\item 
+{\footnotesize template$<$typename Key , typename... Args$>$ }\\std\+::pair$<$ {\bf iterator}, bool $>$ {\bfseries emplace} (Key \&\&key, Args \&\&...args)\label{classska_1_1detailv3_1_1sherwood__v3__table_a200bc6efadde1c702d43cc409fb19429}
+
+\item 
+std\+::pair$<$ {\bf iterator}, bool $>$ {\bfseries insert} (const value\+\_\+type \&value)\label{classska_1_1detailv3_1_1sherwood__v3__table_a60fe276e2e28f1f3a511eaa833cac0ba}
+
+\item 
+std\+::pair$<$ {\bf iterator}, bool $>$ {\bfseries insert} (value\+\_\+type \&\&value)\label{classska_1_1detailv3_1_1sherwood__v3__table_a67bfc4de7f7c1ba543663521cdf4b3cb}
+
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\{\bf iterator} {\bfseries emplace\+\_\+hint} ({\bf const\+\_\+iterator}, Args \&\&...args)\label{classska_1_1detailv3_1_1sherwood__v3__table_a62aee80e9a17d2ef7e79ca7ac0ca1136}
+
+\item 
+{\bf iterator} {\bfseries insert} ({\bf const\+\_\+iterator}, const value\+\_\+type \&value)\label{classska_1_1detailv3_1_1sherwood__v3__table_a8aa6f8b14b1c79e18f9a3d913c626cc7}
+
+\item 
+{\bf iterator} {\bfseries insert} ({\bf const\+\_\+iterator}, value\+\_\+type \&\&value)\label{classska_1_1detailv3_1_1sherwood__v3__table_a7155ae2aec75f222c07fb6331a7c7b24}
+
+\item 
+{\footnotesize template$<$typename It $>$ }\\void {\bfseries insert} (It begin, It end)\label{classska_1_1detailv3_1_1sherwood__v3__table_ae2e98b3ce956b3457faea3a03171ae5f}
+
+\item 
+void {\bfseries insert} (std\+::initializer\+\_\+list$<$ value\+\_\+type $>$ il)\label{classska_1_1detailv3_1_1sherwood__v3__table_acb5b79c6c3184cd718c721e1532f692f}
+
+\item 
+void {\bfseries rehash} (size\+\_\+t num\+\_\+buckets)\label{classska_1_1detailv3_1_1sherwood__v3__table_a687ac4c927e81aca2769f7118b4e5c21}
+
+\item 
+void {\bfseries reserve} (size\+\_\+t num\+\_\+elements)\label{classska_1_1detailv3_1_1sherwood__v3__table_ad21abfcf8f6cab5268f777b76337c549}
+
+\item 
+{\bf convertible\+\_\+to\+\_\+iterator} {\bfseries erase} ({\bf const\+\_\+iterator} to\+\_\+erase)\label{classska_1_1detailv3_1_1sherwood__v3__table_af240d7373ecbeed71ca3eddc7b37d669}
+
+\item 
+{\bf iterator} {\bfseries erase} ({\bf const\+\_\+iterator} begin\+\_\+it, {\bf const\+\_\+iterator} end\+\_\+it)\label{classska_1_1detailv3_1_1sherwood__v3__table_ac2301f42fb2102ae6d39188bc1f3aed3}
+
+\item 
+size\+\_\+t {\bfseries erase} (const Find\+Key \&key)\label{classska_1_1detailv3_1_1sherwood__v3__table_a3a359b9c62c5db91a4c6474e7df64c9b}
+
+\item 
+void {\bfseries clear} ()\label{classska_1_1detailv3_1_1sherwood__v3__table_a8610b4acfeb3dea476ad95bf4bdd743c}
+
+\item 
+void {\bfseries shrink\+\_\+to\+\_\+fit} ()\label{classska_1_1detailv3_1_1sherwood__v3__table_a5dd497165958e5445a925113d6f7ab32}
+
+\item 
+void {\bfseries swap} ({\bf sherwood\+\_\+v3\+\_\+table} \&other)\label{classska_1_1detailv3_1_1sherwood__v3__table_a6b03fb89708db39b37a97bdcc62dac66}
+
+\item 
+size\+\_\+t {\bfseries size} () const \label{classska_1_1detailv3_1_1sherwood__v3__table_aa6159ec66e44afb5ceaf5c724588aeb8}
+
+\item 
+size\+\_\+t {\bfseries max\+\_\+size} () const \label{classska_1_1detailv3_1_1sherwood__v3__table_a90d1cc3ed7257d54a5ab15d1ee2b8ca8}
+
+\item 
+size\+\_\+t {\bfseries bucket\+\_\+count} () const \label{classska_1_1detailv3_1_1sherwood__v3__table_ab6ca95ddf24486c623e756f88603dc31}
+
+\item 
+size\+\_\+type {\bfseries max\+\_\+bucket\+\_\+count} () const \label{classska_1_1detailv3_1_1sherwood__v3__table_a04e8b09b65d4d0894407bd8879f5c2fb}
+
+\item 
+size\+\_\+t {\bfseries bucket} (const Find\+Key \&key) const \label{classska_1_1detailv3_1_1sherwood__v3__table_a42cc5cecfbb20230ee189f28b65fca7c}
+
+\item 
+float {\bfseries load\+\_\+factor} () const \label{classska_1_1detailv3_1_1sherwood__v3__table_a63a605a0c204472c3018da2921b87cdc}
+
+\item 
+void {\bfseries max\+\_\+load\+\_\+factor} (float value)\label{classska_1_1detailv3_1_1sherwood__v3__table_adc1c8ab152d3934157b3d22a71dcab3e}
+
+\item 
+float {\bfseries max\+\_\+load\+\_\+factor} () const \label{classska_1_1detailv3_1_1sherwood__v3__table_a213a3854ab4aab689ec301185f1e1446}
+
+\item 
+bool {\bfseries empty} () const \label{classska_1_1detailv3_1_1sherwood__v3__table_a4957a0b7d6c8f720efbaf7d310feb60e}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Entry} = {\bf detailv3\+::sherwood\+\_\+v3\+\_\+entry}$<$ T $>$\label{classska_1_1detailv3_1_1sherwood__v3__table_a73c15a0a60030b8f148d40f1aecab2d8}
+
+\item 
+using {\bfseries Allocator\+Traits} = std\+::allocator\+\_\+traits$<$ Entry\+Alloc $>$\label{classska_1_1detailv3_1_1sherwood__v3__table_ac1603d09ba4eb53eb927734a7b640ede}
+
+\item 
+using {\bfseries Entry\+Pointer} = typename Allocator\+Traits\+::pointer\label{classska_1_1detailv3_1_1sherwood__v3__table_a6e8384a98f42d8d39b44f0bfcad73be5}
+
+\item 
+using {\bfseries Default\+Table} = {\bf detailv3\+::\+Entry\+Default\+Table}$<$ T $>$\label{classska_1_1detailv3_1_1sherwood__v3__table_aa9c5b669279d50c3439ab203bc30ab7a}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t {\bfseries num\+\_\+buckets\+\_\+for\+\_\+reserve} (size\+\_\+t num\+\_\+elements) const \label{classska_1_1detailv3_1_1sherwood__v3__table_a227f0bd044907bd39408a98928cf055a}
+
+\item 
+void {\bfseries rehash\+\_\+for\+\_\+other\+\_\+container} (const {\bf sherwood\+\_\+v3\+\_\+table} \&other)\label{classska_1_1detailv3_1_1sherwood__v3__table_ab743f94bcf0887332f64489c93b10420}
+
+\item 
+void {\bfseries swap\+\_\+pointers} ({\bf sherwood\+\_\+v3\+\_\+table} \&other)\label{classska_1_1detailv3_1_1sherwood__v3__table_a2304a8c084c7649ad6a56f57dd509bc8}
+
+\item 
+{\footnotesize template$<$typename Key , typename... Args$>$ }\\{\bfseries S\+K\+A\+\_\+\+N\+O\+I\+N\+L\+I\+NE} (std\+::pair$<$ {\bf iterator}, bool $>$) emplace\+\_\+new\+\_\+key(int8\+\_\+t distance\+\_\+from\+\_\+desired\label{classska_1_1detailv3_1_1sherwood__v3__table_ab834eb352e96c51e3c948284fe6db5e5}
+
+\item 
+{\bfseries if} (num\+\_\+slots\+\_\+minus\+\_\+one==0$\vert$$\vert$distance\+\_\+from\+\_\+desired==max\+\_\+lookups$\vert$$\vert$static\+\_\+cast$<$ double $>$(num\+\_\+elements+1)/static\+\_\+cast$<$ double $>$(bucket\+\_\+count()) $>$ \+\_\+max\+\_\+load\+\_\+factor)\label{classska_1_1detailv3_1_1sherwood__v3__table_a11a2fdb1a7b222ff2e3e568b6cb65fd6}
+
+\item 
+else {\bfseries if} (current\+\_\+entry-\/$>$is\+\_\+empty())\label{classska_1_1detailv3_1_1sherwood__v3__table_a6ae64d4164e3b374d0a45813b5602479}
+
+\item 
+value\+\_\+type {\bfseries to\+\_\+insert} (std\+::forward$<$ Key $>$(key), std\+::forward$<$ Args $>$(args)...)\label{classska_1_1detailv3_1_1sherwood__v3__table_a997dd4841a0c18af664c940807125175}
+
+\item 
+{\bfseries swap} (distance\+\_\+from\+\_\+desired, current\+\_\+entry-\/$>$distance\+\_\+from\+\_\+desired)\label{classska_1_1detailv3_1_1sherwood__v3__table_ac0c961acbfbb68270133a74cf0ebf101}
+
+\item 
+{\bfseries swap} (to\+\_\+insert, current\+\_\+entry-\/$>$value)\label{classska_1_1detailv3_1_1sherwood__v3__table_a87f3c74a2acbddcc8d89da67227ebf44}
+
+\item 
+{\bfseries for} (++distance\+\_\+from\+\_\+desired,++current\+\_\+entry;;++current\+\_\+entry)\label{classska_1_1detailv3_1_1sherwood__v3__table_a506dd91bb8f538c62f13a2e253501698}
+
+\item 
+void {\bfseries grow} ()\label{classska_1_1detailv3_1_1sherwood__v3__table_aae7057e0e02182ebfb6f1af6eafb8c7a}
+
+\item 
+void {\bfseries deallocate\+\_\+data} (Entry\+Pointer begin, size\+\_\+t num\+\_\+slots\+\_\+minus\+\_\+one, int8\+\_\+t max\+\_\+lookups)\label{classska_1_1detailv3_1_1sherwood__v3__table_a1011f360b048cebd083665d2f167d5e2}
+
+\item 
+void {\bfseries reset\+\_\+to\+\_\+empty\+\_\+state} ()\label{classska_1_1detailv3_1_1sherwood__v3__table_a7bdbcd192ce21a8e9387d0f1813c1df7}
+
+\item 
+{\footnotesize template$<$typename U $>$ }\\size\+\_\+t {\bfseries hash\+\_\+object} (const U \&key)\label{classska_1_1detailv3_1_1sherwood__v3__table_af8223a9d5081379c092eae7d28f40ea2}
+
+\item 
+{\footnotesize template$<$typename U $>$ }\\size\+\_\+t {\bfseries hash\+\_\+object} (const U \&key) const \label{classska_1_1detailv3_1_1sherwood__v3__table_a53c778c0f19e6068493caa1eef933949}
+
+\item 
+{\footnotesize template$<$typename L , typename R $>$ }\\bool {\bfseries compares\+\_\+equal} (const L \&lhs, const R \&rhs)\label{classska_1_1detailv3_1_1sherwood__v3__table_a793b987a5fe980380c3747275022cb91}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int8\+\_\+t {\bfseries compute\+\_\+max\+\_\+lookups} (size\+\_\+t num\+\_\+buckets)\label{classska_1_1detailv3_1_1sherwood__v3__table_aee430fb4a4044b4788a9610d866b9083}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Entry\+Pointer {\bfseries entries} = const\+\_\+cast$<${\bf Entry} $\ast$$>$(reinterpret\+\_\+cast$<$const {\bf Entry} $\ast$$>$(Default\+Table\+::table))\label{classska_1_1detailv3_1_1sherwood__v3__table_ae1589776281f4e41cce8480108528966}
+
+\item 
+size\+\_\+t {\bfseries num\+\_\+slots\+\_\+minus\+\_\+one} = 0\label{classska_1_1detailv3_1_1sherwood__v3__table_a429f76f8c4db79ffb508c771af707bec}
+
+\item 
+{\bf Hash\+Policy\+Selector}$<$ Argument\+Hash $>$\+::type {\bfseries hash\+\_\+policy}\label{classska_1_1detailv3_1_1sherwood__v3__table_a42bdf8be15a2681dc756b7ea90e7df54}
+
+\item 
+int8\+\_\+t {\bfseries max\+\_\+lookups} = detailv3\+::min\+\_\+lookups -\/ 1\label{classska_1_1detailv3_1_1sherwood__v3__table_afad29da26ad8cbd730d75fd420d37ea8}
+
+\item 
+float {\bfseries \+\_\+max\+\_\+load\+\_\+factor} = 0.\+5f\label{classska_1_1detailv3_1_1sherwood__v3__table_a99df4bd36240137cc818a50719e8e731}
+
+\item 
+size\+\_\+t {\bfseries num\+\_\+elements} = 0\label{classska_1_1detailv3_1_1sherwood__v3__table_a2b9f43ccdb9c9b59430b59249b035c4b}
+
+\item 
+Entry\+Pointer {\bfseries current\+\_\+entry}\label{classska_1_1detailv3_1_1sherwood__v3__table_a9769bdcca4c87de6a37cfcbcd64bb918}
+
+\item 
+Entry\+Pointer Key \&\& {\bfseries key}\label{classska_1_1detailv3_1_1sherwood__v3__table_ad0be4cf3e612706ff6f5af9cebf73321}
+
+\item 
+Entry\+Pointer Key Args \&\& {\bfseries args}
+\item 
+{\bf iterator} {\bfseries result} = \{ current\+\_\+entry \}\label{classska_1_1detailv3_1_1sherwood__v3__table_aed2a992cbbfa3ef56e6dc2fbbfcac8bb}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\index{ska\+::detailv3\+::sherwood\+\_\+v3\+\_\+table@{ska\+::detailv3\+::sherwood\+\_\+v3\+\_\+table}!args@{args}}
+\index{args@{args}!ska\+::detailv3\+::sherwood\+\_\+v3\+\_\+table@{ska\+::detailv3\+::sherwood\+\_\+v3\+\_\+table}}
+\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename Find\+Key, typename Argument\+Hash, typename Hasher, typename Argument\+Equal, typename Equal, typename Argument\+Alloc, typename Entry\+Alloc$>$ Entry\+Pointer Key Args\&\& {\bf ska\+::detailv3\+::sherwood\+\_\+v3\+\_\+table}$<$ T, Find\+Key, Argument\+Hash, Hasher, Argument\+Equal, Equal, Argument\+Alloc, Entry\+Alloc $>$\+::args\hspace{0.3cm}{\ttfamily [private]}}\label{classska_1_1detailv3_1_1sherwood__v3__table_a931fdaa54363e9cd5ac181a4ac7e3af0}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+        \textcolor{keyword}{using} std::swap
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/felipe/\+Desktop/vdsproject/vdscp\+\_\+04/src/flat\+\_\+hash\+\_\+map.\+hpp\end{DoxyCompactItemize}

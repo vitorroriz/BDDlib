@@ -1,0 +1,45 @@
+\# Bench Parser \#
+
+Parser for the I\+S\+C\+A\+S85/89/99 bench file format. It parsers the bench files aiming at generating an abstract syntax graph (A\+SG). The nodes of the A\+SG are topologically sorted in order to make the calls for the B\+DD package.
+
+\subsection*{Installation}
+
+\subsubsection*{Step 1\+: Clone the directory}
+
+Run the git clone command replacing $\ast$$<$username$>$$\ast$ by you username. 
+\begin{DoxyCode}
+1 git clone https://<username>@bitbucket.org/cpnogueira/bench\_parser.git
+\end{DoxyCode}
+
+
+\subsubsection*{Step 2\+: Compiling}
+
+To compile it, after cloning it from bitbucket, you should be in the root folder of the project and run the command\+: 
+\begin{DoxyCode}
+1 make
+\end{DoxyCode}
+
+
+To clean files produced during compilation (object files, executables, libraries, ...) type\+: 
+\begin{DoxyCode}
+1 make clean
+\end{DoxyCode}
+
+
+\subsection*{Running the executable}
+
+The different designs for the bechmarks are located in the directory \char`\"{}benchmarks\char`\"{} For example, to run the code for the circuit s420.\+bench of the iscas89 benchmark type\+: 
+\begin{DoxyCode}
+1 ./bench\_parser benchmarks/iscas89/s420.bench
+\end{DoxyCode}
+
+
+This will produce the subfolder results\+\_\+s420 containing the results.
+
+\subsection*{A\+PI Reference}
+
+To generate or update the documentation, you should navigate to the doc/ directory and then\+: 
+\begin{DoxyCode}
+1 ../bench\_parser/doc/$ doxygen doxyConfigEx
+\end{DoxyCode}
+ The documentation will be available on $\ast$../bench\+\_\+parser/doc/doxygen/$\ast$ and you can access it from the same location opening the file {\itshape index.\+html}. 

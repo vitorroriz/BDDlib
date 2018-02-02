@@ -21,6 +21,40 @@ void {\bf Generate\+B\+DD} (list\+\_\+of\+\_\+circuit\+\_\+t circuit, std\+::str
 void {\bfseries Print\+B\+DD} (std\+::set$<$ label\+\_\+t $>$ set\+\_\+of\+\_\+output\+\_\+labels)\label{classcircuit__to__BDD__manager_acfd5ec2277046cc7b1c78d5f43e18802}
 
 \end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID {\bf circuit\+Id2\+B\+D\+Did} (unique\+\_\+\+I\+D\+\_\+t {\bf node})
+\begin{DoxyCompactList}\small\item\em returns the B\+D\+D\+\_\+\+ID of the given circuit ID. \end{DoxyCompactList}\item 
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID {\bf Input\+Gate} (label\+\_\+t label)
+\begin{DoxyCompactList}\small\item\em generates the B\+DD node equivalent to a variable with label \char`\"{}label\char`\"{}. \end{DoxyCompactList}\item 
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID {\bf Not\+Gate} (set\+\_\+of\+\_\+circuit\+\_\+t {\bf node})
+\begin{DoxyCompactList}\small\item\em generates the B\+DD node equivalent to the N\+OT gate. \end{DoxyCompactList}\item 
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID {\bf And\+Gate} (set\+\_\+of\+\_\+circuit\+\_\+t input\+Nodes)
+\begin{DoxyCompactList}\small\item\em generates the B\+DD node equivalent to the A\+ND gate. \end{DoxyCompactList}\item 
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID {\bf Or\+Gate} (set\+\_\+of\+\_\+circuit\+\_\+t input\+Nodes)
+\begin{DoxyCompactList}\small\item\em generates the B\+DD node equivalent to the OR gate. \end{DoxyCompactList}\item 
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID {\bf Nand\+Gate} (set\+\_\+of\+\_\+circuit\+\_\+t input\+Nodes)
+\begin{DoxyCompactList}\small\item\em generates the B\+DD node equivalent to the N\+A\+ND gate. \end{DoxyCompactList}\item 
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID {\bf Nor\+Gate} (set\+\_\+of\+\_\+circuit\+\_\+t input\+Nodes)
+\begin{DoxyCompactList}\small\item\em generates the B\+DD node equivalent to the N\+OR gate. \end{DoxyCompactList}\item 
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID {\bf Xor\+Gate} (set\+\_\+of\+\_\+circuit\+\_\+t input\+Nodes)
+\begin{DoxyCompactList}\small\item\em generates the B\+DD node equivalent to the X\+OR gate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::unordered\+\_\+map$<$ unique\+\_\+\+I\+D\+\_\+t, Class\+Project\+::\+B\+D\+D\+\_\+\+ID $>$ {\bf node2\+B\+D\+D\+Table}\label{classcircuit__to__BDD__manager_aa04b91e7e456181a61e99662481906bc}
+
+\begin{DoxyCompactList}\small\item\em Mapping from circuit node unique I\+Ds to B\+DD I\+Ds. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ label\+\_\+t, Class\+Project\+::\+B\+D\+D\+\_\+\+ID $>$ {\bf label2\+B\+D\+D\+\_\+\+I\+D\+\_\+table}\label{classcircuit__to__BDD__manager_aa499154088871f0b80df5479f906eb7f}
+
+\begin{DoxyCompactList}\small\item\em Mapping from node\textquotesingle{}s label to B\+DD I\+Ds. \end{DoxyCompactList}\item 
+{\bf Class\+Project\+::\+Manager\+Interface} $\ast$ {\bfseries B\+D\+D\+\_\+manager}\label{classcircuit__to__BDD__manager_ad327024d0703a4919ca14aef79798d3a}
+
+\item 
+std\+::string {\bf result\+\_\+dir}\label{classcircuit__to__BDD__manager_a3d565b303c29cb8b8ec6b886625c532d}
+
+\begin{DoxyCompactList}\small\item\em Directory where the results are stored. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -69,6 +103,60 @@ Destructor.
 
 
 \subsection{Member Function Documentation}
+\index{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}!And\+Gate@{And\+Gate}}
+\index{And\+Gate@{And\+Gate}!circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}}
+\subsubsection[{And\+Gate(set\+\_\+of\+\_\+circuit\+\_\+t input\+Nodes)}]{\setlength{\rightskip}{0pt plus 5cm}Class\+Project\+::\+B\+D\+D\+\_\+\+ID circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager\+::\+And\+Gate (
+\begin{DoxyParamCaption}
+\item[{set\+\_\+of\+\_\+circuit\+\_\+t}]{input\+Nodes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classcircuit__to__BDD__manager_ae42b3652550e68a09a785f5c1b8f63de}
+
+
+generates the B\+DD node equivalent to the A\+ND gate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & is set\+\_\+of\+\_\+circuit\+\_\+t containing the circuit I\+Ds of the gates to be used as input. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID 
+\end{DoxyReturn}
+
+
+References circuit\+Id2\+B\+D\+Did().
+
+
+
+Referenced by Generate\+B\+D\+D(), and Nand\+Gate().
+
+\index{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}!circuit\+Id2\+B\+D\+Did@{circuit\+Id2\+B\+D\+Did}}
+\index{circuit\+Id2\+B\+D\+Did@{circuit\+Id2\+B\+D\+Did}!circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}}
+\subsubsection[{circuit\+Id2\+B\+D\+Did(unique\+\_\+\+I\+D\+\_\+t node)}]{\setlength{\rightskip}{0pt plus 5cm}Class\+Project\+::\+B\+D\+D\+\_\+\+ID circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager\+::circuit\+Id2\+B\+D\+Did (
+\begin{DoxyParamCaption}
+\item[{unique\+\_\+\+I\+D\+\_\+t}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classcircuit__to__BDD__manager_a4b6d8e87f4cba8ef146d4ae37b5924c1}
+
+
+returns the B\+D\+D\+\_\+\+ID of the given circuit ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & is unique\+\_\+\+I\+D\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID 
+\end{DoxyReturn}
+
+
+References node2\+B\+D\+D\+Table.
+
+
+
+Referenced by And\+Gate(), Generate\+B\+D\+D(), Nand\+Gate(), Nor\+Gate(), Not\+Gate(), Or\+Gate(), and Xor\+Gate().
+
 \index{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}!Generate\+B\+DD@{Generate\+B\+DD}}
 \index{Generate\+B\+DD@{Generate\+B\+DD}!circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}}
 \subsubsection[{Generate\+B\+D\+D(list\+\_\+of\+\_\+circuit\+\_\+t circuit, std\+::string benchmark\+\_\+file)}]{\setlength{\rightskip}{0pt plus 5cm}void circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager\+::\+Generate\+B\+DD (
@@ -91,7 +179,169 @@ none
 \end{DoxyReturn}
 Generates the calls to the B\+DD package in order to generate the B\+DD equivalent to the provided circuit. 
 
+References And\+Gate(), circuit\+Id2\+B\+D\+Did(), Input\+Gate(), label2\+B\+D\+D\+\_\+\+I\+D\+\_\+table, Nand\+Gate(), node2\+B\+D\+D\+Table, Nor\+Gate(), Not\+Gate(), Or\+Gate(), result\+\_\+dir, and Xor\+Gate().
+
+\index{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}!Input\+Gate@{Input\+Gate}}
+\index{Input\+Gate@{Input\+Gate}!circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}}
+\subsubsection[{Input\+Gate(label\+\_\+t label)}]{\setlength{\rightskip}{0pt plus 5cm}Class\+Project\+::\+B\+D\+D\+\_\+\+ID circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager\+::\+Input\+Gate (
+\begin{DoxyParamCaption}
+\item[{label\+\_\+t}]{label}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classcircuit__to__BDD__manager_a027d557393d1d33b7cecdf593489956e}
+
+
+generates the B\+DD node equivalent to a variable with label \char`\"{}label\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & is label\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID 
+\end{DoxyReturn}
+
+
+Referenced by Generate\+B\+D\+D().
+
+\index{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}!Nand\+Gate@{Nand\+Gate}}
+\index{Nand\+Gate@{Nand\+Gate}!circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}}
+\subsubsection[{Nand\+Gate(set\+\_\+of\+\_\+circuit\+\_\+t input\+Nodes)}]{\setlength{\rightskip}{0pt plus 5cm}Class\+Project\+::\+B\+D\+D\+\_\+\+ID circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager\+::\+Nand\+Gate (
+\begin{DoxyParamCaption}
+\item[{set\+\_\+of\+\_\+circuit\+\_\+t}]{input\+Nodes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classcircuit__to__BDD__manager_a9cbe6a7e2e3264978476f8a060f104f5}
+
+
+generates the B\+DD node equivalent to the N\+A\+ND gate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & is set\+\_\+of\+\_\+circuit\+\_\+t containing the circuit I\+Ds of the gates to be used as input. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID 
+\end{DoxyReturn}
+
+
+References And\+Gate(), and circuit\+Id2\+B\+D\+Did().
+
+
+
+Referenced by Generate\+B\+D\+D().
+
+\index{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}!Nor\+Gate@{Nor\+Gate}}
+\index{Nor\+Gate@{Nor\+Gate}!circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}}
+\subsubsection[{Nor\+Gate(set\+\_\+of\+\_\+circuit\+\_\+t input\+Nodes)}]{\setlength{\rightskip}{0pt plus 5cm}Class\+Project\+::\+B\+D\+D\+\_\+\+ID circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager\+::\+Nor\+Gate (
+\begin{DoxyParamCaption}
+\item[{set\+\_\+of\+\_\+circuit\+\_\+t}]{input\+Nodes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classcircuit__to__BDD__manager_ac5b3c1a35ca431c955183ed9df72cf8b}
+
+
+generates the B\+DD node equivalent to the N\+OR gate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & is set\+\_\+of\+\_\+circuit\+\_\+t containing the circuit I\+Ds of the gates to be used as input. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID 
+\end{DoxyReturn}
+
+
+References circuit\+Id2\+B\+D\+Did(), and Or\+Gate().
+
+
+
+Referenced by Generate\+B\+D\+D().
+
+\index{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}!Not\+Gate@{Not\+Gate}}
+\index{Not\+Gate@{Not\+Gate}!circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}}
+\subsubsection[{Not\+Gate(set\+\_\+of\+\_\+circuit\+\_\+t node)}]{\setlength{\rightskip}{0pt plus 5cm}Class\+Project\+::\+B\+D\+D\+\_\+\+ID circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager\+::\+Not\+Gate (
+\begin{DoxyParamCaption}
+\item[{set\+\_\+of\+\_\+circuit\+\_\+t}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classcircuit__to__BDD__manager_a8bafb05dc7df4a67173b4997b2fb402d}
+
+
+generates the B\+DD node equivalent to the N\+OT gate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & is set\+\_\+of\+\_\+circuit\+\_\+t containing the circuit ID of the gate to be inverted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID 
+\end{DoxyReturn}
+
+
+References circuit\+Id2\+B\+D\+Did().
+
+
+
+Referenced by Generate\+B\+D\+D().
+
+\index{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}!Or\+Gate@{Or\+Gate}}
+\index{Or\+Gate@{Or\+Gate}!circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}}
+\subsubsection[{Or\+Gate(set\+\_\+of\+\_\+circuit\+\_\+t input\+Nodes)}]{\setlength{\rightskip}{0pt plus 5cm}Class\+Project\+::\+B\+D\+D\+\_\+\+ID circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager\+::\+Or\+Gate (
+\begin{DoxyParamCaption}
+\item[{set\+\_\+of\+\_\+circuit\+\_\+t}]{input\+Nodes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classcircuit__to__BDD__manager_a2bfb5bf2686e20a65b63109f73d2c8aa}
+
+
+generates the B\+DD node equivalent to the OR gate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & is set\+\_\+of\+\_\+circuit\+\_\+t containing the circuit I\+Ds of the gates to be used as input. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID 
+\end{DoxyReturn}
+
+
+References circuit\+Id2\+B\+D\+Did().
+
+
+
+Referenced by Generate\+B\+D\+D(), and Nor\+Gate().
+
+\index{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}!Xor\+Gate@{Xor\+Gate}}
+\index{Xor\+Gate@{Xor\+Gate}!circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager@{circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager}}
+\subsubsection[{Xor\+Gate(set\+\_\+of\+\_\+circuit\+\_\+t input\+Nodes)}]{\setlength{\rightskip}{0pt plus 5cm}Class\+Project\+::\+B\+D\+D\+\_\+\+ID circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager\+::\+Xor\+Gate (
+\begin{DoxyParamCaption}
+\item[{set\+\_\+of\+\_\+circuit\+\_\+t}]{input\+Nodes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classcircuit__to__BDD__manager_ac8140f284db475fca0c3d0aea379bdee}
+
+
+generates the B\+DD node equivalent to the X\+OR gate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & is set\+\_\+of\+\_\+circuit\+\_\+t containing the circuit I\+Ds of the gates to be used as input. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class\+Project\+::\+B\+D\+D\+\_\+\+ID 
+\end{DoxyReturn}
+
+
+References circuit\+Id2\+B\+D\+Did(), label2\+B\+D\+D\+\_\+\+I\+D\+\_\+table, and result\+\_\+dir.
+
+
+
+Referenced by Generate\+B\+D\+D().
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/import/home/vdscp04/\+Luiz/vdscp\+\_\+04/src/bench/circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager.\+hpp\item 
-/import/home/vdscp04/\+Luiz/vdscp\+\_\+04/src/bench/circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager.\+cpp\end{DoxyCompactItemize}
+/home/felipe/\+Desktop/vdsproject/vdscp\+\_\+04/src/bench/circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager.\+hpp\item 
+/home/felipe/\+Desktop/vdsproject/vdscp\+\_\+04/src/bench/circuit\+\_\+to\+\_\+\+B\+D\+D\+\_\+manager.\+cpp\end{DoxyCompactItemize}

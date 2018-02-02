@@ -1,0 +1,60 @@
+\section{ska\+:\+:flat\+\_\+hash\+\_\+map$<$ K, V, H, E, A $>$ Class Template Reference}
+\label{classska_1_1flat__hash__map}\index{ska\+::flat\+\_\+hash\+\_\+map$<$ K, V, H, E, A $>$@{ska\+::flat\+\_\+hash\+\_\+map$<$ K, V, H, E, A $>$}}
+Inheritance diagram for ska\+:\+:flat\+\_\+hash\+\_\+map$<$ K, V, H, E, A $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.345893cm]{classska_1_1flat__hash__map}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf convertible\+\_\+to\+\_\+value}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries key\+\_\+type} = K\label{classska_1_1flat__hash__map_ab22f477e2dfc6e682ee147fcf805e4a9}
+
+\item 
+using {\bfseries mapped\+\_\+type} = V\label{classska_1_1flat__hash__map_a1cb3116c3119b43080e0acdfde9a5ddd}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+V \& {\bfseries operator[$\,$]} (const K \&key)\label{classska_1_1flat__hash__map_ada5db818bc094fba7e76006eeadf4ee9}
+
+\item 
+V \& {\bfseries operator[$\,$]} (K \&\&key)\label{classska_1_1flat__hash__map_a0585139dbbb10cf41b68d3968dbf2010}
+
+\item 
+V \& {\bfseries at} (const K \&key)\label{classska_1_1flat__hash__map_a374735760ecc82651cbb508a1d8866c1}
+
+\item 
+const V \& {\bfseries at} (const K \&key) const \label{classska_1_1flat__hash__map_a6facd6586c9856cbc577368cdb319ff3}
+
+\item 
+std\+::pair$<$ typename {\bf Table\+::iterator}, bool $>$ {\bfseries emplace} ()\label{classska_1_1flat__hash__map_a95175e5ecd48bbdb2d7820b833cefbb4}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries Table} = {\bf detailv3\+::sherwood\+\_\+v3\+\_\+table}$<$ std\+::pair$<$ K, V $>$, K, H, {\bf detailv3\+::\+Key\+Or\+Value\+Hasher}$<$ K, std\+::pair$<$ K, V $>$, H $>$, E, {\bf detailv3\+::\+Key\+Or\+Value\+Equality}$<$ K, std\+::pair$<$ K, V $>$, E $>$, A, typename std\+::allocator\+\_\+traits$<$ A $>$\+::template rebind\+\_\+alloc$<$ {\bf detailv3\+::sherwood\+\_\+v3\+\_\+entry}$<$ std\+::pair$<$ K, V $>$$>$$>$ $>$\label{classska_1_1flat__hash__map_a6ef9f5f58e71eae864a3cc89d29e0c4b}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries operator==} (const {\bf flat\+\_\+hash\+\_\+map} \&lhs, const {\bf flat\+\_\+hash\+\_\+map} \&rhs)\label{classska_1_1flat__hash__map_a469dfb7c5084c0ebd754590f1e78ae87}
+
+\item 
+bool {\bfseries operator!=} (const {\bf flat\+\_\+hash\+\_\+map} \&lhs, const {\bf flat\+\_\+hash\+\_\+map} \&rhs)\label{classska_1_1flat__hash__map_a62328dcbb77072758a4f1f68db6f5e2a}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/felipe/\+Desktop/vdsproject/vdscp\+\_\+04/src/flat\+\_\+hash\+\_\+map.\+hpp\end{DoxyCompactItemize}

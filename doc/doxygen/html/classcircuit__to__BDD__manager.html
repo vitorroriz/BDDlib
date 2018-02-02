@@ -46,6 +46,8 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcircuit__to__BDD__manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">circuit_to_BDD_manager Class Reference</div>  </div>
@@ -71,6 +73,51 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acfd5ec2277046cc7b1c78d5f43e18802"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acfd5ec2277046cc7b1c78d5f43e18802"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>PrintBDD</b> (std::set&lt; label_t &gt; set_of_output_labels)</td></tr>
 <tr class="separator:acfd5ec2277046cc7b1c78d5f43e18802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4b6d8e87f4cba8ef146d4ae37b5924c1"><td class="memItemLeft" align="right" valign="top">ClassProject::BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcircuit__to__BDD__manager.html#a4b6d8e87f4cba8ef146d4ae37b5924c1">circuitId2BDDid</a> (unique_ID_t <a class="el" href="structnode.html">node</a>)</td></tr>
+<tr class="memdesc:a4b6d8e87f4cba8ef146d4ae37b5924c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the BDD_ID of the given circuit ID.  <a href="#a4b6d8e87f4cba8ef146d4ae37b5924c1">More...</a><br /></td></tr>
+<tr class="separator:a4b6d8e87f4cba8ef146d4ae37b5924c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027d557393d1d33b7cecdf593489956e"><td class="memItemLeft" align="right" valign="top">ClassProject::BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcircuit__to__BDD__manager.html#a027d557393d1d33b7cecdf593489956e">InputGate</a> (label_t label)</td></tr>
+<tr class="memdesc:a027d557393d1d33b7cecdf593489956e"><td class="mdescLeft">&#160;</td><td class="mdescRight">generates the BDD node equivalent to a variable with label "label".  <a href="#a027d557393d1d33b7cecdf593489956e">More...</a><br /></td></tr>
+<tr class="separator:a027d557393d1d33b7cecdf593489956e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bafb05dc7df4a67173b4997b2fb402d"><td class="memItemLeft" align="right" valign="top">ClassProject::BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcircuit__to__BDD__manager.html#a8bafb05dc7df4a67173b4997b2fb402d">NotGate</a> (set_of_circuit_t <a class="el" href="structnode.html">node</a>)</td></tr>
+<tr class="memdesc:a8bafb05dc7df4a67173b4997b2fb402d"><td class="mdescLeft">&#160;</td><td class="mdescRight">generates the BDD node equivalent to the NOT gate.  <a href="#a8bafb05dc7df4a67173b4997b2fb402d">More...</a><br /></td></tr>
+<tr class="separator:a8bafb05dc7df4a67173b4997b2fb402d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae42b3652550e68a09a785f5c1b8f63de"><td class="memItemLeft" align="right" valign="top">ClassProject::BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcircuit__to__BDD__manager.html#ae42b3652550e68a09a785f5c1b8f63de">AndGate</a> (set_of_circuit_t inputNodes)</td></tr>
+<tr class="memdesc:ae42b3652550e68a09a785f5c1b8f63de"><td class="mdescLeft">&#160;</td><td class="mdescRight">generates the BDD node equivalent to the AND gate.  <a href="#ae42b3652550e68a09a785f5c1b8f63de">More...</a><br /></td></tr>
+<tr class="separator:ae42b3652550e68a09a785f5c1b8f63de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bfb5bf2686e20a65b63109f73d2c8aa"><td class="memItemLeft" align="right" valign="top">ClassProject::BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcircuit__to__BDD__manager.html#a2bfb5bf2686e20a65b63109f73d2c8aa">OrGate</a> (set_of_circuit_t inputNodes)</td></tr>
+<tr class="memdesc:a2bfb5bf2686e20a65b63109f73d2c8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">generates the BDD node equivalent to the OR gate.  <a href="#a2bfb5bf2686e20a65b63109f73d2c8aa">More...</a><br /></td></tr>
+<tr class="separator:a2bfb5bf2686e20a65b63109f73d2c8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cbe6a7e2e3264978476f8a060f104f5"><td class="memItemLeft" align="right" valign="top">ClassProject::BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcircuit__to__BDD__manager.html#a9cbe6a7e2e3264978476f8a060f104f5">NandGate</a> (set_of_circuit_t inputNodes)</td></tr>
+<tr class="memdesc:a9cbe6a7e2e3264978476f8a060f104f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">generates the BDD node equivalent to the NAND gate.  <a href="#a9cbe6a7e2e3264978476f8a060f104f5">More...</a><br /></td></tr>
+<tr class="separator:a9cbe6a7e2e3264978476f8a060f104f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b3c1a35ca431c955183ed9df72cf8b"><td class="memItemLeft" align="right" valign="top">ClassProject::BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcircuit__to__BDD__manager.html#ac5b3c1a35ca431c955183ed9df72cf8b">NorGate</a> (set_of_circuit_t inputNodes)</td></tr>
+<tr class="memdesc:ac5b3c1a35ca431c955183ed9df72cf8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">generates the BDD node equivalent to the NOR gate.  <a href="#ac5b3c1a35ca431c955183ed9df72cf8b">More...</a><br /></td></tr>
+<tr class="separator:ac5b3c1a35ca431c955183ed9df72cf8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8140f284db475fca0c3d0aea379bdee"><td class="memItemLeft" align="right" valign="top">ClassProject::BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcircuit__to__BDD__manager.html#ac8140f284db475fca0c3d0aea379bdee">XorGate</a> (set_of_circuit_t inputNodes)</td></tr>
+<tr class="memdesc:ac8140f284db475fca0c3d0aea379bdee"><td class="mdescLeft">&#160;</td><td class="mdescRight">generates the BDD node equivalent to the XOR gate.  <a href="#ac8140f284db475fca0c3d0aea379bdee">More...</a><br /></td></tr>
+<tr class="separator:ac8140f284db475fca0c3d0aea379bdee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa04b91e7e456181a61e99662481906bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa04b91e7e456181a61e99662481906bc"></a>
+boost::unordered_map&lt; unique_ID_t, ClassProject::BDD_ID &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcircuit__to__BDD__manager.html#aa04b91e7e456181a61e99662481906bc">node2BDDTable</a></td></tr>
+<tr class="memdesc:aa04b91e7e456181a61e99662481906bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping from circuit node unique IDs to BDD IDs. <br /></td></tr>
+<tr class="separator:aa04b91e7e456181a61e99662481906bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa499154088871f0b80df5479f906eb7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa499154088871f0b80df5479f906eb7f"></a>
+std::unordered_map&lt; label_t, ClassProject::BDD_ID &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcircuit__to__BDD__manager.html#aa499154088871f0b80df5479f906eb7f">label2BDD_ID_table</a></td></tr>
+<tr class="memdesc:aa499154088871f0b80df5479f906eb7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping from node's label to BDD IDs. <br /></td></tr>
+<tr class="separator:aa499154088871f0b80df5479f906eb7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad327024d0703a4919ca14aef79798d3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad327024d0703a4919ca14aef79798d3a"></a>
+<a class="el" href="classClassProject_1_1ManagerInterface.html">ClassProject::ManagerInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>BDD_manager</b></td></tr>
+<tr class="separator:ad327024d0703a4919ca14aef79798d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d565b303c29cb8b8ec6b886625c532d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d565b303c29cb8b8ec6b886625c532d"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcircuit__to__BDD__manager.html#a3d565b303c29cb8b8ec6b886625c532d">result_dir</a></td></tr>
+<tr class="memdesc:a3d565b303c29cb8b8ec6b886625c532d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directory where the results are stored. <br /></td></tr>
+<tr class="separator:a3d565b303c29cb8b8ec6b886625c532d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to convert circuits nodes into BDD nodes. </p>
@@ -125,6 +172,80 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>PrintBDD</b> (std::se
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae42b3652550e68a09a785f5c1b8f63de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ClassProject::BDD_ID circuit_to_BDD_manager::AndGate </td>
+          <td>(</td>
+          <td class="paramtype">set_of_circuit_t&#160;</td>
+          <td class="paramname"><em>inputNodes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>generates the BDD node equivalent to the AND gate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>is set_of_circuit_t containing the circuit IDs of the gates to be used as input. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ClassProject::BDD_ID </dd></dl>
+
+<p>References <a class="el" href="classcircuit__to__BDD__manager.html#a4b6d8e87f4cba8ef146d4ae37b5924c1">circuitId2BDDid()</a>.</p>
+
+<p>Referenced by <a class="el" href="classcircuit__to__BDD__manager.html#ae1b5244f8b77673ccaef57b70b10c0d6">GenerateBDD()</a>, and <a class="el" href="classcircuit__to__BDD__manager.html#a9cbe6a7e2e3264978476f8a060f104f5">NandGate()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b6d8e87f4cba8ef146d4ae37b5924c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ClassProject::BDD_ID circuit_to_BDD_manager::circuitId2BDDid </td>
+          <td>(</td>
+          <td class="paramtype">unique_ID_t&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns the BDD_ID of the given circuit ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>is unique_ID_t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ClassProject::BDD_ID </dd></dl>
+
+<p>References <a class="el" href="classcircuit__to__BDD__manager.html#aa04b91e7e456181a61e99662481906bc">node2BDDTable</a>.</p>
+
+<p>Referenced by <a class="el" href="classcircuit__to__BDD__manager.html#ae42b3652550e68a09a785f5c1b8f63de">AndGate()</a>, <a class="el" href="classcircuit__to__BDD__manager.html#ae1b5244f8b77673ccaef57b70b10c0d6">GenerateBDD()</a>, <a class="el" href="classcircuit__to__BDD__manager.html#a9cbe6a7e2e3264978476f8a060f104f5">NandGate()</a>, <a class="el" href="classcircuit__to__BDD__manager.html#ac5b3c1a35ca431c955183ed9df72cf8b">NorGate()</a>, <a class="el" href="classcircuit__to__BDD__manager.html#a8bafb05dc7df4a67173b4997b2fb402d">NotGate()</a>, <a class="el" href="classcircuit__to__BDD__manager.html#a2bfb5bf2686e20a65b63109f73d2c8aa">OrGate()</a>, and <a class="el" href="classcircuit__to__BDD__manager.html#ac8140f284db475fca0c3d0aea379bdee">XorGate()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ae1b5244f8b77673ccaef57b70b10c0d6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -159,11 +280,233 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>PrintBDD</b> (std::se
 <dl class="section return"><dt>Returns</dt><dd>none</dd></dl>
 <p>Generates the calls to the BDD package in order to generate the BDD equivalent to the provided circuit. </p>
 
+<p>References <a class="el" href="classcircuit__to__BDD__manager.html#ae42b3652550e68a09a785f5c1b8f63de">AndGate()</a>, <a class="el" href="classcircuit__to__BDD__manager.html#a4b6d8e87f4cba8ef146d4ae37b5924c1">circuitId2BDDid()</a>, <a class="el" href="classcircuit__to__BDD__manager.html#a027d557393d1d33b7cecdf593489956e">InputGate()</a>, <a class="el" href="classcircuit__to__BDD__manager.html#aa499154088871f0b80df5479f906eb7f">label2BDD_ID_table</a>, <a class="el" href="classcircuit__to__BDD__manager.html#a9cbe6a7e2e3264978476f8a060f104f5">NandGate()</a>, <a class="el" href="classcircuit__to__BDD__manager.html#aa04b91e7e456181a61e99662481906bc">node2BDDTable</a>, <a class="el" href="classcircuit__to__BDD__manager.html#ac5b3c1a35ca431c955183ed9df72cf8b">NorGate()</a>, <a class="el" href="classcircuit__to__BDD__manager.html#a8bafb05dc7df4a67173b4997b2fb402d">NotGate()</a>, <a class="el" href="classcircuit__to__BDD__manager.html#a2bfb5bf2686e20a65b63109f73d2c8aa">OrGate()</a>, <a class="el" href="classcircuit__to__BDD__manager.html#a3d565b303c29cb8b8ec6b886625c532d">result_dir</a>, and <a class="el" href="classcircuit__to__BDD__manager.html#ac8140f284db475fca0c3d0aea379bdee">XorGate()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a027d557393d1d33b7cecdf593489956e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ClassProject::BDD_ID circuit_to_BDD_manager::InputGate </td>
+          <td>(</td>
+          <td class="paramtype">label_t&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>generates the BDD node equivalent to a variable with label "label". </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>is label_t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ClassProject::BDD_ID </dd></dl>
+
+<p>Referenced by <a class="el" href="classcircuit__to__BDD__manager.html#ae1b5244f8b77673ccaef57b70b10c0d6">GenerateBDD()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9cbe6a7e2e3264978476f8a060f104f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ClassProject::BDD_ID circuit_to_BDD_manager::NandGate </td>
+          <td>(</td>
+          <td class="paramtype">set_of_circuit_t&#160;</td>
+          <td class="paramname"><em>inputNodes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>generates the BDD node equivalent to the NAND gate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>is set_of_circuit_t containing the circuit IDs of the gates to be used as input. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ClassProject::BDD_ID </dd></dl>
+
+<p>References <a class="el" href="classcircuit__to__BDD__manager.html#ae42b3652550e68a09a785f5c1b8f63de">AndGate()</a>, and <a class="el" href="classcircuit__to__BDD__manager.html#a4b6d8e87f4cba8ef146d4ae37b5924c1">circuitId2BDDid()</a>.</p>
+
+<p>Referenced by <a class="el" href="classcircuit__to__BDD__manager.html#ae1b5244f8b77673ccaef57b70b10c0d6">GenerateBDD()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5b3c1a35ca431c955183ed9df72cf8b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ClassProject::BDD_ID circuit_to_BDD_manager::NorGate </td>
+          <td>(</td>
+          <td class="paramtype">set_of_circuit_t&#160;</td>
+          <td class="paramname"><em>inputNodes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>generates the BDD node equivalent to the NOR gate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>is set_of_circuit_t containing the circuit IDs of the gates to be used as input. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ClassProject::BDD_ID </dd></dl>
+
+<p>References <a class="el" href="classcircuit__to__BDD__manager.html#a4b6d8e87f4cba8ef146d4ae37b5924c1">circuitId2BDDid()</a>, and <a class="el" href="classcircuit__to__BDD__manager.html#a2bfb5bf2686e20a65b63109f73d2c8aa">OrGate()</a>.</p>
+
+<p>Referenced by <a class="el" href="classcircuit__to__BDD__manager.html#ae1b5244f8b77673ccaef57b70b10c0d6">GenerateBDD()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8bafb05dc7df4a67173b4997b2fb402d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ClassProject::BDD_ID circuit_to_BDD_manager::NotGate </td>
+          <td>(</td>
+          <td class="paramtype">set_of_circuit_t&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>generates the BDD node equivalent to the NOT gate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>is set_of_circuit_t containing the circuit ID of the gate to be inverted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ClassProject::BDD_ID </dd></dl>
+
+<p>References <a class="el" href="classcircuit__to__BDD__manager.html#a4b6d8e87f4cba8ef146d4ae37b5924c1">circuitId2BDDid()</a>.</p>
+
+<p>Referenced by <a class="el" href="classcircuit__to__BDD__manager.html#ae1b5244f8b77673ccaef57b70b10c0d6">GenerateBDD()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2bfb5bf2686e20a65b63109f73d2c8aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ClassProject::BDD_ID circuit_to_BDD_manager::OrGate </td>
+          <td>(</td>
+          <td class="paramtype">set_of_circuit_t&#160;</td>
+          <td class="paramname"><em>inputNodes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>generates the BDD node equivalent to the OR gate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>is set_of_circuit_t containing the circuit IDs of the gates to be used as input. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ClassProject::BDD_ID </dd></dl>
+
+<p>References <a class="el" href="classcircuit__to__BDD__manager.html#a4b6d8e87f4cba8ef146d4ae37b5924c1">circuitId2BDDid()</a>.</p>
+
+<p>Referenced by <a class="el" href="classcircuit__to__BDD__manager.html#ae1b5244f8b77673ccaef57b70b10c0d6">GenerateBDD()</a>, and <a class="el" href="classcircuit__to__BDD__manager.html#ac5b3c1a35ca431c955183ed9df72cf8b">NorGate()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac8140f284db475fca0c3d0aea379bdee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ClassProject::BDD_ID circuit_to_BDD_manager::XorGate </td>
+          <td>(</td>
+          <td class="paramtype">set_of_circuit_t&#160;</td>
+          <td class="paramname"><em>inputNodes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>generates the BDD node equivalent to the XOR gate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>is set_of_circuit_t containing the circuit IDs of the gates to be used as input. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ClassProject::BDD_ID </dd></dl>
+
+<p>References <a class="el" href="classcircuit__to__BDD__manager.html#a4b6d8e87f4cba8ef146d4ae37b5924c1">circuitId2BDDid()</a>, <a class="el" href="classcircuit__to__BDD__manager.html#aa499154088871f0b80df5479f906eb7f">label2BDD_ID_table</a>, and <a class="el" href="classcircuit__to__BDD__manager.html#a3d565b303c29cb8b8ec6b886625c532d">result_dir</a>.</p>
+
+<p>Referenced by <a class="el" href="classcircuit__to__BDD__manager.html#ae1b5244f8b77673ccaef57b70b10c0d6">GenerateBDD()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/import/home/vdscp04/Luiz/vdscp_04/src/bench/<a class="el" href="circuit__to__BDD__manager_8hpp_source.html">circuit_to_BDD_manager.hpp</a></li>
-<li>/import/home/vdscp04/Luiz/vdscp_04/src/bench/circuit_to_BDD_manager.cpp</li>
+<li>/home/felipe/Desktop/vdsproject/vdscp_04/src/bench/<a class="el" href="circuit__to__BDD__manager_8hpp_source.html">circuit_to_BDD_manager.hpp</a></li>
+<li>/home/felipe/Desktop/vdsproject/vdscp_04/src/bench/circuit_to_BDD_manager.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

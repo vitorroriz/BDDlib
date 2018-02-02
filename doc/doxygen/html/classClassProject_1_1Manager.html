@@ -29,6 +29,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -95,7 +96,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a07c655db284e0f8c169563adbed8801b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return the top variable of a given BDD_ID.  <a href="#a07c655db284e0f8c169563adbed8801b">More...</a><br /></td></tr>
 <tr class="separator:a07c655db284e0f8c169563adbed8801b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a615943b56ed99f812d4117ebb5bbc455"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite</a> (const BDD_ID i, const BDD_ID t, const BDD_ID e) override</td></tr>
-<tr class="memdesc:a615943b56ed99f812d4117ebb5bbc455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute the IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator of a given BDD_ID with respect to its top variable.  <a href="#a615943b56ed99f812d4117ebb5bbc455">More...</a><br /></td></tr>
+<tr class="memdesc:a615943b56ed99f812d4117ebb5bbc455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute the IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator.  <a href="#a615943b56ed99f812d4117ebb5bbc455">More...</a><br /></td></tr>
 <tr class="separator:a615943b56ed99f812d4117ebb5bbc455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae58b05ca4ddd764390db56a1e22e7b07"><td class="memItemLeft" align="right" valign="top">BDD_ID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue</a> (const BDD_ID f, BDD_ID x) override</td></tr>
 <tr class="memdesc:ae58b05ca4ddd764390db56a1e22e7b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compute the TRUE coFactor of a given BDD_ID f with respect to BDD_ID x.  <a href="#ae58b05ca4ddd764390db56a1e22e7b07">More...</a><br /></td></tr>
@@ -925,7 +926,7 @@ vector&lt; <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Return the id of the computed IF then ELSE Operator. </dd></dl>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a1da261b1c3050efc7d5ce7006aa61630">computed_table</a>, <a class="el" href="classClassProject_1_1Manager.html#a11656a3ce5a4ba0e71a65ac874d89813">getComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a5e47cffe40b3f094fb29715526740f50">isComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a60bfd3e2c706f5b7d96f3739aefd30fd">iteC()</a>, <a class="el" href="classClassProject_1_1Manager.html#ab05746c6672ddda6a4e9cfbe874d4076">new_nodes</a>, <a class="el" href="structClassProject_1_1BDD__Node.html#a334b891f34eac8419a6402c6e7c730dd">ClassProject::BDD_Node::top_var</a>, and <a class="el" href="classClassProject_1_1Manager.html#a0b54ce30834a6044fc9eb8e85550c5a8">uniqueTableSize()</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a1da261b1c3050efc7d5ce7006aa61630">computed_table</a>, <a class="el" href="classClassProject_1_1Manager.html#a11656a3ce5a4ba0e71a65ac874d89813">getComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a5e47cffe40b3f094fb29715526740f50">isComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a60bfd3e2c706f5b7d96f3739aefd30fd">iteC()</a>, <a class="el" href="classClassProject_1_1Manager.html#ab05746c6672ddda6a4e9cfbe874d4076">new_nodes</a>, and <a class="el" href="classClassProject_1_1Manager.html#a0b54ce30834a6044fc9eb8e85550c5a8">uniqueTableSize()</a>.</p>
 
 <p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a75bd703f518ab88006bb2b493569ba08">and2()</a>, <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a615943b56ed99f812d4117ebb5bbc455">ite()</a>, <a class="el" href="classClassProject_1_1Manager.html#a60bfd3e2c706f5b7d96f3739aefd30fd">iteC()</a>, <a class="el" href="classClassProject_1_1Manager.html#a6c82345b580058836d1cd8a1c09399b6">iteST()</a>, <a class="el" href="classClassProject_1_1Manager.html#a94abdd8d633d6e52a052838305f97f36">nand2()</a>, <a class="el" href="classClassProject_1_1Manager.html#a6c83a83001023096dd68183f40ee80b3">neg()</a>, <a class="el" href="classClassProject_1_1Manager.html#a3271fba879ca737e9566c079629841c5">nor2()</a>, <a class="el" href="classClassProject_1_1Manager.html#a0b0f8f45f547343dd165357900f155d0">or2()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a210d71defa6813536c7c4e4007bdd67e">xor2()</a>.</p>
 
@@ -969,7 +970,7 @@ vector&lt; <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a
 </table>
 </div><div class="memdoc">
 
-<p>Function to compute the IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator of a given BDD_ID with respect to its top variable. </p>
+<p>Function to compute the IF(BDD_ID i) then(BDD_ID t) ELSE(BDD_ID e) Operator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>a BDD_ID argument. </td></tr>
@@ -1042,7 +1043,7 @@ vector&lt; <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Return the id of the computed IF then ELSE Operator. </dd></dl>
 
-<p>References <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a1da261b1c3050efc7d5ce7006aa61630">computed_table</a>, <a class="el" href="classClassProject_1_1Manager.html#a11656a3ce5a4ba0e71a65ac874d89813">getComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, <a class="el" href="classClassProject_1_1Manager.html#ab05746c6672ddda6a4e9cfbe874d4076">new_nodes</a>, <a class="el" href="structClassProject_1_1BDD__Node.html#a334b891f34eac8419a6402c6e7c730dd">ClassProject::BDD_Node::top_var</a>, and <a class="el" href="classClassProject_1_1Manager.html#a0b54ce30834a6044fc9eb8e85550c5a8">uniqueTableSize()</a>.</p>
+<p>References <a class="el" href="classClassProject_1_1Manager.html#a91b0f680c53a9813e11f590f99c21264">coFactorFalse()</a>, <a class="el" href="classClassProject_1_1Manager.html#ae58b05ca4ddd764390db56a1e22e7b07">coFactorTrue()</a>, <a class="el" href="classClassProject_1_1Manager.html#a1da261b1c3050efc7d5ce7006aa61630">computed_table</a>, <a class="el" href="classClassProject_1_1Manager.html#a11656a3ce5a4ba0e71a65ac874d89813">getComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, <a class="el" href="classClassProject_1_1Manager.html#ab05746c6672ddda6a4e9cfbe874d4076">new_nodes</a>, and <a class="el" href="classClassProject_1_1Manager.html#a0b54ce30834a6044fc9eb8e85550c5a8">uniqueTableSize()</a>.</p>
 
 <p>Referenced by <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>.</p>
 
@@ -1095,7 +1096,7 @@ vector&lt; <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the ID of the computed IF THEN ELSE operator according the standard triples. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the ID of the computed IF THEN ELSE operator according to the standard triples. </dd></dl>
 
 <p>References <a class="el" href="classClassProject_1_1Manager.html#a11656a3ce5a4ba0e71a65ac874d89813">getComplement()</a>, <a class="el" href="classClassProject_1_1Manager.html#a0baa1de7f305b8a6d972784c3399ee73">getNextId()</a>, <a class="el" href="classClassProject_1_1Manager.html#a13edef310f5e0ea718619151a7be451a">isConstant()</a>, <a class="el" href="classClassProject_1_1Manager.html#a12f754fae1fd3b2322cf5dcd2eec095f">ite()</a>, and <a class="el" href="classClassProject_1_1Manager.html#a07c655db284e0f8c169563adbed8801b">topVar()</a>.</p>
 
@@ -1499,8 +1500,8 @@ vector&lt; <a class="el" href="structClassProject_1_1BDD__Node.html">BDD_Node</a
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/import/home/vdscp04/Luiz/vdscp_04/src/<a class="el" href="Manager_8h_source.html">Manager.h</a></li>
-<li>/import/home/vdscp04/Luiz/vdscp_04/src/Manager.cpp</li>
+<li>/home/felipe/Desktop/vdsproject/vdscp_04/src/<a class="el" href="Manager_8h_source.html">Manager.h</a></li>
+<li>/home/felipe/Desktop/vdsproject/vdscp_04/src/Manager.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

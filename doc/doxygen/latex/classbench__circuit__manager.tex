@@ -20,6 +20,86 @@ list\+\_\+of\+\_\+circuit\+\_\+t {\bf Get\+Sorted\+Circuit} (void)
 \begin{DoxyCompactList}\small\item\em return the list of circuit nodes topologically sorted. \end{DoxyCompactList}\item 
 std\+::set$<$ label\+\_\+t $>$ {\bf Get\+List\+Of\+Output\+Labels} (void)
 \begin{DoxyCompactList}\small\item\em return a list with the labels of the O\+U\+T\+P\+UT gates of the circuit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf Print\+Labels\+Table} (void)
+\begin{DoxyCompactList}\small\item\em Print the labels2node\+\_\+table table. \end{DoxyCompactList}\item 
+void {\bf Print\+U\+U\+I\+D\+Circuit\+Table} (void)
+\begin{DoxyCompactList}\small\item\em Print the uuid2circuit\+Node\+\_\+table table. \end{DoxyCompactList}\item 
+void {\bf Print\+Output\+List} (void)
+\begin{DoxyCompactList}\small\item\em Print the set\+\_\+of\+\_\+output\+\_\+labels list. \end{DoxyCompactList}\item 
+void {\bf Print\+Labels2\+U\+U\+I\+D\+Table} (void)
+\begin{DoxyCompactList}\small\item\em Print the labels2uuid\+\_\+table table. \end{DoxyCompactList}\item 
+void {\bf Print\+Circuit} (unique\+\_\+\+I\+D\+\_\+t circuit\+\_\+\+ID, int indent)
+\begin{DoxyCompactList}\small\item\em prints the circuit starting from the given unique identificator. \end{DoxyCompactList}\item 
+void {\bf Print\+Circuit\+By\+Label} (label\+\_\+t node\+\_\+label)
+\begin{DoxyCompactList}\small\item\em prints the circuit starting from the given label\textquotesingle{}s node. \end{DoxyCompactList}\item 
+void {\bf Print\+Circuits\+Of\+Output\+Set} (void)
+\begin{DoxyCompactList}\small\item\em prints all circuits from the set of circuit O\+U\+T\+P\+U\+TS. \end{DoxyCompactList}\item 
+void {\bf Print\+Sorted\+Circuit\+List} (void)
+\begin{DoxyCompactList}\small\item\em prints the list of topological sorted circuit\textquotesingle{}s node. \end{DoxyCompactList}\item 
+set\+\_\+of\+\_\+circuit\+\_\+t {\bf Get\+List\+Of\+Circuits\+Inputs} (void)
+\begin{DoxyCompactList}\small\item\em return a list with the U\+U\+ID of the I\+N\+P\+UT gates of the circuit. \end{DoxyCompactList}\item 
+set\+\_\+of\+\_\+circuit\+\_\+t {\bf Get\+List\+Of\+Circuits\+Outputs} (void)
+\begin{DoxyCompactList}\small\item\em return a list with the U\+U\+ID of the O\+U\+T\+P\+UT gates of the circuit. \end{DoxyCompactList}\item 
+{\bf circuit\+\_\+node\+\_\+type} {\bf Get\+Circuit\+Node} (unique\+\_\+\+I\+D\+\_\+t circuit\+\_\+node\+\_\+uuid)
+\begin{DoxyCompactList}\small\item\em return a circuit node, given a its unique ID. \end{DoxyCompactList}\item 
+boost\+::unordered\+\_\+map$<$ unique\+\_\+\+I\+D\+\_\+t, {\bf circuit\+\_\+node\+\_\+type} $>$ {\bf Get\+Circuit} (void)
+\begin{DoxyCompactList}\small\item\em return the table representing the circuit. \end{DoxyCompactList}\item 
+bool {\bf Parse\+File} (std\+::string bench\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Reads the file containing the circuit in the bench format. \end{DoxyCompactList}\item 
+bool {\bf Add\+To\+Labels\+Table} ({\bf bench\+\_\+node\+\_\+t} bench\+\_\+node)
+\begin{DoxyCompactList}\small\item\em return the list of circuit nodes topologically sorted. \end{DoxyCompactList}\item 
+unique\+\_\+\+I\+D\+\_\+t {\bf Find\+Or\+Add\+To\+Circuit} ({\bf bench\+\_\+node\+\_\+t} bench\+\_\+node)
+\begin{DoxyCompactList}\small\item\em search or add the node to the circuit. \end{DoxyCompactList}\item 
+unique\+\_\+\+I\+D\+\_\+t {\bf Find\+Or\+Add\+To\+Circuitby\+Label} (label\+\_\+t node\+\_\+label)
+\begin{DoxyCompactList}\small\item\em find or add a node to the circuit given its label. \end{DoxyCompactList}\item 
+{\bf circuit\+\_\+node\+\_\+type} {\bf Bench\+Node2\+Circuit\+Node} ({\bf bench\+\_\+node\+\_\+t} bench\+\_\+node)
+\begin{DoxyCompactList}\small\item\em converts bench node to circuit node. \end{DoxyCompactList}\item 
+void {\bf Create\+Circuit\+From\+Output\+List} (void)
+\begin{DoxyCompactList}\small\item\em create a circuit from the labels in the set\+\_\+of\+\_\+output\+\_\+labels. \end{DoxyCompactList}\item 
+void {\bf Create\+Circuitby\+Label} (label\+\_\+t bnode\+\_\+label)
+\begin{DoxyCompactList}\small\item\em create a circuit from the given node\textquotesingle{}s label. \end{DoxyCompactList}\item 
+void {\bf Topological\+Sort\+Kahns\+Algorithm} (void)
+\begin{DoxyCompactList}\small\item\em Implementation of Kahn\textquotesingle{}s Algorithm for topological sort. \end{DoxyCompactList}\item 
+bool {\bf Is\+Unique\+Outgoing\+Edge} (unique\+\_\+\+I\+D\+\_\+t src\+\_\+node, unique\+\_\+\+I\+D\+\_\+t dst\+\_\+node)
+\begin{DoxyCompactList}\small\item\em auxiliar function for topological sort algorithms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unique\+\_\+\+I\+D\+\_\+t {\bfseries I\+D\+\_\+counter}\label{classbench__circuit__manager_aa29b6db19515bcc6e196fe4f2151a2bb}
+
+\item 
+boost\+::uuids\+::random\+\_\+generator {\bfseries generator}\label{classbench__circuit__manager_a20bf59848cce81112187ee6b907bd0fe}
+
+\item 
+std\+::set$<$ label\+\_\+t $>$ {\bf set\+\_\+of\+\_\+output\+\_\+labels}\label{classbench__circuit__manager_a0f99369a0ed9e8367d5e284468bf1f38}
+
+\begin{DoxyCompactList}\small\item\em Set containing bench node labels of all O\+U\+T\+P\+UT gates. \end{DoxyCompactList}\item 
+std\+::set$<$ label\+\_\+t $>$ {\bf set\+\_\+of\+\_\+flipflop\+\_\+labels}
+\begin{DoxyCompactList}\small\item\em Set containing bench node labels of all F\+L\+IP F\+L\+OP gates. \end{DoxyCompactList}\item 
+std\+::set$<$ label\+\_\+t $>$ {\bfseries outputs}\label{classbench__circuit__manager_ae51844818c3987b0ca24ea118a3e7777}
+
+\item 
+set\+\_\+of\+\_\+circuit\+\_\+t {\bf set\+\_\+of\+\_\+circuit\+\_\+\+O\+UT}\label{classbench__circuit__manager_a70fb36f7125dba13a75aba3b7282a71c}
+
+\begin{DoxyCompactList}\small\item\em Set containing the unique ID of all O\+U\+T\+P\+UT gates. \end{DoxyCompactList}\item 
+set\+\_\+of\+\_\+circuit\+\_\+t {\bf set\+\_\+of\+\_\+circuit\+\_\+\+IN}\label{classbench__circuit__manager_aa5476b7904bf8a6cdfc5f904d42fe01a}
+
+\begin{DoxyCompactList}\small\item\em Set containing the unique ID of all I\+N\+P\+UT gates. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ label\+\_\+t, {\bf bench\+\_\+node\+\_\+t} $>$ {\bf labels2node\+\_\+table}\label{classbench__circuit__manager_a72239bd576f9c229eab5fd43bbefd99f}
+
+\begin{DoxyCompactList}\small\item\em Mapping from bench node labels to bench node. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ label\+\_\+t, unique\+\_\+\+I\+D\+\_\+t $>$ {\bf labels2uuid\+\_\+table}\label{classbench__circuit__manager_a3a70e7232c7fa7b86da66d1be0adf2df}
+
+\begin{DoxyCompactList}\small\item\em Mapping from bench node labels to circuit unique I\+Ds. \end{DoxyCompactList}\item 
+boost\+::unordered\+\_\+map$<$ unique\+\_\+\+I\+D\+\_\+t, {\bf circuit\+\_\+node\+\_\+type} $>$ {\bf uuid2circuit\+Node\+\_\+table}\label{classbench__circuit__manager_a507e2cc6af7a21a4f96b23892b35c596}
+
+\begin{DoxyCompactList}\small\item\em Mapping from circuit unique I\+Ds to circuit nodes. \end{DoxyCompactList}\item 
+list\+\_\+of\+\_\+circuit\+\_\+t {\bf sorted\+\_\+circuit}\label{classbench__circuit__manager_a6419c128581cefce2d6bd33b61e964b9}
+
+\begin{DoxyCompactList}\small\item\em List contained the topological sorted circuit nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -49,6 +129,10 @@ Constructor.
 {\em bench\+\_\+file} & is std\+::string. Constructor method for the \doxyref{bench\+\_\+circuit\+\_\+manager}{p.}{classbench__circuit__manager} class. It generates the topological circuit described in the file bench\+\_\+file that must be in the I\+S\+C\+A\+S85/\+I\+S\+C\+A\+S89/\+I\+S\+C\+A\+S99 format. \\
 \hline
 \end{DoxyParams}
+
+
+References Create\+Circuit\+From\+Output\+List(), labels2node\+\_\+table, labels2uuid\+\_\+table, Parse\+File(), set\+\_\+of\+\_\+circuit\+\_\+\+IN, set\+\_\+of\+\_\+circuit\+\_\+\+O\+UT, set\+\_\+of\+\_\+flipflop\+\_\+labels, set\+\_\+of\+\_\+output\+\_\+labels, Topological\+Sort\+Kahns\+Algorithm(), and uuid2circuit\+Node\+\_\+table.
+
 \index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!````~bench\+\_\+circuit\+\_\+manager@{$\sim$bench\+\_\+circuit\+\_\+manager}}
 \index{````~bench\+\_\+circuit\+\_\+manager@{$\sim$bench\+\_\+circuit\+\_\+manager}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
 \subsubsection[{$\sim$bench\+\_\+circuit\+\_\+manager()}]{\setlength{\rightskip}{0pt plus 5cm}bench\+\_\+circuit\+\_\+manager\+::$\sim$bench\+\_\+circuit\+\_\+manager (
@@ -67,11 +151,269 @@ Destructor.
 \end{DoxyParams}
 
 
-References circuit\+\_\+node\+\_\+type\+::gate\+\_\+type, Get\+Sorted\+Circuit(), circuit\+\_\+node\+\_\+type\+::\+ID, circuit\+\_\+node\+\_\+type\+::input\+\_\+\+I\+D\+\_\+list, circuit\+\_\+node\+\_\+type\+::label, and circuit\+\_\+node\+\_\+type\+::output\+\_\+\+I\+D\+\_\+list.
-
-
-
 \subsection{Member Function Documentation}
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Add\+To\+Labels\+Table@{Add\+To\+Labels\+Table}}
+\index{Add\+To\+Labels\+Table@{Add\+To\+Labels\+Table}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Add\+To\+Labels\+Table(bench\+\_\+node\+\_\+t bench\+\_\+node)}]{\setlength{\rightskip}{0pt plus 5cm}bool bench\+\_\+circuit\+\_\+manager\+::\+Add\+To\+Labels\+Table (
+\begin{DoxyParamCaption}
+\item[{{\bf bench\+\_\+node\+\_\+t}}]{bench\+\_\+node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_ac7941a63098c9647a69e4c6ae5bf8ba8}
+
+
+return the list of circuit nodes topologically sorted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bench\+\_\+node} & is bench\+\_\+node\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: true -\/$>$ Node successfully added false -\/$>$ Node already exist and could not be added
+\end{DoxyReturn}
+Adds a node to the labels table (labels2node) and to the sets\+\_\+of\+\_\+outputs in case it is of gate type O\+U\+T\+P\+UT. 
+
+References labels2node\+\_\+table, set\+\_\+of\+\_\+flipflop\+\_\+labels, and set\+\_\+of\+\_\+output\+\_\+labels.
+
+
+
+Referenced by Parse\+File().
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Bench\+Node2\+Circuit\+Node@{Bench\+Node2\+Circuit\+Node}}
+\index{Bench\+Node2\+Circuit\+Node@{Bench\+Node2\+Circuit\+Node}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Bench\+Node2\+Circuit\+Node(bench\+\_\+node\+\_\+t bench\+\_\+node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf circuit\+\_\+node\+\_\+type} bench\+\_\+circuit\+\_\+manager\+::\+Bench\+Node2\+Circuit\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf bench\+\_\+node\+\_\+t}}]{bench\+\_\+node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a56fccf1f3b64c4325ca288c14c9dbec3}
+
+
+converts bench node to circuit node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bench\+\_\+node} & is bench\+\_\+node\+\_\+t and represents the node to be converted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{circuit\+\_\+node\+\_\+type}{p.}{structcircuit__node__type}
+\end{DoxyReturn}
+Given a bench\+\_\+node\+\_\+t, it converts the node into an \doxyref{circuit\+\_\+node\+\_\+type}{p.}{structcircuit__node__type}. 
+
+References Find\+Or\+Add\+To\+Circuitby\+Label(), circuit\+\_\+node\+\_\+type\+::gate\+\_\+type, circuit\+\_\+node\+\_\+type\+::\+ID, circuit\+\_\+node\+\_\+type\+::input\+\_\+\+I\+D\+\_\+list, circuit\+\_\+node\+\_\+type\+::label, set\+\_\+of\+\_\+circuit\+\_\+\+IN, and uuid2circuit\+Node\+\_\+table.
+
+
+
+Referenced by Find\+Or\+Add\+To\+Circuit().
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Create\+Circuitby\+Label@{Create\+Circuitby\+Label}}
+\index{Create\+Circuitby\+Label@{Create\+Circuitby\+Label}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Create\+Circuitby\+Label(label\+\_\+t bnode\+\_\+label)}]{\setlength{\rightskip}{0pt plus 5cm}void bench\+\_\+circuit\+\_\+manager\+::\+Create\+Circuitby\+Label (
+\begin{DoxyParamCaption}
+\item[{label\+\_\+t}]{bnode\+\_\+label}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a2ece11730c6be2811ccf9fd05f30f2f9}
+
+
+create a circuit from the given node\textquotesingle{}s label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bnode\+\_\+label} & is label\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+References Find\+Or\+Add\+To\+Circuitby\+Label(), and set\+\_\+of\+\_\+circuit\+\_\+\+O\+UT.
+
+
+
+Referenced by Create\+Circuit\+From\+Output\+List().
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Create\+Circuit\+From\+Output\+List@{Create\+Circuit\+From\+Output\+List}}
+\index{Create\+Circuit\+From\+Output\+List@{Create\+Circuit\+From\+Output\+List}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Create\+Circuit\+From\+Output\+List(void)}]{\setlength{\rightskip}{0pt plus 5cm}void bench\+\_\+circuit\+\_\+manager\+::\+Create\+Circuit\+From\+Output\+List (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_aadda69b0a4c2814425fcc55a3fb46c62}
+
+
+create a circuit from the labels in the set\+\_\+of\+\_\+output\+\_\+labels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+References Create\+Circuitby\+Label(), labels2uuid\+\_\+table, set\+\_\+of\+\_\+flipflop\+\_\+labels, set\+\_\+of\+\_\+output\+\_\+labels, and uuid2circuit\+Node\+\_\+table.
+
+
+
+Referenced by bench\+\_\+circuit\+\_\+manager().
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Find\+Or\+Add\+To\+Circuit@{Find\+Or\+Add\+To\+Circuit}}
+\index{Find\+Or\+Add\+To\+Circuit@{Find\+Or\+Add\+To\+Circuit}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Find\+Or\+Add\+To\+Circuit(bench\+\_\+node\+\_\+t bench\+\_\+node)}]{\setlength{\rightskip}{0pt plus 5cm}unique\+\_\+\+I\+D\+\_\+t bench\+\_\+circuit\+\_\+manager\+::\+Find\+Or\+Add\+To\+Circuit (
+\begin{DoxyParamCaption}
+\item[{{\bf bench\+\_\+node\+\_\+t}}]{bench\+\_\+node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a66d2d99b46b1499de5896a6591dc647e}
+
+
+search or add the node to the circuit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bench\+\_\+node} & is bench\+\_\+node\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unique\+\_\+\+I\+D\+\_\+t representing the given bench\+\_\+node
+\end{DoxyReturn}
+It searches if the bench node exist in the label2uuid\+\_\+table. If it does\textquotesingle{}t, adds it to the table and return the unique ID. Otherwise, simply return the unique ID of the node. 
+
+References Bench\+Node2\+Circuit\+Node(), circuit\+\_\+node\+\_\+type\+::\+ID, labels2uuid\+\_\+table, and uuid2circuit\+Node\+\_\+table.
+
+
+
+Referenced by Find\+Or\+Add\+To\+Circuitby\+Label().
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Find\+Or\+Add\+To\+Circuitby\+Label@{Find\+Or\+Add\+To\+Circuitby\+Label}}
+\index{Find\+Or\+Add\+To\+Circuitby\+Label@{Find\+Or\+Add\+To\+Circuitby\+Label}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Find\+Or\+Add\+To\+Circuitby\+Label(label\+\_\+t node\+\_\+label)}]{\setlength{\rightskip}{0pt plus 5cm}unique\+\_\+\+I\+D\+\_\+t bench\+\_\+circuit\+\_\+manager\+::\+Find\+Or\+Add\+To\+Circuitby\+Label (
+\begin{DoxyParamCaption}
+\item[{label\+\_\+t}]{node\+\_\+label}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a825453443e25b10a70b0eb971d1d1f57}
+
+
+find or add a node to the circuit given its label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+label} & is label\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unique\+\_\+\+I\+D\+\_\+t representing the given label
+\end{DoxyReturn}
+It searches if the node corresponding to the given label is already inserted into the labels2uuid\+\_\+table table. If it is, returns its id. If not, creates a new node into the circuit and add it to the table. 
+
+References Find\+Or\+Add\+To\+Circuit(), and labels2node\+\_\+table.
+
+
+
+Referenced by Bench\+Node2\+Circuit\+Node(), and Create\+Circuitby\+Label().
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Get\+Circuit@{Get\+Circuit}}
+\index{Get\+Circuit@{Get\+Circuit}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Get\+Circuit(void)}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::unordered\+\_\+map$<$ unique\+\_\+\+I\+D\+\_\+t, {\bf circuit\+\_\+node\+\_\+type} $>$ bench\+\_\+circuit\+\_\+manager\+::\+Get\+Circuit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a696f25d855d475de0e3284766f867ef6}
+
+
+return the table representing the circuit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boost\+::unordered\+\_\+map$<$unique\+\_\+\+I\+D\+\_\+t, circuit\+\_\+node\+\_\+type$>$ 
+\end{DoxyReturn}
+
+
+References uuid2circuit\+Node\+\_\+table.
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Get\+Circuit\+Node@{Get\+Circuit\+Node}}
+\index{Get\+Circuit\+Node@{Get\+Circuit\+Node}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Get\+Circuit\+Node(unique\+\_\+\+I\+D\+\_\+t circuit\+\_\+node\+\_\+uuid)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf circuit\+\_\+node\+\_\+type} bench\+\_\+circuit\+\_\+manager\+::\+Get\+Circuit\+Node (
+\begin{DoxyParamCaption}
+\item[{unique\+\_\+\+I\+D\+\_\+t}]{circuit\+\_\+node\+\_\+uuid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a00d9a279f0e566c109a3b9153a3fdc30}
+
+
+return a circuit node, given a its unique ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em circuit\+\_\+node\+\_\+uuid} & is unique\+\_\+\+I\+D\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{circuit\+\_\+node\+\_\+type}{p.}{structcircuit__node__type} 
+\end{DoxyReturn}
+
+
+References uuid2circuit\+Node\+\_\+table.
+
+
+
+Referenced by Topological\+Sort\+Kahns\+Algorithm().
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Get\+List\+Of\+Circuits\+Inputs@{Get\+List\+Of\+Circuits\+Inputs}}
+\index{Get\+List\+Of\+Circuits\+Inputs@{Get\+List\+Of\+Circuits\+Inputs}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Get\+List\+Of\+Circuits\+Inputs(void)}]{\setlength{\rightskip}{0pt plus 5cm}set\+\_\+of\+\_\+circuit\+\_\+t bench\+\_\+circuit\+\_\+manager\+::\+Get\+List\+Of\+Circuits\+Inputs (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_ab5ef44f29ad4660810d82bf47c75fdb3}
+
+
+return a list with the U\+U\+ID of the I\+N\+P\+UT gates of the circuit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set\+\_\+of\+\_\+circuit\+\_\+t 
+\end{DoxyReturn}
+
+
+References set\+\_\+of\+\_\+circuit\+\_\+\+IN.
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Get\+List\+Of\+Circuits\+Outputs@{Get\+List\+Of\+Circuits\+Outputs}}
+\index{Get\+List\+Of\+Circuits\+Outputs@{Get\+List\+Of\+Circuits\+Outputs}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Get\+List\+Of\+Circuits\+Outputs(void)}]{\setlength{\rightskip}{0pt plus 5cm}set\+\_\+of\+\_\+circuit\+\_\+t bench\+\_\+circuit\+\_\+manager\+::\+Get\+List\+Of\+Circuits\+Outputs (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_aafa544609f33a3eb48ae7a299edfc05a}
+
+
+return a list with the U\+U\+ID of the O\+U\+T\+P\+UT gates of the circuit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set\+\_\+of\+\_\+circuit\+\_\+t 
+\end{DoxyReturn}
+
+
+References set\+\_\+of\+\_\+circuit\+\_\+\+O\+UT.
+
+
+
+Referenced by Topological\+Sort\+Kahns\+Algorithm().
+
 \index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Get\+List\+Of\+Output\+Labels@{Get\+List\+Of\+Output\+Labels}}
 \index{Get\+List\+Of\+Output\+Labels@{Get\+List\+Of\+Output\+Labels}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
 \subsubsection[{Get\+List\+Of\+Output\+Labels(void)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::set$<$ label\+\_\+t $>$ bench\+\_\+circuit\+\_\+manager\+::\+Get\+List\+Of\+Output\+Labels (
@@ -112,15 +454,304 @@ list\+\_\+of\+\_\+circuit\+\_\+t
 \end{DoxyReturn}
 
 
-References circuit\+\_\+node\+\_\+type\+::gate\+\_\+type, circuit\+\_\+node\+\_\+type\+::\+ID, circuit\+\_\+node\+\_\+type\+::input\+\_\+\+I\+D\+\_\+list, and circuit\+\_\+node\+\_\+type\+::label.
+References sorted\+\_\+circuit.
 
 
 
-Referenced by $\sim$bench\+\_\+circuit\+\_\+manager().
+Referenced by Print\+Sorted\+Circuit\+List().
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Is\+Unique\+Outgoing\+Edge@{Is\+Unique\+Outgoing\+Edge}}
+\index{Is\+Unique\+Outgoing\+Edge@{Is\+Unique\+Outgoing\+Edge}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Is\+Unique\+Outgoing\+Edge(unique\+\_\+\+I\+D\+\_\+t src\+\_\+node, unique\+\_\+\+I\+D\+\_\+t dst\+\_\+node)}]{\setlength{\rightskip}{0pt plus 5cm}bool bench\+\_\+circuit\+\_\+manager\+::\+Is\+Unique\+Outgoing\+Edge (
+\begin{DoxyParamCaption}
+\item[{unique\+\_\+\+I\+D\+\_\+t}]{src\+\_\+node, }
+\item[{unique\+\_\+\+I\+D\+\_\+t}]{dst\+\_\+node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_ac1c70d608460bd3f05d1372b42ec9c7f}
+
+
+auxiliar function for topological sort algorithms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+\_\+node} & is unique\+\_\+\+I\+D\+\_\+t \\
+\hline
+{\em dst\+\_\+node} & is unique\+\_\+\+I\+D\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if it was the only outgoing edge. False, otherwise.
+\end{DoxyReturn}
+It removes the edge from src-\/$>$dst at the table uuid2circuit\+Node and then checks if it was the only outgoing edge. 
+
+References uuid2circuit\+Node\+\_\+table.
+
+
+
+Referenced by Topological\+Sort\+Kahns\+Algorithm().
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Parse\+File@{Parse\+File}}
+\index{Parse\+File@{Parse\+File}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Parse\+File(std\+::string bench\+\_\+file)}]{\setlength{\rightskip}{0pt plus 5cm}bool bench\+\_\+circuit\+\_\+manager\+::\+Parse\+File (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{bench\+\_\+file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_ad7efc2e1ab4f2c8a205cf5f4b188cfd5}
+
+
+Reads the file containing the circuit in the bench format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bench\+\_\+file} & is std\+::string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool returns true in case of success.
+\end{DoxyReturn}
+Reads the file containing the circuit in the bench format. 
+
+References Add\+To\+Labels\+Table().
+
+
+
+Referenced by bench\+\_\+circuit\+\_\+manager().
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Print\+Circuit@{Print\+Circuit}}
+\index{Print\+Circuit@{Print\+Circuit}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Print\+Circuit(unique\+\_\+\+I\+D\+\_\+t circuit\+\_\+\+I\+D, int indent)}]{\setlength{\rightskip}{0pt plus 5cm}void bench\+\_\+circuit\+\_\+manager\+::\+Print\+Circuit (
+\begin{DoxyParamCaption}
+\item[{unique\+\_\+\+I\+D\+\_\+t}]{circuit\+\_\+\+ID, }
+\item[{int}]{indent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a0b3faf292184b198fca9d9fc4b60282c}
+
+
+prints the circuit starting from the given unique identificator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em circuit\+\_\+\+ID} & is unique\+\_\+\+I\+D\+\_\+t corresponding to a node circuit. \\
+\hline
+{\em indent} & is int and represents the depth of the node in the circuit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none
+\end{DoxyReturn}
+It prints the circuit starting from circuit\+\_\+\+ID node. Indent is an integer corresponding to the depth of the node in the circuit. Each unity will add four spaces as identation before printing the node\textquotesingle{}s data. 
+
+References circuit\+\_\+node\+\_\+type\+::gate\+\_\+type, circuit\+\_\+node\+\_\+type\+::\+ID, circuit\+\_\+node\+\_\+type\+::input\+\_\+\+I\+D\+\_\+list, circuit\+\_\+node\+\_\+type\+::label, circuit\+\_\+node\+\_\+type\+::output\+\_\+\+I\+D\+\_\+list, and uuid2circuit\+Node\+\_\+table.
+
+
+
+Referenced by Print\+Circuit\+By\+Label(), and Print\+Circuits\+Of\+Output\+Set().
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Print\+Circuit\+By\+Label@{Print\+Circuit\+By\+Label}}
+\index{Print\+Circuit\+By\+Label@{Print\+Circuit\+By\+Label}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Print\+Circuit\+By\+Label(label\+\_\+t node\+\_\+label)}]{\setlength{\rightskip}{0pt plus 5cm}void bench\+\_\+circuit\+\_\+manager\+::\+Print\+Circuit\+By\+Label (
+\begin{DoxyParamCaption}
+\item[{label\+\_\+t}]{node\+\_\+label}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a936f5c058ec5b07302936ce7a87884d1}
+
+
+prints the circuit starting from the given label\textquotesingle{}s node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+label} & is label\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+References labels2uuid\+\_\+table, and Print\+Circuit().
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Print\+Circuits\+Of\+Output\+Set@{Print\+Circuits\+Of\+Output\+Set}}
+\index{Print\+Circuits\+Of\+Output\+Set@{Print\+Circuits\+Of\+Output\+Set}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Print\+Circuits\+Of\+Output\+Set(void)}]{\setlength{\rightskip}{0pt plus 5cm}void bench\+\_\+circuit\+\_\+manager\+::\+Print\+Circuits\+Of\+Output\+Set (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a6ed078b79bdaa72c73d63aa78210e893}
+
+
+prints all circuits from the set of circuit O\+U\+T\+P\+U\+TS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+References Print\+Circuit(), and set\+\_\+of\+\_\+circuit\+\_\+\+O\+UT.
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Print\+Labels2\+U\+U\+I\+D\+Table@{Print\+Labels2\+U\+U\+I\+D\+Table}}
+\index{Print\+Labels2\+U\+U\+I\+D\+Table@{Print\+Labels2\+U\+U\+I\+D\+Table}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Print\+Labels2\+U\+U\+I\+D\+Table(void)}]{\setlength{\rightskip}{0pt plus 5cm}void bench\+\_\+circuit\+\_\+manager\+::\+Print\+Labels2\+U\+U\+I\+D\+Table (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a94d61a9739a6c230676ec6d6f59b665f}
+
+
+Print the labels2uuid\+\_\+table table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none
+\end{DoxyReturn}
+It prints all the labels and its associates unique circuit ID. 
+
+References labels2uuid\+\_\+table.
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Print\+Labels\+Table@{Print\+Labels\+Table}}
+\index{Print\+Labels\+Table@{Print\+Labels\+Table}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Print\+Labels\+Table(void)}]{\setlength{\rightskip}{0pt plus 5cm}void bench\+\_\+circuit\+\_\+manager\+::\+Print\+Labels\+Table (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a26d9bb58223d45c8cd431921ce0dfcd1}
+
+
+Print the labels2node\+\_\+table table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none
+\end{DoxyReturn}
+It prints all the labels and the data associated to bench nodes. 
+
+References labels2node\+\_\+table.
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Print\+Output\+List@{Print\+Output\+List}}
+\index{Print\+Output\+List@{Print\+Output\+List}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Print\+Output\+List(void)}]{\setlength{\rightskip}{0pt plus 5cm}void bench\+\_\+circuit\+\_\+manager\+::\+Print\+Output\+List (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a717b0a52495073b2973c756e3708a585}
+
+
+Print the set\+\_\+of\+\_\+output\+\_\+labels list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none
+\end{DoxyReturn}
+It prints the list containing the label of all output nodes. 
+
+References set\+\_\+of\+\_\+output\+\_\+labels.
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Print\+Sorted\+Circuit\+List@{Print\+Sorted\+Circuit\+List}}
+\index{Print\+Sorted\+Circuit\+List@{Print\+Sorted\+Circuit\+List}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Print\+Sorted\+Circuit\+List(void)}]{\setlength{\rightskip}{0pt plus 5cm}void bench\+\_\+circuit\+\_\+manager\+::\+Print\+Sorted\+Circuit\+List (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_adde5485afe84b4aa0f849e15c1924102}
+
+
+prints the list of topological sorted circuit\textquotesingle{}s node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+References Get\+Sorted\+Circuit().
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Print\+U\+U\+I\+D\+Circuit\+Table@{Print\+U\+U\+I\+D\+Circuit\+Table}}
+\index{Print\+U\+U\+I\+D\+Circuit\+Table@{Print\+U\+U\+I\+D\+Circuit\+Table}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Print\+U\+U\+I\+D\+Circuit\+Table(void)}]{\setlength{\rightskip}{0pt plus 5cm}void bench\+\_\+circuit\+\_\+manager\+::\+Print\+U\+U\+I\+D\+Circuit\+Table (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a93d125d2e6f37bf2f7d809677fcf6edc}
+
+
+Print the uuid2circuit\+Node\+\_\+table table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none
+\end{DoxyReturn}
+It prints all the unique I\+Ds and the data associated to circuit nodes. 
+
+References uuid2circuit\+Node\+\_\+table.
+
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!Topological\+Sort\+Kahns\+Algorithm@{Topological\+Sort\+Kahns\+Algorithm}}
+\index{Topological\+Sort\+Kahns\+Algorithm@{Topological\+Sort\+Kahns\+Algorithm}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{Topological\+Sort\+Kahns\+Algorithm(void)}]{\setlength{\rightskip}{0pt plus 5cm}void bench\+\_\+circuit\+\_\+manager\+::\+Topological\+Sort\+Kahns\+Algorithm (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a3d57b5a1a510cd113df07cc36c3ab2f4}
+
+
+Implementation of Kahn\textquotesingle{}s Algorithm for topological sort. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none (the result is stored at sorted\+\_\+circuit variable) 
+\end{DoxyReturn}
+
+
+References Get\+Circuit\+Node(), Get\+List\+Of\+Circuits\+Outputs(), circuit\+\_\+node\+\_\+type\+::\+ID, circuit\+\_\+node\+\_\+type\+::input\+\_\+\+I\+D\+\_\+list, Is\+Unique\+Outgoing\+Edge(), sorted\+\_\+circuit, and uuid2circuit\+Node\+\_\+table.
+
+
+
+Referenced by bench\+\_\+circuit\+\_\+manager().
+
+
+
+\subsection{Member Data Documentation}
+\index{bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}!set\+\_\+of\+\_\+flipflop\+\_\+labels@{set\+\_\+of\+\_\+flipflop\+\_\+labels}}
+\index{set\+\_\+of\+\_\+flipflop\+\_\+labels@{set\+\_\+of\+\_\+flipflop\+\_\+labels}!bench\+\_\+circuit\+\_\+manager@{bench\+\_\+circuit\+\_\+manager}}
+\subsubsection[{set\+\_\+of\+\_\+flipflop\+\_\+labels}]{\setlength{\rightskip}{0pt plus 5cm}std\+::set$<$label\+\_\+t$>$ bench\+\_\+circuit\+\_\+manager\+::set\+\_\+of\+\_\+flipflop\+\_\+labels\hspace{0.3cm}{\ttfamily [private]}}\label{classbench__circuit__manager_a461263b1b126077e3c340997344dc9ea}
+
+
+Set containing bench node labels of all F\+L\+IP F\+L\+OP gates. 
+
+When a F\+L\+IP F\+L\+OP bench gate is parsed, it is splitted into two circuit\textquotesingle{}s gates\+: one will be handled as I\+N\+P\+UT gate and the other one as O\+U\+T\+P\+UT gate. 
+
+Referenced by Add\+To\+Labels\+Table(), bench\+\_\+circuit\+\_\+manager(), and Create\+Circuit\+From\+Output\+List().
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/import/home/vdscp04/\+Luiz/vdscp\+\_\+04/src/bench/bench\+\_\+circuit\+\_\+manager.\+hpp\item 
-/import/home/vdscp04/\+Luiz/vdscp\+\_\+04/src/bench/bench\+\_\+circuit\+\_\+manager.\+cpp\end{DoxyCompactItemize}
+/home/felipe/\+Desktop/vdsproject/vdscp\+\_\+04/src/bench/bench\+\_\+circuit\+\_\+manager.\+hpp\item 
+/home/felipe/\+Desktop/vdsproject/vdscp\+\_\+04/src/bench/bench\+\_\+circuit\+\_\+manager.\+cpp\end{DoxyCompactItemize}

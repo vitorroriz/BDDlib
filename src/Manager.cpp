@@ -104,7 +104,6 @@ BDD_ID  Manager::topVar(const BDD_ID f){
     return getBDDNode(f).top_var;
 }
 
-
 //! Function to return the coplement of a given BDD_ID.
 /*!
 	\param f a BDD_ID argument.
