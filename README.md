@@ -1,3 +1,5 @@
+This is a class project, developed by Felipe Prado, Luiz Maia and me (Vitor Roriz). We have implemented a ROBDD package for a given interface.
+
 # VDS Class Project - Reduced Order Binary Decision Diagram Package (ROBDD)
 
 ## Intro
